@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UCSVM Loader</title>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 20px; background: #f7f7f7; }
+  h1 { font-size: 2rem; margin-bottom: 1rem; }
+  select, input[type="text"] { font-size: 1rem; padding: 5px; margin-bottom: 20px; width: 100%; max-width: 400px; }
+  .episode-list { max-height: 70vh; overflow-y: auto; border: 1px solid #ccc; background: #fff; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid #eee; padding: 8px; text-align: left; }
+  th { background: #f0f0f0; position: sticky; top: 0; }
+  a { color: #007BFF; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<h1>Universal Christian Scripture Verification Module</h1>
+
+<label for="datasetSelect">Select Dataset:</label>
+<select id="datasetSelect">
+  <option value="NB-Heiser_479.csv">NB-Heiser_479.csv</option>
+  <option value="NB-Heiser_test.csv" selected>NB-Heiser_test.csv</option>
+</select>
+
+<br>
+<label for="searchInput" class="hidden">Search:</label>
+<input type="text" id="searchInput" placeholder="Filter episodes..." class="hidden">
+
+<div id="episodes" class="episode-list hidden"></div>
+
+<script>
+const datasetSelect = document.getElementById('datasetSelect');
+const searchInput = document.getElementById('searchInput');
+const episodeDiv = document.getElementById('episodes');
+let currentRows = [];
+
+// Robust CSV parser
+function parseCSV(text) {
+  const rows = [];
+  const lines = text.split(/\r?\n/);
+  for (let line of lines) {
+    if (!line.trim()) continue; // skip empty lines
+    let values = [];
+    let value = '';
+    let inQuotes = false;
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      if (char === '"') {
+        if (inQuotes && line[i+1] === '"') { value += '"'; i++; } 
+        else { inQuotes = !inQuotes; }
+      } else if (char === ',' && !inQuotes) { 
+        values.push(value.trim()); 
+        value = ''; 
+      } else { 
+        value += char; 
+      }
+    }
+    values.push(value.trim());
+    // skip completely empty rows
+    if (values.every(v => v === '')) continue;
+    rows.push(values);
+  }
+  return rows;
+}
+
+function renderTable(rows) {
+  if (!rows || rows.length < 1) {
+    episodeDiv.textContent = 'No data to display.';
+    episodeDiv.classList.remove('hidden');
+    return;
+  }
+
+  const table = document.createElement('table');
+  const headers = rows[0];
+
+  // THEAD
+  const thead = document.createElement('thead');
+  const trHead = document.createElement('tr');
+  headers.forEach(h => {
+    const th = document.createElement('th');
+    th.textContent = h;
+    trHead.appendChild(th);
+  });
+  thead.appendChild(trHead);
+  table.appendChild(thead);
+
+  // TBODY
+  const tbody = document.createElement('tbody');
+  for (let i = 1; i < rows.length; i++) {
+    const row = rows[i];
+    if (!row || row.length === 0) continue; // skip empty/malformed row
+    const tr = document.createElement('tr');
+    headers.forEach((header, idx) => {
+      const td = document.createElement('td');
+      const cell = row[idx] || '';
+      if (header.toLowerCase().includes('url') && cell) {
+        const a = document.createElement('a');
+        a.href = cell;
+        a.target = '_blank';
+        a.textContent = 'Link';
+        td.appendChild(a);
+      } else {
+        td.textContent = cell;
+      }
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  }
+  table.appendChild(tbody);
+
+  episodeDiv.innerHTML = '';
+  episodeDiv.appendChild(table);
+  episodeDiv.classList.remove('hidden');
+}
+
+function loadCSV(filename) {
+  fetch(`./csv/${filename}`)
+    .then(response => {
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      return response.text();
+    })
+    .then(text => {
+      const rows = parseCSV(text);
+      if (!rows || rows.length < 2) {
+        episodeDiv.textContent = 'No episodes found in this CSV.';
+        episodeDiv.classList.remove('hidden');
+        return;
+      }
+      currentRows = rows;
+      renderTable(rows);
+      searchInput.classList.remove('hidden');
+      searchInput.previousElementSibling.classList.remove('hidden'); // show label
+    })
+    .catch(err => {
+      episodeDiv.textContent = `Error loading ${filename}: ${err}`;
+      episodeDiv.classList.remove('hidden');
+    });
+}
+
+// Initial load
+loadCSV(datasetSelect.value);
+
+// Dataset change
+datasetSelect.addEventListener('change', () => {
+  loadCSV(datasetSelect.value);
+});
+
+// Search/filter
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase();
+  const filtered = currentRows.filter((row, idx) => {
+    if (idx === 0) return true; // always include header
+    return row && row.some(cell => (cell || '').toLowerCase().includes(query));
+  });
+  renderTable(filtered);
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

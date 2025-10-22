@@ -1,27 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Berean Bible College</title>
-  <link rel="stylesheet" href="css/base.css">
+  <style>
+    /* --- Reset & Body --- */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+      background: black;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background-image: url("https://cdn.shopify.com/s/files/1/0754/3570/4578/files/Jesus_figure_holding_boys_hand_in_fog.png?v=1746574956");
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 3% 5%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0 0 1rem 0;
+    }
+
+    .callout, .subtitle {
+      font-size: 1rem;
+      line-height: 1.2;
+      margin: 0.2rem 0;
+      max-width: 300px;
+    }
+
+    .subtitle {
+      font-style: italic;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-top: 1rem;
+    }
+
+    .links a {
+      font-size: 1rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      color: #D4AF37;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .callout, .subtitle, .links a { font-size: 0.9rem; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.8rem; }
+      .callout, .subtitle, .links a { font-size: 0.85rem; }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <img src="images/new_Temple_sharpened.png" alt="Temple Icon" class="temple-icon">
-  <h1>Berean Bible College</h1>
-</header>
+  <div class="hero">
+    <h1>Berean Bible College</h1>
 
-<section class="landing-background">
-  <img src="images/Christ holding boy's hand.png" alt="Jesus Boy" class="landing-img">
-  <div class="landing-text">
-    <h2>Welcome to Berean Bible College</h2>
-    <p>Study the Bible with clarity and depth.</p>
+    <div class="callout">
+      <p>While we await the return of our King, we walk hand-in-hand with our Savior.</p>
+    </div>
+    <div class="subtitle">Jesus came. He's coming again…to stay!</div>
+
+    <div class="links">
+      <a href="news.html">News</a>
+      <a href="bible/index.html">Bible</a>
+      <a href="prayer.html">Prayer</a>
+      <a href="store.html">Store</a>
+      <a href="eden.html">Eden</a>
+    </div>
   </div>
-</section>
-
-  <footer>
-    <p>&copy; 2025 Berean Bible College</p>
-  </footer>
 </body>
 </html>
+
+
 

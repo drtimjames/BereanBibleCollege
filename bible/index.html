@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Berean Bible College — Bible</title>
+  <style>
+    html,body{margin:0;padding:0;height:100%;font-family:'Helvetica Neue',Helvetica,Arial,serif;background:black;color:#fff}
+    .hero{
+      width:100%;height:100vh;position:relative;
+      background-image:url("https://cdn.shopify.com/s/files/1/0754/3570/4578/files/Jesus_figure_holding_boys_hand_in_fog.png?v=1746574956");
+      background-size:cover;background-position:center top;background-repeat:no-repeat;
+      display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;padding:3% 5%;box-sizing:border-box;overflow:hidden;
+    }
+    .hero h1{font-size:2.5rem;margin:0 0 1rem 0}
+    .callout,.subtitle{font-size:1rem;line-height:1.2;margin:0.2rem 0;max-width:300px}
+    .subtitle{font-style:italic}
+    .links{display:flex;flex-direction:column;gap:.3rem;margin-top:1rem}
+    .links a{font-size:1rem;color:white;text-decoration:none}
+    .links a:hover{color:#D4AF37}
+
+    .logo-stack{position:absolute;bottom:20px;left:20px;display:flex;flex-direction:column;gap:8px;align-items:flex-start;z-index:10}
+    .logo-row{display:flex;gap:15px;align-items:center}
+    .logo-row img{display:block;height:50px;width:auto}
+    .ucsvm-row{display:flex;gap:12px;align-items:center}
+    .ucsvm-row img{display:block;height:40px}
+    .ucsvm-text{color:white;font-size:1rem;white-space:nowrap}
+
+    @media (max-width:768px){
+      .hero h1{font-size:2rem}
+      .callout,.subtitle,.links a{font-size:.9rem}
+      .logo-row img{height:40px}
+      .ucsvm-row img{height:30px}
+      .ucsvm-text{font-size:.9rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Berean Bible College</h1>
+
+    <div class="callout">
+      <p>While we await the return of our King, we walk hand-in-hand with our Savior.</p>
+    </div>
+    <div class="subtitle">Jesus came. He's coming again…to stay!</div>
+
+    <div class="links">
+      <a href="news.html">News</a>
+      <a href="bible/library.html">Bible</a>
+      <a href="prayer.html">Prayer</a>
+      <a href="store.html">Store</a>
+      <a href="eden.html">Eden</a>
+    </div>
+
+    <div class="logo-stack">
+      <div class="logo-row">
+        <img src="../images/logos.png" alt="Logos">
+        <img src="../images/biblehub.png" alt="BibleHub">
+      </div>
+      <div class="ucsvm-row">
+        <img src="../images/ucsvm.png" alt="UCSVM">
+        <div class="ucsvm-text">Universal Christian Scripture Verification Module</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
