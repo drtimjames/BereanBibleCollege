@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Berean Bible College — Bookstore</title>
+<style>
+  body {margin:0; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; background:white; color:#111;}
+  header {text-align:center; padding:20px 0; border-bottom:2px solid #ddd;}
+  header img {width:80px; height:auto; display:block; margin:0 auto 10px;}
+  header h1 {font-size:28px; margin:0; color:#002147;}
+  nav {display:flex; justify-content:center; gap:25px; padding:10px 0; border-bottom:1px solid #ccc;}
+  nav a {color:#002147; text-decoration:none; font-weight:bold;}
+  
+  .content {display:grid; grid-template-columns:250px 1fr; gap:20px; padding:20px; max-width:1200px; margin:0 auto;}
+  .sidebar {border-right:2px solid #ccc; padding-right:10px;}
+  .main {padding-left:20px;}
+
+  .book-card {
+    display:flex; 
+    border:1px solid #ccc; 
+    margin-bottom:15px; 
+    padding:8px; 
+    background:white; 
+    align-items:flex-start; 
+    gap:10px;
+  }
+  .book-card img {width:90px; height:auto; flex-shrink:0;}
+  .book-info {flex:1;}
+  .book-info h3 {margin:0; font-size:1rem; color:#002147;}
+  .book-info p {margin:3px 0; font-size:0.9rem;}
+  .buttons {margin-top:5px; display:flex; gap:5px;}
+  .buttons a {
+    background:#228B22; 
+    color:white; 
+    padding:4px 8px; 
+    text-decoration:none; 
+    font-size:0.8rem; 
+    border-radius:4px; 
+    transition:0.3s;
+  }
+  .buttons a:hover {background:#32CD32; color:black;}
+  .sidebar iframe {width:100%; height:150px; border:none; margin-bottom:15px;}
+  .author-section {margin-bottom:35px;}
+  h2.author-name {color:#002147; margin-top:25px;}
+  footer {text-align:center; padding:15px; color:#555; border-top:1px solid #ccc; margin-top:30px;}
+  
+  @media (max-width:768px) {
+    .content {grid-template-columns:1fr;}
+    .sidebar {border-right:none; padding-right:0;}
+    .main {padding-left:0;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <img src="../images/new_Temple_sharpened.png" alt="Temple Logo">
+  <h1>Berean Bible College</h1>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="news.html">News</a>
+  <a href="prayer.html">Prayer</a>
+  <a href="store.html">Store</a>
+  <a href="eden.html">Eden</a>
+</nav>
+
+<div class="content">
+  <div class="sidebar">
+    <h3 style="color:#002147">Featured Lessons</h3>
+    <iframe src="https://www.youtube.com/embed/sjQiZOQfWB0" title="YouTube video 1"></iframe>
+    <iframe src="https://www.youtube.com/embed/eGzprqZfw3U" title="YouTube video 2"></iframe>
+    <iframe src="https://www.youtube.com/embed/_7watmvWVN4" title="YouTube video 3"></iframe>
+  </div>
+
+  <div class="main">
+
+    <!-- ===== Author: Dr. Tim James ===== -->
+    <div class="author-section" id="James">
+      <h2 class="author-name">Dr. Tim James</h2>
+
+      <!-- ===== Book Cards ===== -->
+      <div class="book-card">
+        <img src="../images/presuppositions-2025.jpg" alt="Presuppositions">
+        <div class="book-info">
+          <h3>Presuppositions</h3>
+          <p>Recovering the Biblical Worldview of God's Redemptive Plan.</p>
+          <div class="buttons">
+            <a href="https://www.amazon.com/dp/HardcoverASIN" target="_blank">Hardcover</a>
+            <a href="https://www.amazon.com/dp/PaperbackASIN" target="_blank">Paperback</a>
+            <a href="https://www.amazon.com/dp/KindleASIN" target="_blank">Kindle</a>
+          </div>
+          <p><a href="../docs/presuppositions_toc.pdf" target="_blank">TOC PDF</a></p>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img src="../images/tree-of-life-2025.jpg" alt="Tree of Life">
+        <div class="book-info">
+          <h3>Tree of Life</h3>
+          <p>The Spirit of God from Eden to Paradise to New Jerusalem.</p>
+          <div class="buttons">
+            <a href="https://www.amazon.com/dp/HardcoverASIN" target="_blank">Hardcover</a>
+            <a href="https://www.amazon.com/dp/PaperbackASIN" target="_blank">Paperback</a>
+            <a href="https://www.amazon.com/dp/KindleASIN" target="_blank">Kindle</a>
+          </div>
+          <p><a href="../docs/tree_of_life_toc.pdf" target="_blank">TOC PDF</a></p>
+        </div>
+      </div>
+
+      <!-- Additional placeholders for easy drop-in -->
+      <div class="book-card"><img src="../images/placeholder.jpg" alt="Book Cover"><div class="book-info"><h3>Book Title</h3><p>Brief 1-line description here.</p><div class="buttons"><a href="#">Hardcover</a><a href="#">Paperback</a><a href="#">Kindle</a></div><p><a href="#">TOC PDF</a></p></div></div>
+      <div class="book-card"><img src="../images/placeholder.jpg" alt="Book Cover"><div class="book-info"><h3>Book Title</h3><p>Brief 1-line description here.</p><div class="buttons"><a href="#">Hardcover</a><a href="#">Paperback</a><a href="#">Kindle</a></div><p><a href="#">TOC PDF</a></p></div></div>
+      <div class="book-card"><img src="../images/placeholder.jpg" alt="Book Cover"><div class="book-info"><h3>Book Title</h3><p>Brief 1-line description here.</p><div class="buttons"><a href="#">Hardcover</a><a href="#">Paperback</a><a href="#">Kindle</a></div><p><a href="#">TOC PDF</a></p></div></div>
+      <div class="book-card"><img src="../images/placeholder.jpg" alt="Book Cover"><div class="book-info"><h3>Book Title</h3><p>Brief 1-line description here.</p><div class="buttons"><a href="#">Hardcover</a><a href="#">Paperback</a><a href="#">Kindle</a></div><p><a href="#">TOC PDF</a></p></div></div>
+      <div class="book-card"><img src="../images/placeholder.jpg" alt="Book Cover"><div class="book-info"><h3>Book Title</h3><p>Brief 1-line description here.</p><div class="buttons"><a href="#">Hardcover</a><a href="#">Paperback</a><a href="#">Kindle</a></div><p><a href="#">TOC PDF</a></p></div></div>
+
+    </div>
+
+    <!-- ===== Example Author: C.S. Lewis ===== -->
+    <div class="author-section" id="Lewis">
+      <h2 class="author-name">C.S. Lewis</h2>
+
+      <div class="book-card"><img src="../images/placeholder.jpg" alt="Book Cover"><div class="book-info"><h3>Book Title</h3><p>Brief 1-line description here.</p><div class="buttons"><a href="#">Hardcover</a><a href="#">Paperback</a><a href="#">Kindle</a><a href="#">Audible</a></div><p><a href="#">TOC PDF</a></p></div></div>
+      <div class="book-card"><img src="../images/placeholder.jpg" alt="Book Cover"><div class="book-info"><h3>Book Title</h3><p>Brief 1-line description here.</p><div class="buttons"><a href="#">Hardcover</a><a href="#">Paperback</a><a href="#">Kindle</a><a href="#">Audible</a></div><p><a href="#">TOC PDF</a></p></div></div>
+      <div class="book-card"><img src="../images/placeholder.jpg" alt="Book Cover"><div class="book-info"><h3>Book Title</h3><p>Brief 1-line description here.</p><div class="buttons"><a href="#">Hardcover</a><a href="#">Paperback</a><a href="#">Kindle</a><a href="#">Audible</a></div><p><a href="#">TOC PDF</a></p></div></div>
+
+    </div>
+
+    <!-- More authors and books can be added here by copying author-section blocks -->
+
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Berean Bible College. All rights reserved.
+</footer>
+</body>
+</html>
+

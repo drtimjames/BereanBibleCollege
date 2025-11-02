@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vestibule Bookstore | Berean Bible College</title>
+<style>
+:root {
+  --green: #228B22;
+  --green-hover: #32CD32;
+  --muted: #555;
+  --text: #111;
+  --sidebar: 280px;
+  --max: 1200px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--text);
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding: 16px 0 10px;
+}
+
+header img {
+  width: 90px;
+  height: auto;
+  display: block;
+  margin: 0 auto 4px;
+}
+
+header h1 {
+  margin: 4px 0;
+  font-size: 22px;
+}
+
+header h2 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--green);
+}
+
+.ticker {
+  max-width: var(--max);
+  margin: 8px auto;
+  padding: 4px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker p {
+  display: inline-block;
+  animation: scroll 18s linear infinite;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+@keyframes scroll {
+  from {transform: translateX(100%);}
+  to {transform: translateX(-100%);}
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: var(--sidebar) 1fr;
+  gap: 18px;
+  max-width: var(--max);
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #eee;
+  padding-right: 12px;
+}
+
+.cameo img {
+  width: 160px;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.author-name {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.bio {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.enter-btn {
+  display: block;
+  background: var(--green);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: auto;
+}
+
+.enter-btn:hover {
+  background: var(--green-hover);
+  color: #000;
+}
+
+main {
+  padding-bottom: 30px;
+  max-height: 720px; /* limits vestibule scroll */
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.book {
+  display: flex;
+  gap: 14px;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 14px 0;
+  align-items: flex-start;
+}
+
+.book img {
+  width: 120px;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.info {
+  flex: 1;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  margin: 4px 0 6px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 10px;
+  text-align: center;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.btn:hover {
+  background: var(--green-hover);
+  color: #000;
+}
+
+.toc {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.toc:hover {
+  text-decoration: underline;
+  color: var(--text);
+}
+
+.note {
+  font-size: 14px;
+  margin-top: 8px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+@media(max-width:850px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+  aside {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+  }
+  main {
+    max-height: none;
+  }
+  .book {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="../images/new_Temple_sharpened.png" alt="Temple logo">
+  <h1>Vestibule Bookstore</h1>
+  <h2>Berean Bible College</h2>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../bible/index.html">Bible</a>
+    <a href="../prayer/index.html">Prayer</a>
+    <a href="../eden/index.html">Eden</a>
+    <a href="../news/index.html">News</a>
+  </nav>
+</header>
+
+<div class="ticker">
+  <p>Featured Author — Dr. Tim James • Presuppositions • Tree of Life • Day of the Lord Vol 1 & 2 • Support Berean Bible College Research</p>
+</div>
+
+<div class="wrap">
+  <!-- Sidebar -->
+  <aside>
+    <div class="cameo">
+      <img src="../images/dr-tim-james/dr-tim-james-author.jpg" alt="Dr. Tim James, Author">
+    </div>
+    <div class="author-name">Dr. Tim James</div>
+    <div class="bio">
+      Author, researcher, and Bible teacher devoted to uncovering the prophetic structure of Scripture and clarifying the true meaning of the Day of the Lord.
+    </div>
+    <a class="enter-btn" href="inner-bookstore.html">Enter Full Bookstore ›</a>
+  </aside>
+
+  <!-- Main featured books -->
+  <main>
+    <div class="book">
+      <img src="../images/dr-tim-james/james-dr-tim-presuppositions-2025-9798282544145.jpg" alt="Presuppositions">
+      <div class="info">
+        <div class="title">Presuppositions</div>
+        <div class="subtitle">Recovering the Biblical Worldview of God's Redemptive Plan</div>
+        <div class="buttons">
+          <a class="btn" href="#">Paperback</a>
+          <a class="btn" href="#">Kindle</a>
+        </div>
+        <a class="toc" href="#">📄 Table of Contents</a>
+        <div class="note">Foundational guide to dismantling false assumptions and re-anchoring theology in the Hebraic worldview of Scripture.</div>
+      </div>
+    </div>
+
+    <div class="book">
+      <img src="../images/dr-tim-james/james-dr-tim-tree-of-life-2025-9798282544152.jpg" alt="Tree of Life">
+      <div class="info">
+        <div class="title">Tree of Life</div>
+        <div class="subtitle">Unveiling Sheol, Paradise, and the Divine Plan</div>
+        <div class="buttons">
+          <a class="btn" href="#">Paperback</a>
+          <a class="btn" href="#">Kindle</a>
+        </div>
+        <a class="toc" href="#">📄 Table of Contents</a>
+        <div class="note">Explores biblical eschatology, Sheol’s Paradise, and the restoration of God’s plan on Earth.</div>
+      </div>
+    </div>
+
+    <!-- Add one or two more featured books here if needed -->
+  </main>
+</div>
+
+<footer style="text-align:center;padding:14px 0;border-top:1px solid #eee;color:var(--muted);font-size:13px">
+  As an Amazon Associate, Berean Bible College earns from qualifying purchases.
+</footer>
+
+</body>
+</html>
