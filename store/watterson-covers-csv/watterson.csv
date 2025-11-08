@@ -1,0 +1,13 @@
+AuthorLast,AuthorInit,Title,Subtitle,CoverLink,TOCLink,AmazonHardback,AmazonPaperback,AmazonKindlewatt
+
+Watterson,B,The Complete Calvin and Hobbes,Book Set,0740748475,9780740748479 H,1449433251,9781449433253 P
+
+
+See Children's Library: children-covers-csv/watterson,b re: Calvin & Hobbs
+
+<!-- ===== Author 5: Bill Watterson ===== -->
+
+    <div class="author-section" id="Watterson">
+      <h2 class="author-name">Watterson, Bill</h2>
+      <p style="color:#555; font-style:italic;">Books coming soon... Use CSV generator to populate this section.</p>
+    </div>

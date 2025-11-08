@@ -1,4 +1,31 @@
-AuthorLast,AuthorInit,Title,Subtitle,CoverLink,TOCLink,Genre,Category,Textbook,AmazonHardback,AmazonPaperback,AmazonKindle
-Heiser,M S,The Unseen Realm,Recovering the Supernatural Worldview of the Bible,heiser-m-s-unseen-realm-9781577995574.jpg,Unseen Realm-TOC.pdf,Theology,Divine Council,Yes,https://www.amazon.com/dp/1577995570/?tag=themissiontod-20,,
-James,Dr. T,Tree of Life,The Spirit of God from Eden to Paradise to New Jerusalem,james-dr-tim-tree-of-life-2025-9798285942238.jpg,Tree of Life-TOC.pdf,Theology,Creation & Eden,Yes,https://www.amazon.com/dp/B0FBKDKRZM/?tag=themissiontod-20,https://www.amazon.com/dp/B0FB8GP9JG/?tag=themissiontod-20,
-James,Dr. T,The Day of the Lord Vol 2,The Book of Revelation,james-dr-tim-day-of-the-lord-v2-2025-9798263713393.jpg,The Day of the Lord Vol 2-TOC.pdf,Theology,Eschatology,Yes,https://www.amazon.com/dp/B0FPRLC8SJ/?tag=themissiontod-20,https://www.amazon.com/dp/B0FPLSWL3W/?tag=themissiontod-20,
+AuthorLast,AuthorInit,Title,Subtitle,CoverLink,TOCLink,AmazonHardback,AmazonPaperback,AmazonKindle
+
+Lewis,CS,The C. S. Lewis Signature Classics (8-Volume Box Set),"An Anthology of 8 C. S. Lewis Titles: Mere Christianity, The Screwtape Letters, The Great Divorce, The Problem of Pain, Miracles, A Grief Observed, The Abolition of Man, and The Four Loves",0062572563,9780060244880 P,
+
+Lewis,CS,The Chronicles of Narnia (Box Set),This timeless box set makes the perfect gift and includes all seven titles in the must-read Chronicles of Narnia series—The Magician's Nephew; The Lion, the Witch and the Wardrobe; The Horse and His Boy; Prince Caspian; The Voyage of the Dawn Treader; The Silver Chair; and The Last Battle.,0060244887,9780060244880 H,
+
+Lewis,CS,How to Be a Christian,006284993X,9780062849939 H,0008307172,9780008307172 P,B075WR7R11,9780062849953 K
+
+Lewis,CS,How to Pray,0062847139, 9780062847133 H,B075QC7GZY,9780062847140 K
+
+Lewis,CS,Abolition of Man,1609422686,9781609422684 H, B0FTYZ5J5W,9798268499353 P,B0F1QRFPK2,9781916700734 K
+
+Lewis,CS,Space Trilogy,Three books in One: Lewis's first science fiction novel. Elwin Ransom, a Cambridge academic, is on a walking holiday in rural England, when he is abducted, to the planet of Malacandra (Mars), where he and his kidnappers encounter intelligent beings, of more than one species. Interesting events ensue, for good and for ill. Titles include: Out of the Silent Planet, Perelandra, and The Hidden Strength. The story which began on Mars and was continued on Venus comes to its conclusion on Earth.,B00ZAT776G,9781451664829 P,B0F9R3CP69,9781916700789 K
+
+Lewis,CS,Surprised by Joy,The Shape of My Early Life,0151001855,9780151001859 H,0062565435,9780062565433 P,B01EFM8NKC,9780062565440 K
+
+Lewis,CS,"The Lion, The Witch, and the Wardrobe",0063435136,9780063435131 H,0064404994,9780064404990 P,B001I45UFC,9780061974151 K
+
+Lewis,CS,Mere Christianity,006344397X,9780063443976 H,0060652926,9780060652920 P,B002BD2UR0,9780061947438 K
+
+Lewis,CS,The C.S. Lewis Collection,Signature Classics and Other Major Works: The Eleven Titles Include: Mere Christianity, The Screwtape Letters, The Great Divorce, The Problem of Pain, Miracles, A Grief Observed, The Abolition of Man, The Four Loves, Reflections on the Psalms, Surprised by Joy, and Letters to Malcolm.,B01HXK8LNM,9780062663283 K
+
+Lewis,CS,The Screwtape Letters,0062023179,9780062023179 H,B00CD36FH4,9780062299086 K
+
+Lewis,CS,C.S. Lewis Signature Classics (8-Set),0062572555,9780062572554 H,0062572547,9780062572547 P
+
+Lewis,CS,Made For Heaven,And Why on Earth It Matters,0060766921,9780060766924 H,B002BXH62Y,9780061949364 K
+
+Lewis,CS,Virtue and Vice,A Dictionary of the Good Life,    B01HCAA1LI,B002BY77FE,9780061950209 K
+
+Lewis,CS,What Christians Believe,0060761539,9780060761530 H,0063455269,9780063455269 P,B002BY77AY,9780061950353 K

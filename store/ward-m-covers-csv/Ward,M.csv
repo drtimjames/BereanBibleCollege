@@ -1,4 +1,20 @@
 AuthorLast,AuthorInit,Title,Subtitle,CoverLink,TOCLink,Genre,Category,Textbook,AmazonHardback,AmazonPaperback,AmazonKindle
-Heiser,M S,The Unseen Realm,Recovering the Supernatural Worldview of the Bible,heiser-m-s-unseen-realm-9781577995574.jpg,Unseen Realm-TOC.pdf,Theology,Divine Council,Yes,https://www.amazon.com/dp/1577995570/?tag=themissiontod-20,,
-James,Dr. T,Tree of Life,The Spirit of God from Eden to Paradise to New Jerusalem,james-dr-tim-tree-of-life-2025-9798285942238.jpg,Tree of Life-TOC.pdf,Theology,Creation & Eden,Yes,https://www.amazon.com/dp/B0FBKDKRZM/?tag=themissiontod-20,https://www.amazon.com/dp/B0FB8GP9JG/?tag=themissiontod-20,
-James,Dr. T,The Day of the Lord Vol 2,The Book of Revelation,james-dr-tim-day-of-the-lord-v2-2025-9798263713393.jpg,The Day of the Lord Vol 2-TOC.pdf,Theology,Eschatology,Yes,https://www.amazon.com/dp/B0FPRLC8SJ/?tag=themissiontod-20,https://www.amazon.com/dp/B0FPLSWL3W/?tag=themissiontod-20,
+
+Ward,M,Planet Narnia: The Seven Heavens in the Imagination of C. S. Lewis,Scholars have labored to show that C. S. Lewis's famed but apparently disorganized Chronicles of Narnia have an underlying symbolic coherence. Ward reveals how the Narnia stories were designed to express the characteristics of the seven medieval planets - Jupiter, Mars, Sol, Luna, Mercury, Venus, and Saturn - planets that Lewis described as "spiritual symbols of permanent value" and "especially worthwhile in our own generation." The cosmological theme of each Chronicle is what Lewis called 'the kappa element in romance', the atmospheric essence of a story, everywhere present but nowhere explicit. The reader inhabits this atmosphere and thus imaginatively gains connaître knowledge of the spiritual character which the tale was created to embody.,0195313879,9780195313871 H,019973870X,9780199738700 P,B000SKMOMY,9780199740932 K
+
+
+If interested, here...
+
+<!-- Planet Narnia -->
+  <div class="book-card">
+    <img src="covers-csv/.jpg" alt="Planet Narnia">
+    <div class="book-info">
+      <h3>Planet Narnia</h3>
+      <p class="subtitle">The Seven Heavens in the Imagination of C. S. Lewis</p>
+      <div class="buttons">
+        <a href="https://www.amazon.com/dp/?tag=themissiontod-20" target="_blank" rel="noopener noreferrer">Paperback</a>
+        <a href="https://www.amazon.com/dp/?tag=themissiontod-20" target="_blank" rel="noopener noreferrer">Kindle</a>
+      </div>
+      <a class="toc-link" href="[folder-name]/[Book-Title-TOC].pdf" target="_blank" rel="noopener noreferrer">📄 Table of Contents</a>
+    </div>
+  </div>
