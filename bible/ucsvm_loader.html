@@ -23,14 +23,11 @@
 
 <label for="datasetSelect">Select Dataset:</label>
 <select id="datasetSelect">
-  <option value="">Select Dataset</option>
-  <option value="Ask-Wright-Anything_226.csv">Ask-Wright-Anything_226.csv</option>
-  <option value="FAI-End-Times_15.csv">FAI-End-Times_15.csv</option>
-  <option value="FAI-RE-Saints_38.csv">FAI-RE-Saints_38.csv</option>
-  <option value="Mrn-Daniel_12.csv">Mrn-Daniel_12.csv</option>
-  <option value="NB-Heiser_479.csv">NB-Heiser_479.csv</option>
+  <option value="">-- Select a Dataset --</option>
+  <option value="Ask-Wright-Anything_226.csv">Ask Wright Anything (226 episodes)</option>
+  <option value="NB-Heiser_479.csv">Naked Bible - Dr. Heiser (479 episodes)</option>
+  <option value="Revelation_88.csv">Revelation Study (88 episodes)</option>
 </select>
-
 
 <br>
 <label for="searchInput" class="hidden">Search:</label>
@@ -124,6 +121,14 @@ function renderTable(rows) {
 }
 
 function loadCSV(filename) {
+  if (!filename) {
+    episodeDiv.innerHTML = '';
+    episodeDiv.classList.add('hidden');
+    searchInput.classList.add('hidden');
+    searchInput.previousElementSibling.classList.add('hidden');
+    return;
+  }
+  
   fetch(`./csv/${filename}`)
     .then(response => {
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -146,9 +151,6 @@ function loadCSV(filename) {
       episodeDiv.classList.remove('hidden');
     });
 }
-
-// Initial load
-loadCSV(datasetSelect.value);
 
 // Dataset change
 datasetSelect.addEventListener('change', () => {
