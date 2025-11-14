@@ -1,0 +1,618 @@
+A<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Veterans Application for Admission — Berean Bible College</title>
+<style>
+  body {margin:0; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; background:#f5f5f5; color:#333;}
+  .container {max-width:900px; margin:40px auto; background:white; padding:40px; border:1px solid #ddd; border-radius:8px;}
+  
+  header {text-align:center; margin-bottom:40px; padding-bottom:20px; border-bottom:2px solid #ccc;}
+  header img {width:80px; height:auto; margin:0 auto 10px;}
+  header h1 {font-size:28px; color:#002147; margin:10px 0;}
+  header p {color:#555; font-size:14px;}
+  
+  .veteran-banner {background:white; border:2px solid #ccc; color:#333; padding:25px; text-align:center; margin-bottom:30px; border-radius:8px;}
+  .veteran-banner h2 {color:#002147; font-size:24px; margin:0 0 10px 0;}
+  .veteran-banner p {font-size:16px; margin:5px 0;}
+  
+  h2 {color:#002147; font-size:22px; margin-top:35px; margin-bottom:20px; border-bottom:2px solid #ccc; padding-bottom:8px;}
+  h3 {color:#002147; font-size:18px; margin-top:25px; margin-bottom:15px;}
+  
+  .section {margin-bottom:30px;}
+  
+  label {display:block; font-weight:bold; color:#002147; margin-bottom:5px; margin-top:15px;}
+  input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+    width:100%; 
+    padding:10px; 
+    border:1px solid #ccc; 
+    border-radius:4px; 
+    font-size:14px; 
+    font-family:inherit;
+    box-sizing:border-box;
+  }
+  textarea {min-height:120px; resize:vertical;}
+  
+  .row {display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  
+  .checkbox-group {margin:15px 0;}
+  .checkbox-group label {display:inline; font-weight:normal; margin-left:8px;}
+  .checkbox-group input[type="checkbox"] {width:auto; margin-right:5px;}
+  
+  .info-box {background:#f0f8ff; border-left:4px solid #99b3cc; padding:20px; margin:25px 0; border-radius:5px;}
+  .info-box p {margin:10px 0; line-height:1.7;}
+  
+  .military-box {background:#f5f5f5; border:2px solid #ccc; color:#333; padding:25px; margin:25px 0; border-radius:5px;}
+  .military-box h3 {color:#002147; margin-top:0;}
+  .military-box p {line-height:1.8; margin:10px 0;}
+  .military-box ul {margin-left:20px; margin-top:10px; line-height:1.9;}
+  
+  .warning-box {background:#fff8dc; border:2px solid:#002147; padding:20px; margin:25px 0; border-radius:5px;}
+  .warning-box strong {color:#002147;}
+  
+  .gi-bill-box {background:white; border:2px solid #ccc; color:#333; padding:30px; margin:30px 0; border-radius:8px;}
+  .gi-bill-box h3 {color:#002147; margin-top:0; font-size:20px;}
+  .gi-bill-box ul {margin-left:20px; margin-top:15px; line-height:2;}
+  
+  .submit-section {background:white; border:2px solid #ccc; color:#333; padding:30px; text-align:center; margin-top:40px; border-radius:8px;}
+  .submit-section h2 {color:#002147; border:none; margin-top:0;}
+  .submit-section p {font-size:15px; line-height:1.7; margin-bottom:20px;}
+  
+  button {background:#228B22; color:white; padding:15px 40px; border:none; border-radius:5px; font-size:16px; font-weight:bold; cursor:pointer; transition:0.3s;}
+  button:hover {background:#32CD32;}
+  
+  footer {text-align:center; margin-top:40px; padding-top:20px; border-top:1px solid #ddd; color:#777; font-size:13px;}
+  
+  @media (max-width:768px) {
+    .container {padding:20px;}
+    .row {grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+  <header>
+    <img src="../new_Temple_sharpened.jpg" alt="Berean Bible College Logo">
+    <h1>🎖️ VETERANS APPLICATION FOR ADMISSION</h1>
+    <p>Berean Bible College — Missionary Training Institute</p>
+  </header>
+  
+  <div class="veteran-banner">
+    <h2>From the Battlefield to the Mission Field</h2>
+    <p>Thank you for your service. Your next mission awaits.</p>
+  </div>
+  
+  <div class="military-box">
+    <h3>Why Berean is Perfect for Veterans</h3>
+    <ul>
+      <li><strong>Your deployment experience</strong> counts toward our cross-cultural prerequisite</li>
+      <li><strong>Your security training</strong> prepares you for hostile mission fields</li>
+      <li><strong>Your discipline</strong> thrives in our intensive year-round program</li>
+      <li><strong>Your GI Bill</strong> covers tuition - graduate debt-free</li>
+    </ul>
+    <p style="margin-top:20px; font-size:16px;"><strong>We recognize that military service has uniquely prepared you for missionary work. This application reflects modified prerequisites for veterans.</strong></p>
+  </div>
+  
+  <div class="gi-bill-box">
+    <h3>💰 Use Your GI Bill Benefits at Berean</h3>
+    <p>Berean Bible College is approved for VA education benefits. Your Post-9/11 GI Bill covers:</p>
+    <ul>
+      <li>✓ <strong>Full tuition</strong> for 3-year program</li>
+      <li>✓ <strong>Monthly housing allowance</strong> (BAH rate based on location)</li>
+      <li>✓ <strong>Books & supplies stipend</strong> ($1,000/year)</li>
+      <li>✓ <strong>Graduate completely debt-free</strong></li>
+    </ul>
+    <p style="margin-top:20px;">Questions about GI Bill? Contact our Veterans Certifying Official at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb8d9e8f9e899a9588bb999e899e9a95999299979e989497979e9c9ed59e9f8e">[email&#160;protected]</a></p>
+  </div>
+  
+  <form id="veteransApplicationForm" method="post" action="/submit-veterans-application">
+    
+    <!-- SECTION 1: PERSONAL INFORMATION -->
+    <h2>Section 1: Personal Information</h2>
+    
+    <div class="section">
+      <div class="row">
+        <div>
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div>
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="middleName">Middle Name</label>
+          <input type="text" id="middleName" name="middleName">
+        </div>
+        <div>
+          <label for="preferredName">Preferred Name</label>
+          <input type="text" id="preferredName" name="preferredName">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="dob">Date of Birth *</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+        <div>
+          <label for="gender">Gender *</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+      
+      <label for="address">Street Address *</label>
+      <input type="text" id="address" name="address" required>
+      
+      <div class="row">
+        <div>
+          <label for="city">City *</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+        <div>
+          <label for="state">State *</label>
+          <input type="text" id="state" name="state" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="zip">Zip Code *</label>
+          <input type="text" id="zip" name="zip" required>
+        </div>
+        <div>
+          <label for="country">Country *</label>
+          <input type="text" id="country" name="country" value="United States" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+    </div>
+    
+    <!-- SECTION 2: MILITARY SERVICE -->
+    <h2>Section 2: Military Service</h2>
+    
+    <div class="section">
+      <label for="branch">Branch of Service *</label>
+      <select id="branch" name="branch" required>
+        <option value="">Select...</option>
+        <option value="army">U.S. Army</option>
+        <option value="navy">U.S. Navy</option>
+        <option value="airforce">U.S. Air Force</option>
+        <option value="marines">U.S. Marine Corps</option>
+        <option value="coastguard">U.S. Coast Guard</option>
+        <option value="spaceforce">U.S. Space Force</option>
+        <option value="national guard">National Guard</option>
+        <option value="reserves">Reserves</option>
+      </select>
+      
+      <div class="row">
+        <div>
+          <label for="rank">Rank at Discharge *</label>
+          <input type="text" id="rank" name="rank" placeholder="e.g., E-5, O-3" required>
+        </div>
+        <div>
+          <label for="mos">MOS/Rating/AFSC *</label>
+          <input type="text" id="mos" name="mos" placeholder="Military Occupational Specialty" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="enlistmentDate">Date of Enlistment/Commission *</label>
+          <input type="date" id="enlistmentDate" name="enlistmentDate" required>
+        </div>
+        <div>
+          <label for="dischargeDate">Date of Discharge/Separation *</label>
+          <input type="date" id="dischargeDate" name="dischargeDate" required>
+        </div>
+      </div>
+      
+      <label for="totalService">Total Years of Service *</label>
+      <input type="text" id="totalService" name="totalService" placeholder="e.g., 4 years, 6 months" required>
+      
+      <label for="dischargeType">Type of Discharge *</label>
+      <select id="dischargeType" name="dischargeType" required>
+        <option value="">Select...</option>
+        <option value="honorable">Honorable</option>
+        <option value="general">General (Under Honorable Conditions)</option>
+        <option value="medical">Medical</option>
+        <option value="other">Other (explain below)</option>
+      </select>
+      
+      <label for="deployments">Deployment History *</label>
+      <textarea id="deployments" name="deployments" rows="5" placeholder="List all deployments: location, dates, duration. Example: Iraq (Baghdad), Jan 2019 - Aug 2019, 7 months" required></textarea>
+      
+      <label for="combatExperience">Did you serve in a combat zone?</label>
+      <select id="combatExperience" name="combatExperience">
+        <option value="">Select...</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      
+      <label for="foreignLanguage">Foreign Language Training (if any)</label>
+      <textarea id="foreignLanguage" name="foreignLanguage" rows="3" placeholder="List any languages studied during military service and proficiency level (e.g., Arabic - DLPT 2/2, Pashto - Basic)"></textarea>
+      
+      <label for="militaryEducation">Military Training & Schools Completed</label>
+      <textarea id="militaryEducation" name="militaryEducation" rows="4" placeholder="List relevant military schools, certifications, special training (e.g., Combat Medic Course, Language School, Leadership Training)"></textarea>
+      
+      <label for="awards">Military Awards & Decorations</label>
+      <textarea id="awards" name="awards" rows="3" placeholder="List any medals, ribbons, or commendations received"></textarea>
+    </div>
+    
+    <!-- SECTION 3: VA EDUCATION BENEFITS -->
+    <h2>Section 3: VA Education Benefits</h2>
+    
+    <div class="section">
+      <label for="giBillEligibility">Are you eligible for Post-9/11 GI Bill benefits? *</label>
+      <select id="giBillEligibility" name="giBillEligibility" required>
+        <option value="">Select...</option>
+        <option value="yes-unused">Yes, I have not used any benefits</option>
+        <option value="yes-partial">Yes, I have used some benefits</option>
+        <option value="yes-transferred">Yes, benefits transferred from family member</option>
+        <option value="no">No</option>
+        <option value="unsure">Unsure</option>
+      </select>
+      
+      <label for="benefitsRemaining">Approximately how many months of GI Bill benefits do you have remaining?</label>
+      <input type="text" id="benefitsRemaining" name="benefitsRemaining" placeholder="e.g., 36 months (full benefits)">
+      
+      <label for="coe">Do you have a Certificate of Eligibility (COE) from the VA?</label>
+      <select id="coe" name="coe">
+        <option value="">Select...</option>
+        <option value="yes">Yes, I have my COE</option>
+        <option value="no-applied">No, but I have applied for it</option>
+        <option value="no-notapplied">No, I have not applied yet</option>
+      </select>
+      
+      <label for="vaFile">VA File Number (if known)</label>
+      <input type="text" id="vaFile" name="vaFile" placeholder="Also called claim number or SSN">
+      
+      <label for="yellowRibbon">Are you interested in Yellow Ribbon Program benefits (if applicable)?</label>
+      <select id="yellowRibbon" name="yellowRibbon">
+        <option value="">Select...</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="unsure">Need more information</option>
+      </select>
+      
+      <p style="margin-top:20px; font-size:14px; color:#555;"><em>Note: Our Veterans Certifying Official will help you navigate the GI Bill process if you are accepted.</em></p>
+    </div>
+    
+    <!-- SECTION 4: CHURCH & SPIRITUAL BACKGROUND -->
+    <h2>Section 4: Church & Spiritual Background</h2>
+    
+    <div class="section">
+      <label for="salvationDate">Approximate date of salvation (conversion to Christ) *</label>
+      <input type="text" id="salvationDate" name="salvationDate" placeholder="Month/Year or general timeframe" required>
+      
+      <label for="salvationStory">Briefly describe your conversion experience (250 words max) *</label>
+      <textarea id="salvationStory" name="salvationStory" rows="6" required></textarea>
+      
+      <label for="militaryFaith">How did your faith sustain you during military service?</label>
+      <textarea id="militaryFaith" name="militaryFaith" rows="5" placeholder="Share how your relationship with Christ developed or deepened during your time in the military"></textarea>
+      
+      <label for="churchName">Current Church Name *</label>
+      <input type="text" id="churchName" name="churchName" required>
+      
+      <div class="row">
+        <div>
+          <label for="churchCity">Church City *</label>
+          <input type="text" id="churchCity" name="churchCity" required>
+        </div>
+        <div>
+          <label for="churchState">Church State *</label>
+          <input type="text" id="churchState" name="churchState" required>
+        </div>
+      </div>
+      
+      <label for="pastorName">Pastor's Name *</label>
+      <input type="text" id="pastorName" name="pastorName" required>
+      
+      <label for="pastorEmail">Pastor's Email Address *</label>
+      <input type="email" id="pastorEmail" name="pastorEmail" required>
+      
+      <label for="churchInvolvement">Describe your involvement in your local church since leaving military service *</label>
+      <textarea id="churchInvolvement" name="churchInvolvement" rows="5" required></textarea>
+      
+      <label for="chaplainContact">If you worked with a military chaplain, may we contact them for reference?</label>
+      <textarea id="chaplainContact" name="chaplainContact" rows="3" placeholder="Chaplain name, contact information (optional)"></textarea>
+    </div>
+    
+    <!-- SECTION 5: EDUCATIONAL BACKGROUND -->
+    <h2>Section 5: Educational Background</h2>
+    
+    <div class="section">
+      <h3>High School</h3>
+      <label for="hsName">High School Name *</label>
+      <input type="text" id="hsName" name="hsName" required>
+      
+      <div class="row">
+        <div>
+          <label for="hsGradDate">Graduation Date *</label>
+          <input type="text" id="hsGradDate" name="hsGradDate" placeholder="Month/Year" required>
+        </div>
+        <div>
+          <label for="hsGPA">GPA (if available)</label>
+          <input type="text" id="hsGPA" name="hsGPA">
+        </div>
+      </div>
+      
+      <h3>College/University (if applicable)</h3>
+      <label for="collegeName">Institution Name</label>
+      <input type="text" id="collegeName" name="collegeName">
+      
+      <label for="collegeDegree">Degree Earned/In Progress</label>
+      <input type="text" id="collegeDegree" name="collegeDegree">
+      
+      <label for="collegeGradDate">Graduation Date (or expected)</label>
+      <input type="text" id="collegeGradDate" name="collegeGradDate" placeholder="Month/Year">
+      
+      <h3>Military Education</h3>
+      <label for="militaryCollegeCredit">Did you earn college credit through military training or correspondence courses?</label>
+      <textarea id="militaryCollegeCredit" name="militaryCollegeCredit" rows="3" placeholder="e.g., CLEP exams, JST transcript, military correspondence courses"></textarea>
+      
+      <p style="margin-top:20px; font-size:14px; color:#555;"><em>Note: Official transcripts from all institutions (including JST transcript) will be required if accepted.</em></p>
+    </div>
+    
+    <!-- SECTION 6: BIBLICAL LANGUAGE PROFICIENCY (PREREQUISITE - REQUIRED) -->
+    <h2>Section 6: Biblical Language Proficiency (PREREQUISITE - REQUIRED)</h2>
+    
+    <div class="warning-box">
+      <p><strong>REQUIRED PREREQUISITE FOR ALL APPLICANTS (INCLUDING VETERANS):</strong></p>
+      <p style="margin-top:10px;">You must have completed at least <strong>two semesters (one academic year)</strong> of Biblical Hebrew, Koine Greek, or Biblical Aramaic with a minimum grade of <strong>B (80%) or better</strong>.</p>
+      <p style="margin-top:10px;"><em>Note: Military foreign language training (Arabic, Farsi, etc.) does NOT substitute for biblical language proficiency. However, it demonstrates language-learning ability and may help you succeed in biblical languages.</em></p>
+    </div>
+    
+    <div class="section">
+      <label for="languageStudied">Which biblical language(s) have you studied? *</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="hebrew" name="languages" value="Hebrew">
+        <label for="hebrew">Biblical Hebrew</label><br>
+        <input type="checkbox" id="greek" name="languages" value="Greek">
+        <label for="greek">Koine Greek</label><br>
+        <input type="checkbox" id="aramaic" name="languages" value="Aramaic">
+        <label for="aramaic">Biblical Aramaic</label>
+      </div>
+      
+      <h3>Language Course 1</h3>
+      <label for="lang1Name">Course Name *</label>
+      <input type="text" id="lang1Name" name="lang1Name" placeholder="e.g., Biblical Greek I" required>
+      
+      <label for="lang1Institution">Institution *</label>
+      <input type="text" id="lang1Institution" name="lang1Institution" required>
+      
+      <div class="row">
+        <div>
+          <label for="lang1Semester">Semester/Term *</label>
+          <input type="text" id="lang1Semester" name="lang1Semester" placeholder="e.g., Fall 2023" required>
+        </div>
+        <div>
+          <label for="lang1Grade">Final Grade *</label>
+          <input type="text" id="lang1Grade" name="lang1Grade" placeholder="Must be B or better" required>
+        </div>
+      </div>
+      
+      <h3>Language Course 2</h3>
+      <label for="lang2Name">Course Name *</label>
+      <input type="text" id="lang2Name" name="lang2Name" placeholder="e.g., Biblical Greek II" required>
+      
+      <label for="lang2Institution">Institution *</label>
+      <input type="text" id="lang2Institution" name="lang2Institution" required>
+      
+      <div class="row">
+        <div>
+          <label for="lang2Semester">Semester/Term *</label>
+          <input type="text" id="lang2Semester" name="lang2Semester" placeholder="e.g., Spring 2024" required>
+        </div>
+        <div>
+          <label for="lang2Grade">Final Grade *</label>
+          <input type="text" id="lang2Grade" name="lang2Grade" placeholder="Must be B or better" required>
+        </div>
+      </div>
+      
+      <p style="margin-top:20px; font-size:14px; color:#555;"><em>Official transcripts showing biblical language coursework will be required.</em></p>
+    </div>
+    
+    <!-- SECTION 7: CROSS-CULTURAL EXPERIENCE (MODIFIED FOR VETERANS) -->
+    <h2>Section 7: Cross-Cultural & Missionary Experience</h2>
+    
+    <div class="military-box">
+      <h3>Modified Prerequisite for Veterans</h3>
+      <p><strong>Standard Berean Requirement:</strong> 3-6 months of missionary field experience under a career missionary.</p>
+      
+      <p style="margin-top:15px;"><strong>Veterans Adjustment:</strong> Your combat deployment provides <em>partial credit</em> for cross-cultural experience. However, you must ALSO complete missionary field experience under a career missionary to demonstrate calling to Gospel ministry (not just ability to endure hardship).</p>
+      
+      <p style="margin-top:15px;"><strong>Accepted Combinations:</strong></p>
+      <ul style="margin-top:10px;">
+        <li>Combat deployment (completed) + 3-6 months missionary experience (completed)</li>
+        <li>Combat deployment (completed) + Short-term mission trip (2-4 weeks) + Commitment to complete 3-6 month missionary stint before starting at Berean</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h3>Deployment Cross-Cultural Experience</h3>
+      <label for="deploymentCulture">Describe your most significant cross-cultural experience during deployment *</label>
+      <textarea id="deploymentCulture" name="deploymentCulture" rows="6" placeholder="What did you learn about the local culture? How did you adapt? What challenges did you face in cross-cultural communication?" required></textarea>
+      
+      <label for="localRelationships">Did you build relationships with local nationals during deployment? Describe. *</label>
+      <textarea id="localRelationships" name="localRelationships" rows="5" required></textarea>
+      
+      <h3>Missionary Field Experience</h3>
+      <label for="missionExperienceStatus">Have you completed missionary field experience under a career missionary? *</label>
+      <select id="missionExperienceStatus" name="missionExperienceStatus" required>
+        <option value="">Select...</option>
+        <option value="completed">Yes, I have completed 3-6 months of missionary service</option>
+        <option value="short-term">I have completed a short-term mission trip (2-4 weeks)</option>
+        <option value="planning">No, but I commit to completing this before starting at Berean</option>
+        <option value="none">No, I have not yet done missionary work</option>
+      </select>
+      
+      <div id="missionDetails" style="margin-top:20px;">
+        <label for="missionOrg">Missionary Organization *</label>
+        <input type="text" id="missionOrg" name="missionOrg" placeholder="e.g., IMB, OMF, local church missions team">
+        
+        <label for="missionLocation">Mission Location *</label>
+        <input type="text" id="missionLocation" name="missionLocation" placeholder="City, Country">
+        
+        <div class="row">
+          <div>
+            <label for="missionStart">Start Date *</label>
+            <input type="text" id="missionStart" name="missionStart" placeholder="Month/Year">
+          </div>
+          <div>
+            <label for="missionEnd">End Date *</label>
+            <input type="text" id="missionEnd" name="missionEnd" placeholder="Month/Year">
+          </div>
+        </div>
+        
+        <label for="missionRole">Your Role/Responsibilities *</label>
+        <textarea id="missionRole" name="missionRole" rows="4"></textarea>
+        
+        <h3>Supervising Missionary</h3>
+        <label for="supervisorName">Supervising Missionary's Name *</label>
+        <input type="text" id="supervisorName" name="supervisorName">
+        
+        <label for="supervisorEmail">Email Address *</label>
+        <input type="email" id="supervisorEmail" name="supervisorEmail">
+        
+        <label for="supervisorPhone">Phone Number *</label>
+        <input type="tel" id="supervisorPhone" name="supervisorPhone">
+      </div>
+    </div>
+    
+    <!-- SECTION 8: MISSIONARY CALLING -->
+    <h2>Section 8: From Military to Missionary</h2>
+    
+    <div class="section">
+      <label for="militaryToMission">How did God use your military service to call you to missionary work? *</label>
+      <textarea id="militaryToMission" name="militaryToMission" rows="7" placeholder="Be specific about how your experiences in the military shaped your calling to missions" required></textarea>
+      
+      <label for="deployment Parallels">What parallels do you see between military deployment and missionary deployment? *</label>
+      <textarea id="deploymentParallels" name="deploymentParallels" rows="6" required></textarea>
+      
+      <label for="targetField">What region or people group do you sense God calling you to serve? *</label>
+      <input type="text" id="targetField" name="targetField" placeholder="e.g., Middle East Muslims, North Africa, Central Asia" required>
+      
+      <label for="sendingOrgStatus">Have you applied to a missionary sending organization? *</label>
+      <select id="sendingOrgStatus" name="sendingOrgStatus" required>
+        <option value="">Select...</option>
+        <option value="accepted">Yes, I have been accepted</option>
+        <option value="applied">Yes, I have applied</option>
+        <option value="planning">No, but I plan to apply to [organization name]</option>
+        <option value="researching">No, still researching</option>
+      </select>
+      
+      <label for="sendingOrgName">If applicable, which organization?</label>
+      <input type="text" id="sendingOrgName" name="sendingOrgName">
+    </div>
+    
+    <!-- SECTION 9: VETERANS ESSAY -->
+    <h2>Section 9: Veterans Essay (Modified Great Commission Essay)</h2>
+    
+    <div class="warning-box">
+      <p><strong>REQUIRED: Submit a 1,500-word essay</strong> addressing the prompts below.</p>
+    </div>
+    
+    <div class="section">
+      <p style="margin-bottom:20px;"><strong>Essay Prompts for Veterans (address all four):</strong></p>
+      
+      <p style="margin-bottom:10px;">1. <strong>Military Service & Cross-Cultural Experience:</strong> What did you learn about cross-cultural ministry through your military deployment(s)? How has this prepared you for missionary work?</p>
+      
+      <p style="margin-bottom:10px;">2. <strong>From Warrior to Missionary:</strong> How has your identity shifted from military service member to missionary? What skills transfer? What must change?</p>
+      
+      <p style="margin-bottom:10px;">3. <strong>Evidence of Calling:</strong> What specific evidence do you have that God has called you from military service to missionary service? (Provide concrete examples, not just feelings.)</p>
+      
+      <p style="margin-bottom:20px;">4. <strong>Why Berean?:</strong> Why Berean Bible College specifically? How does our intensive, "Languages First" approach appeal to someone with your military background?</p>
+      
+      <label for="essayUpload">Upload Your Essay (PDF or Word) *</label>
+      <input type="file" id="essayUpload" name="essayUpload" accept=".pdf,.doc,.docx" required style="padding:10px; border:1px solid #ccc; border-radius:4px;">
+      
+      <p style="margin-top:15px; font-size:14px; color:#555;"><em>Essay must be 1,500 words (+/- 100 words). Format: 12pt font, double-spaced, 1-inch margins.</em></p>
+    </div>
+    
+    <!-- SECTION 10: REQUIRED DOCUMENTS -->
+    <h2>Section 10: Required Documents Checklist</h2>
+    
+    <div class="info-box">
+      <p><strong>Submit the following documents:</strong></p>
+      <div class="checkbox-group" style="margin-top:15px;">
+        <input type="checkbox" id="doc1" name="documents" value="dd214">
+        <label for="doc1">DD Form 214 (Certificate of Release or Discharge from Active Duty)</label><br>
+        
+        <input type="checkbox" id="doc2" name="documents" value="transcripts">
+        <label for="doc2">Official transcripts (including JST transcript if applicable)</label><br>
+        
+        <input type="checkbox" id="doc3" name="documents" value="essay">
+        <label for="doc3">Veterans Essay (1,500 words)</label><br>
+        
+        <input type="checkbox" id="doc4" name="documents" value="missionaryLetter">
+        <label for="doc4">Letter of recommendation from supervising missionary (if completed mission experience)</label><br>
+        
+        <input type="checkbox" id="doc5" name="documents" value="pastorLetter">
+        <label for="doc5">Letter of recommendation from current pastor</label><br>
+        
+        <input type="checkbox" id="doc6" name="documents" value="coe">
+        <label for="doc6">VA Certificate of Eligibility (COE) - if available, or commitment to obtain</label><br>
+        
+        <input type="checkbox" id="doc7" name="documents" value="photoID">
+        <label for="doc7">Copy of government-issued photo ID</label><br>
+        
+        <input type="checkbox" id="doc8" name="documents" value="appFee">
+        <label for="doc8">$50 application fee (waived for combat veterans with honorable discharge)</label>
+      </div>
+    </div>
+    
+    <!-- SECTION 11: SIGNATURE -->
+    <h2>Section 11: Applicant Statement & Signature</h2>
+    
+    <div class="section">
+      <div style="background:#f5f5f5; padding:20px; border:1px solid #ccc; border-radius:5px; margin-bottom:20px;">
+        <p><strong>I affirm that:</strong></p>
+        <ul style="margin-left:20px; margin-top:10px; line-height:1.9;">
+          <li>All information in this application is true and accurate.</li>
+          <li>I understand that false information may result in denial or dismissal.</li>
+          <li>I meet or will meet all prerequisites before starting at Berean.</li>
+          <li>I am committed to completing the three-year program and deploying to the mission field.</li>
+          <li>I authorize Berean to verify my military service and contact my references.</li>
+          <li>I agree to abide by Berean's Statement of Faith and community standards.</li>
+        </ul>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="signature">Full Name (Electronic Signature) *</label>
+          <input type="text" id="signature" name="signature" required>
+        </div>
+        <div>
+          <label for="signatureDate">Date *</label>
+          <input type="date" id="signatureDate" name="signatureDate" required>
+        </div>
+      </div>
+    </div>
+    
+    <!-- SUBMIT -->
+    <div class="submit-section">
+      <h2>Submit Your Veterans Application</h2>
+      <p>Thank you for your service and for considering Berean Bible College for your next mission.</p>
+      <p style="font-size:14px; margin-bottom:25px;">Questions? Contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ff899a8b9a8d9e918cbf9d9a8d9a9e919d969d939a9c9093939a989ad19a9b8a">[email&#160;protected]</a></p>
+      <button type="sub
