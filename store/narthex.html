@@ -25,8 +25,24 @@
     .ticker{max-width:var(--max);margin:8px auto;padding:4px 0;border-top:1px solid #eee;border-bottom:1px solid #eee;overflow:hidden;white-space:nowrap}
     .ticker p{display:inline-block;animation:scroll 18s linear infinite;font-size:13px;color:var(--muted);margin:0}
     @keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
-    .wrap{display:grid;grid-template-columns:var(--sidebar) 1fr;gap:18px;max-width:var(--max);margin:20px auto;padding:0 16px}
-    aside{display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid #eee;padding-right:12px}
+    
+    /* FORCE TWO COLUMN LAYOUT */
+    .wrap{
+      display:grid !important;
+      grid-template-columns:280px 1fr !important;
+      gap:18px;
+      max-width:1200px;
+      margin:20px auto;
+      padding:0 16px;
+    }
+    
+    aside{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      border-right:1px solid #eee;
+      padding-right:12px;
+    }
     .cameo img{width:160px;height:auto;border-radius:6px;display:block;margin:0 auto 6px;box-shadow:0 3px 8px rgba(0,0,0,0.1)}
     .author-name{text-align:center;font-weight:700;margin-bottom:8px}
     .bio{font-size:14px;line-height:1.5;color:var(--text);margin-bottom:18px}
@@ -44,8 +60,10 @@
     .toc{font-size:13px;color:var(--muted);text-decoration:none}
     .toc:hover{text-decoration:underline;color:var(--text)}
     .note{font-size:14px;margin-top:8px;color:var(--text);line-height:1.5}
-    @media(max-width:850px){
-      .wrap{grid-template-columns:1fr}
+    
+    /* Mobile only - collapse to single column on very small screens */
+    @media(max-width:600px){
+      .wrap{grid-template-columns:1fr !important}
       aside{border-right:none;border-bottom:1px solid #eee;padding-bottom:12px}
       .book{flex-direction:column;align-items:center;text-align:center}
       .buttons{flex-direction:row;flex-wrap:wrap;justify-content:center}
@@ -62,8 +80,8 @@
     <a href="../index.html">Home</a>
     <a href="../bible/index.html">Bible</a>
     <a href="../prayer/index.html">Prayer</a>
-    <a href="../eden/index.html">Eden</a>
-    <a href="../news/index.html">News</a>
+    <a href="../eden/home.html">Eden</a>
+    <a href="../news/home.html">News</a>
   </nav>
 </header>
 
@@ -172,7 +190,6 @@
       </div>
     </div>
   </main>
-
 
 </div>
 
