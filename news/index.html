@@ -18,43 +18,46 @@
     .links{display:flex;flex-direction:column;gap:.3rem;margin-top:1rem}
     .links a{font-size:1rem;color:white;text-decoration:none}
     .links a:hover{color:#D4AF37}
-
-    .logo-stack{position:absolute;bottom:20px;left:20px;display:flex;flex-direction:column;gap:8px;align-items:flex-start;z-index:10}
-    .logo-row{display:flex;gap:15px;align-items:center}
-    .logo-row img{display:block;height:50px;width:auto}
-    .ucsvm-row{display:flex;gap:12px;align-items:center}
-    .ucsvm-row img{display:block;height:40px}
-    .ucsvm-text{color:white;font-size:1rem;white-space:nowrap}
-
+    .enter-button{
+      position:absolute;
+      bottom:40px;
+      left:40px;
+      background-color:#228B22;
+      color:white;
+      padding:12px 24px;
+      font-size:1.1rem;
+      text-decoration:none;
+      border-radius:6px;
+      transition:background-color 0.3s ease;
+    }
+    .enter-button:hover{
+      background-color:#32CD32;
+      color:black;
+    }
     @media (max-width:768px){
       .hero h1{font-size:2rem}
       .callout,.subtitle,.links a{font-size:.9rem}
-      .logo-row img{height:40px}
-      .ucsvm-row img{height:30px}
-      .ucsvm-text{font-size:.9rem}
     }
   </style>
 </head>
 <body>
   <div class="hero">
     <h1>News</h1>
-
     <div class="callout">
-      <p>“Watch therefore, for you do not know what hour your Lord is coming.”</p><p>— Matthew 24:42</p>
+      <p>"You will hear of wars and rumors of wars..."</p>
+      <p>— Matthew 24:6</p>
     </div>
     <div class="subtitle">Jesus came. He's coming again…to stay!</div>
-
     <div class="links">
-      
-      <a href="../index.html">Landing</a>        <!-- root -->
-      <a href="index.html">News</a>             <!-- current page -->
+      <a href="../index.html">Landing</a>
+      <a href="home.html">News</a>
       <a href="../bible/index.html">Bible</a>
       <a href="../prayer/index.html">Prayer</a>
-      <a href="../store/index.html">Store</a>
-      <a href="../eden/index.html">Eden</a>
-
+      <a href="../store/narthex.html">Store</a>
+      <a href="../eden/home.html">Eden</a>
     </div>
-
+    <!-- Green ENTER NEWS button -->
+    <a href="home.html" class="enter-button">ENTER NEWS</a>
   </div>
 </body>
 </html>
