@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Berean Bible College — Library (Page 1)</title>
+  <title>The Mission Today — Berean Bible College</title>
   <style>
     :root{--nav-blue:#002147;--muted:#555}
     html,body{margin:0;padding:0;background:white;color:#111;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
@@ -26,46 +26,62 @@
     .resource-bar .ucsvm img{height:80px}
     .resource-bar .ucsvm-text{color:var(--nav-blue);font-weight:700}
     @media (max-width:480px){.content{grid-template-columns:1fr}.resource-bar{justify-content:center;text-align:center}.resource-bar .ucsvm-text{white-space:normal}}
+
+    /* CENTERED NEXT LINK */
+    .continue-link {
+      display: block;
+      text-align: center;
+      margin: 2rem 0;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      font-family: inherit;
+    }
+    .continue-link:hover {
+      color: #006400;
+      text-decoration: underline;
+    }
+    .continue-link:focus {
+      outline: 2px solid #006400;
+      outline-offset: 2px;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <img src="../images/new_Temple_sharpened.png" alt="Temple Logo">
-    <h1>Berean Bible College</h1>
-    <h2>Advancing Scholarship & Preparing for Restoration in the Age to Come</h2>
+
+  <!-- HEADER: The Mission Today + Berean Bible College -->
+  <header style="text-align:center; padding:1.5rem 0; background:#fff; border-bottom:1px solid #eee;">
+    <div style="margin-bottom:0.5rem;">
+      <img src="new_Temple_sharpened.jpg" 
+           alt="Temple Icon" 
+           style="height:80px; display:block; margin:0 auto;">
+    </div>
+    <h1 style="margin:0.5rem 0; font-size:1.8rem; color:#000;">
+      The Mission Today
+    </h1>
+    <h2 style="margin:0; font-size:1.1rem; color:#333; font-style:italic;">
+      Berean Bible College
+    </h2>
   </header>
 
-  <nav>
-    <a href="news.html">News</a>
-    <a href="index.html">Home</a>
-    <a href="prayer.html">Prayer</a>
-    <a href="store.html">Store</a>
-    <a href="eden.html">Eden</a>
+  <!-- NAV: Unchanged (links to library.html, etc.) -->
+  <nav style="text-align:center; padding:0.75rem 0; background:#f9f9f9; border-bottom:1px solid #ddd;">
+    <a href="news.html" style="margin:0 1rem; color:#000; text-decoration:none; font-weight:600; font-size:1rem;">News</a>
+    <a href="index.html" style="margin:0 1rem; color:#000; text-decoration:none; font-weight:600; font-size:1rem;">Home</a>
+    <a href="prayer.html" style="margin:0 1rem; color:#000; text-decoration:none; font-weight:600; font-size:1rem;">Prayer</a>
+    <a href="store.html" style="margin:0 1rem; color:#000; text-decoration:none; font-weight:600; font-size:1rem;">Store</a>
+    <a href="eden.html" style="margin:0 1rem; color:#000; text-decoration:none; font-weight:600; font-size:1rem;">Eden</a>
+    <a href="library.html" style="margin:0 1rem; color:#000; text-decoration:none; font-weight:600; font-size:1rem;">Study Tools</a>
   </nav>
 
+  <!-- TICKER -->
   <div class="ticker">
     <p>Israel-Lebanon tensions rise • Archaeologists uncover scroll near Qumran • Christians call for peace in Nigeria • New Bible translation launched in Southeast Asia • Earthquake relief efforts continue in Turkey & Syria</p>
   </div>
 
+  <!-- TWO-COLUMN LAYOUT + YOUTUBE FRAMES -->
   <div class="content">
     <div class="sidebar">
       <h3 style="color:var(--nav-blue)">Featured Lessons</h3>
-      <iframe src="https://www.youtube.com/embed/sjQiZOQfWB0" title="YouTube video 1" style="width:100%;height:150px;border:none;margin-bottom:15px"></iframe>
-      <iframe src="https://www.youtube.com/embed/eGzprqZfw3U" title="YouTube video 2" style="width:100%;height:150px;border:none;margin-bottom:15px"></iframe>
-      <iframe src="https://www.youtube.com/embed/_7watmvWVN4" title="YouTube video 3" style="width:100%;height:150px;border:none"></iframe>
-    </div>
-    <div class="main">
-      <h2 style="color:var(--nav-blue)">Teaching the Word with Clarity</h2>
-      <p><strong>Discover the Bible as it was meant to be understood:</strong> in its original language, cultural context, and intent. We challenge mistranslations, explore Scripture rigorously, and empower you to think critically about the Gospel.</p>
-      <p>Learn from world-class scholars and pursue truth that honors God above tradition. Every lesson here is carefully researched to bring you the most accurate understanding of Scripture.</p>
-      <a class="continue-link" href="library2.html">| Next</a>
-    </div>
-  </div>
-
-  
-  <footer>
-    &copy; 2025 Berean Bible College. All rights reserved.
-  </footer>
-</body>
-</html>
-
+      <iframe src="https://www.youtube.com/embed/sjQiZOQfWB0" title="YouTube video 1" style="width:100%;height:150px;border:none;margin-bottom:15px" allowfullscreen></iframe>
+      <iframe
