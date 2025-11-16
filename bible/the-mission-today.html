@@ -14,7 +14,7 @@
     nav{display:flex;justify-content:center;gap:25px;padding:10px 0;border-bottom:1px solid #ccc}
     nav a{color:var(--nav-blue);text-decoration:none;font-weight:bold}
     .ticker{overflow:hidden;white-space:nowrap;border-top:1px solid #eee;border-bottom:1px solid #eee;margin-bottom:15px}
-    .ticker p{display:inline-block;animation:scroll-left 22s linear infinite;color:var(--nav-blue);padding:8px 0;margin:0}
+    .ticker p{display:inline-block;animation:scroll-left 50s linear infinite;color:var(--nav-blue);padding:8px 0;margin:0}
     @keyframes scroll-left{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
     .content{display:grid;grid-template-columns:240px 1fr;gap:20px;padding:20px;max-width:1200px;margin:0 auto}
     .sidebar{border-right:2px solid #ccc;padding-right:10px}
@@ -27,7 +27,6 @@
     .resource-bar .ucsvm-text{color:var(--nav-blue);font-weight:700}
     @media (max-width:480px){.content{grid-template-columns:1fr}.resource-bar{justify-content:center;text-align:center}.resource-bar .ucsvm-text{white-space:normal}}
 
-    /* CENTERED NEXT LINK */
     .continue-link {
       display: block;
       text-align: center;
@@ -49,22 +48,16 @@
 </head>
 <body>
 
-  <!-- HEADER: The Mission Today + Berean Bible College -->
+  <!-- HEADER -->
   <header style="text-align:center; padding:1.5rem 0; background:#fff; border-bottom:1px solid #eee;">
     <div style="margin-bottom:0.5rem;">
-      <img src="new_Temple_sharpened.jpg" 
-           alt="Temple Icon" 
-           style="height:80px; display:block; margin:0 auto;">
+      <img src="new_Temple_sharpened.jpg" alt="Temple Icon" style="height:80px; display:block; margin:0 auto;">
     </div>
-    <h1 style="margin:0.5rem 0; font-size:1.8rem; color:#000;">
-      The Mission Today
-    </h1>
-    <h2 style="margin:0; font-size:1.1rem; color:#333; font-style:italic;">
-      Berean Bible College
-    </h2>
+    <h1 style="margin:0.5rem 0; font-size:1.8rem; color:#000;">The Mission Today</h1>
+    <h2 style="margin:0; font-size:1.1rem; color:#333; font-style:italic;">Berean Bible College</h2>
   </header>
 
-  <!-- NAV: Unchanged (links to library.html, etc.) -->
+  <!-- NAV -->
   <nav style="text-align:center; padding:0.75rem 0; background:#f9f9f9; border-bottom:1px solid #ddd;">
     <a href="news.html" style="margin:0 1rem; color:#000; text-decoration:none; font-weight:600; font-size:1rem;">News</a>
     <a href="index.html" style="margin:0 1rem; color:#000; text-decoration:none; font-weight:600; font-size:1rem;">Home</a>
@@ -76,27 +69,77 @@
 
   <!-- TICKER -->
   <div class="ticker">
-    <p>The Mission Today is a carryover from my (Tim's) Bible studies, which originally began as TheMission.Today - my former Substack channel. Today, you will find posted here a variety of articles, snippets from my The Restoration Series books, and curated video lessons from such noted Bible scholars as Dr. Michael Heiser, James Jacob Prasch, Joel Richardson, N.T. Wright, and others.</p>
+    <p>The Mission Today is a carryover from my (Tim's) Bible studies, which originally began as TheMission.Today - my former Substack channel. Today, you will find posted here a variety of articles, snippets from my The Restoration Series books, and curated video lessons from noted Bible scholars, including Dr. Michael Heiser, James Jacob Prasch, Joel Richardson, and N.T. Wright, and others.</p>
   </div>
 
-  <!-- TWO-COLUMN LAYOUT + YOUTUBE FRAMES -->
+  <!-- TWO-COLUMN LAYOUT -->
   <div class="content">
-    <div class="sidebar">
+   <div class="sidebar">
   <h3 style="color:var(--nav-blue)">Featured Lessons</h3>
-  
-  <!-- ORIGINAL 3 -->
-  <iframe src="https://www.youtube.com/embed/sjQiZOQfWB0" title="Lesson 1" style="width:100%;height:150px;border:none;margin-bottom:15px" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/eGzprqZfw3U" title="Lesson 2" style="width:100%;height:150px;border:none;margin-bottom:15px" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/_7watmvWVN4" title="Lesson 3" style="width:100%;height:150px;border:none;margin-bottom:15px" allowfullscreen></iframe>
-  
-  <!-- NEW: Dr. Michael Heiser -->
-  <iframe src="https://youtu.be/A_sgWDpnldI" title="Dr. Michael Heiser – Demons: Why the Bible's Darkest Battles Were Never Fully Told - Part 1" style="width:100%;height:150px;border:none;margin-bottom:15px" allowfullscreen></iframe>
-  
-  <!-- NEW: Dr. Michael Heiser -->
-  <iframe src="https://www.youtube.com/watch?v=i3t-qzFt0QM&pp=ugUEEgJlbg%3D%3D" title="Dr. Michael Heiser – Demons, Principalities, What do the Powers of Darkness Fear? - Part 2" style="width:100%;height:150px;border:none;margin-bottom:15px" allowfullscreen></iframe>
 
-<!-- NEW: James Jacob Parch -->
-  <iframe src="https://www.youtube.com/watch?v=FhAwhyNKmLo&pp=ygUMcHJhc2NoIGphY29i0gcJCQMKAYcqIYzv" title="James Jacob Prasch – Who is the Grand Deceiver?" style="width:100%;height:150px;border:none;margin-bottom:15px" allowfullscreen></iframe>
+  <!-- Dr. Michael Heiser – Part 1 -->
+  <a href="https://www.youtube.com/watch?v=A_sgWDpnldI" target="_blank" style="display:block; margin-bottom:20px; text-decoration:none; color:inherit;">
+    <div style="position:relative; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,.1);">
+      <img src="https://img.youtube.com/vi/A_sgWDpnldI/maxresdefault.jpg" 
+           alt="Dr. Michael Heiser – Demons (Part 1)" 
+           style="width:100%; height:auto; display:block;">
+      <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background:rgba(0,0,0,.5); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </div>
+    </div>
+    <p style="margin:8px 0 0; font-weight:600; font-size:0.95rem; text-align:center; line-height:1.3;">
+      Dr. Michael Heiser – Demons (Part 1)
+    </p>
+  </a>
 
+  <!-- Dr. Michael Heiser – Part 2 -->
+  <a href="https://www.youtube.com/watch?v=i3t-qzFt0QM" target="_blank" style="display:block; margin-bottom:20px; text-decoration:none; color:inherit;">
+    <div style="position:relative; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,.1);">
+      <img src="https://img.youtube.com/vi/i3t-qzFt0QM/maxresdefault.jpg" 
+           alt="Dr. Michael Heiser – Demons (Part 2)" 
+           style="width:100%; height:auto; display:block;">
+      <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background:rgba(0,0,0,.5); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </div>
+    </div>
+    <p style="margin:8px 0 0; font-weight:600; font-size:0.95rem; text-align:center; line-height:1.3;">
+      Dr. Michael Heiser – Demons (Part 2)
+    </p>
+  </a>
 
+  <!-- James Jacob Prasch -->
+  <a href="https://www.youtube.com/watch?v=FhAwhyNKmLo" target="_blank" style="display:block; margin-bottom:20px; text-decoration:none; color:inherit;">
+    <div style="position:relative; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,.1);">
+      <img src="https://img.youtube.com/vi/FhAwhyNKmLo/maxresdefault.jpg" 
+           alt="James Jacob Prasch – Grand Deceiver" 
+           style="width:100%; height:auto; display:block;">
+      <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background:rgba(0,0,0,.5); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </div>
+    </div>
+    <p style="margin:8px 0 0; font-weight:600; font-size:0.95rem; text-align:center; line-height:1.3;">
+      James Jacob Prasch – Grand Deceiver
+    </p>
+  </a>
 </div>
+    <div class="main">
+      <h2 style="color:var(--nav-blue)">Teaching the Word with Clarity</h2>
+      <p><strong>Discover the Bible as it was meant to be understood:</strong> in its original language, cultural context, and intent. We challenge mistranslations, explore Scripture rigorously, and empower you to think critically about the Gospel.</p>
+      <p>Learn from world-class scholars and pursue truth that honors God above tradition. Every lesson here is carefully researched to bring you the most accurate understanding of Scripture.</p>
+      
+      <a class="continue-link" href="library2.html">Next</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Berean Bible College. All rights reserved.
+  </footer>
+
+</body>
+</html>
