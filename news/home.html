@@ -35,7 +35,79 @@
     .news-link p{margin:0;font-size:13px;color:#666}
     .news-link .date{font-size:11px;color:#999;margin-top:5px}
     
-    footer{text-align:center;padding:15px;color:#555;border-top:1px solid #ccc;margin-top:30px;font-size:14px}
+    /* HERO BANNER */
+    .hero {
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('shofar-watchman.jpg') center/cover no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 45vh;
+      max-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 15px 0;
+      border-bottom: 2px solid #ddd;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #555;
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      max-width: 85%;
+    }
+    .hero-content h1 {
+      font-size: 3.2rem;
+      margin: 0 0 0.5rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    }
+    .hero-content .quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin: 0.7rem 0 1rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+    .hero-content .ref {
+      font-size: 1.1rem;
+      margin: 0 0 1.2rem;
+      font-weight: 600;
+      color: #ddd;
+    }
+    .watch-btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      background: #D4AF37;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .watch-btn:hover {
+      background: #FFD700;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #555;
+      border-top: 1px solid #ccc;
+      margin-top: 30px;
+      font-size: 14px;
+    }
     
     @media (max-width:850px){
       .content{grid-template-columns:1fr}
@@ -57,49 +129,52 @@
     <a href="../prayer/index.html">Prayer</a>
     <a href="../store/narthex.html">Store</a>
     <a href="../eden/home.html">Eden</a>
-    </nav>
+  </nav>
 
   <!-- HERO BANNER -->
-<div class="hero" style="background:url('images/shofar-watchman.jpg') center/cover no-repeat; height:45vh; max-height:420px; min-height:300px; display:flex; align-items:center; justify-content:center; text-align:center; color:white; text-shadow:2px 2px 10px rgba(0,0,0,0.8); margin:0 0 15px 0; border-bottom:2px solid #ddd; position:relative;">
-  <!-- FALLBACK IF IMAGE MISSING -->
-  <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:#555; display:flex; align-items:center; justify-content:center; flex-direction:column; padding:2rem;">
-    <h1 style="font-size:3rem; margin:0; font-weight:900; color:white;">THE DAY WATCH</h1>
-    <p style="font-size:1.4rem; font-style:italic; margin:0.8rem 0 1rem; color:#eee;">“Watchman, what of the night?”</p>
-    <p style="font-size:1.1rem; margin:0 0 1.2rem; color:#ddd; font-weight:600;">Isaiah 21:11</p>
-    <a href="https://thedaywatch.com" target="_blank" style="padding:0.8rem 1.8rem; background:#D4AF37; color:#000; font-weight:bold; text-decoration:none; border-radius:8px; font-size:1rem;">
-      WATCH NOW
-    </a>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>THE DAY WATCH</h1>
+      <p class="quote">“Watchman, what of the night?”</p>
+      <p class="ref">Isaiah 21:11</p>
+      <a href="https://thedaywatch.com" target="_blank" class="watch-btn">WATCH NOW</a>
+    </div>
   </div>
-  <!-- MAIN CONTENT (SHOWS WHEN IMAGE LOADS) -->
-  <div style="background:rgba(0,0,0,0.4); padding:1.8rem 2.5rem; border-radius:12px; max-width:85%; z-index:1;">
-    <h1 style="font-size:3.2rem; margin:0; font-weight:900; letter-spacing:1px;">THE DAY WATCH</h1>
-    <p style="font-size:1.5rem; font-style:italic; margin:0.7rem 0 1rem;">“Watchman, what of the night?”</p>
-    <p style="font-size:1.1rem; margin:0 0 1.2rem; font-weight:600;">Isaiah 21:11</p>
-    <a href="https://thedaywatch.com" target="_blank" style="display:inline-block; padding:0.8rem 1.8rem; background:#D4AF37; color:#000; font-weight:bold; text-decoration:none; border-radius:8px; font-size:1rem; transition:0.3s;" onmouseover="this.style.background='#FFD700'" onmouseout="this.style.background='#D4AF37'">
-      WATCH NOW
-    </a>
-  </div>
-</div>
 
   <!-- TICKER -->
-  <div class="ticker" style="background:white; border-top:1px solid #eee; border-bottom:1px solid #eee; overflow:hidden; white-space:nowrap; margin:15px 0;">
-    <p style="display:inline-block; animation:scroll-left 8s linear infinite; color:black; font-weight:normal; padding:8px 0; margin:0; font-size:1rem;">
-      Breaking news from Israel, Europe, the Middle East & beyond — signs of God’s timeline. <strong>TheDayWatch.com</strong>
-    </p>
+  <div class="ticker">
+    <p>Breaking news from Israel, Europe, the Middle East & beyond — signs of God’s timeline. <strong>TheDayWatch.com</strong></p>
   </div>
 
-<style>
-@keyframes scroll-left {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
-}
-</style>
+  <style>
+    @keyframes scroll-left {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+    .ticker {
+      background: white;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 15px 0;
+    }
+    .ticker p {
+      display: inline-block;
+      animation: scroll-left 8s linear infinite;
+      color: black;
+      font-weight: normal;
+      padding: 8px 0;
+      margin: 0;
+      font-size: 1rem;
+    }
+  </style>
   
   <div class="content">
     
     <!-- Sidebar -->
     <div class="sidebar">
-      <h3>🔴 Live News</h3>
+      <h3>Live News</h3>
       
       <p style="font-size:13px;color:#555;margin-bottom:10px"><strong>Al Jazeera English</strong></p>
       <iframe src="https://www.youtube.com/embed/gCNeDWCI0vo" title="Al Jazeera Live" allowfullscreen></iframe>
@@ -140,32 +215,32 @@
       <h3>Featured News Sources</h3>
       
       <a href="https://www.jpost.com" target="_blank" class="news-link">
-        <h4>🇮🇱 Jerusalem Post</h4>
+        <h4>Jerusalem Post</h4>
         <p>Israel's leading English-language news source. Essential for understanding Israeli politics, security, and regional developments.</p>
       </a>
       
       <a href="https://www.timesofisrael.com" target="_blank" class="news-link">
-        <h4>🇮🇱 Times of Israel</h4>
+        <h4>Times of Israel</h4>
         <p>Comprehensive coverage of Israel and the Jewish world, with balanced reporting and in-depth analysis.</p>
       </a>
       
       <a href="https://www.christianpost.com/news/world.html" target="_blank" class="news-link">
-        <h4>✝️ Christian Post World News</h4>
+        <h4>Christian Post World News</h4>
         <p>Christian perspective on global events, with special attention to persecution and religious freedom issues.</p>
       </a>
       
       <a href="https://english.alarabiya.net" target="_blank" class="news-link">
-        <h4>🌍 Al Arabiya English</h4>
+        <h4>Al Arabiya English</h4>
         <p>Gulf States perspective on Middle Eastern affairs. Saudi-owned, generally moderate.</p>
       </a>
       
       <a href="https://www.dw.com/en/top-stories/s-9097" target="_blank" class="news-link">
-        <h4>🇩🇪 Deutsche Welle (DW News)</h4>
+        <h4>Deutsche Welle (DW News)</h4>
         <p>German public broadcaster with reliable European and global coverage.</p>
       </a>
       
       <a href="https://www.i24news.tv/en" target="_blank" class="news-link">
-        <h4>🇮🇱 i24NEWS</h4>
+        <h4>i24NEWS</h4>
         <p>Israeli international news channel broadcasting 24/7 from Tel Aviv in multiple languages.</p>
       </a>
       
@@ -179,10 +254,9 @@
   </div>
   
   <footer>
-    &copy; 2025 Berean Bible College. All rights reserved.<br>
+    © 2025 Berean Bible College. All rights reserved.<br>
     <a href="https://thedaywatch.com" style="color:var(--green);text-decoration:none;font-weight:bold">TheDayWatch.com</a> • 
     Watching and waiting for His return
   </footer>
-
 </body>
 </html>
