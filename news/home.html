@@ -35,18 +35,15 @@
     .news-link p{margin:0;font-size:13px;color:#666}
     .news-link .date{font-size:11px;color:#999;margin-top:5px}
     
-    /* HERO BANNER */
+    /* HERO BANNER - Uses your actual file */
     .hero {
       position: relative;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
                   url('shofar-watchman.jpg') center/cover no-repeat;
       background-size: cover;
       background-position: center;
       min-height: 45vh;
       max-height: 420px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       margin: 0 0 15px 0;
       border-bottom: 2px solid #ddd;
       overflow: hidden;
@@ -56,48 +53,7 @@
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background: #555;
-      z-index: 0;
-    }
-    .hero-content {
-      position: relative;
       z-index: 1;
-      text-align: center;
-      color: white;
-      padding: 2rem;
-      max-width: 85%;
-    }
-    .hero-content h1 {
-      font-size: 3.2rem;
-      margin: 0 0 0.5rem;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-    }
-    .hero-content .quote {
-      font-size: 1.5rem;
-      font-style: italic;
-      margin: 0.7rem 0 1rem;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-    }
-    .hero-content .ref {
-      font-size: 1.1rem;
-      margin: 0 0 1.2rem;
-      font-weight: 600;
-      color: #ddd;
-    }
-    .watch-btn {
-      display: inline-block;
-      padding: 0.8rem 1.8rem;
-      background: #D4AF37;
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: background 0.3s;
-    }
-    .watch-btn:hover {
-      background: #FFD700;
     }
 
     footer {
@@ -112,6 +68,7 @@
     @media (max-width:850px){
       .content{grid-template-columns:1fr}
       .sidebar{border-right:none;border-bottom:2px solid #ccc;padding-bottom:15px;margin-bottom:20px}
+      .hero { min-height: 35vh; }
     }
   </style>
 </head>
@@ -132,14 +89,7 @@
   </nav>
 
   <!-- HERO BANNER -->
-  <div class="hero">
-    <div class="hero-content">
-      <h1>THE DAY WATCH</h1>
-      <p class="quote">“Watchman, what of the night?”</p>
-      <p class="ref">Isaiah 21:11</p>
-      <a href="https://thedaywatch.com" target="_blank" class="watch-btn">WATCH NOW</a>
-    </div>
-  </div>
+  <div class="hero"></div>
 
   <!-- TICKER -->
   <div class="ticker">
@@ -158,10 +108,13 @@
       overflow: hidden;
       white-space: nowrap;
       margin: 15px 0;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .ticker p {
       display: inline-block;
-      animation: scroll-left 8s linear infinite;
+      animation: scroll-left 18s linear infinite;
       color: black;
       font-weight: normal;
       padding: 8px 0;
