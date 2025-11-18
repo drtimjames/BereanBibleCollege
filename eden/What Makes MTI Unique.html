@@ -1,104 +1,133 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Missionary Training Institute — Berean Bible College</title>
+  <title>What Makes MTI Unique — Missionary Training Institute | Berean Bible College</title>
   <style>
     :root{--nav-blue:#002147;--muted:#555;--green:#228B22}
     html,body{margin:0;padding:0;background:white;color:#111;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
-    header{text-align:center;padding:20px 0 10px 0;border-bottom:2px solid #ddd}
-    header img{width:80px;height:auto;display:block;margin:0 auto 10px}
+    header{text-align:center;padding:20px 0 10px;border-bottom:2px solid #ddd}
+    header img{height:80px;margin-bottom:10px}
     header h1{font-size:28px;margin:0;color:var(--nav-blue)}
     header h2{font-size:16px;color:var(--muted);margin-top:5px}
     nav{display:flex;justify-content:center;gap:25px;padding:10px 0;border-bottom:1px solid #ccc}
     nav a{color:var(--nav-blue);text-decoration:none;font-weight:bold}
     nav a:hover{color:var(--green)}
-    .ticker{overflow:hidden;white-space:nowrap;border-top:1px solid #eee;border-bottom:1px solid #eee;margin-bottom:15px;background:white;padding:10px 0}
-    .ticker p{display:inline-block;animation:scroll-left 35s linear infinite;color:var(--nav-blue);margin:0}
+    .ticker{overflow:hidden;white-space:nowrap;background:white;padding:10px 0;margin-bottom:15px}
+    .ticker p{display:inline-block;animation:scroll-left 40s linear infinite;color:var(--nav-blue);margin:0;font-size:15px}
     @keyframes scroll-left{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
-    .container{max-width:1100px;margin:0 auto;padding:40px 20px}
-    h2{color:var(--nav-blue);font-size:28px;margin-top:40px;margin-bottom:20px;border-bottom:2px solid #ccc;padding-bottom:10px}
-    h3{color:var(--nav-blue);font-size:22px;margin-top:30px;margin-bottom:15px}
-    p{line-height:1.8;margin-bottom:15px}
-    ul{margin-left:20px;margin-bottom:20px;line-height:1.9}
-    .hero{text-align:center;padding:40px 20px;border-bottom:2px solid #ccc;margin-bottom:30px}
-    .hero h2{font-size:32px;border:none;margin:0 0 15px 0}
-    .hero p{font-size:18px;color:var(--muted);max-width:800px;margin:10px auto}
-    .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin:40px 0}
+    .content{display:grid;grid-template-columns:280px 1fr;gap:20px;padding:20px;max-width:1200px;margin:0 auto}
+    .sidebar{border-right:2px solid #ccc;padding-right:15px}
+    .sidebar h3{color:var(--nav-blue);font-size:18px;margin-bottom:15px}
+    .sidebar iframe{width:100%;height:160px;border:none;margin-bottom:15px;border-radius:4px}
+    .sidebar ul{list-style:none;padding:0;margin:30px 0 0 0}
+    .sidebar li{margin-bottom:12px}
+    .sidebar a{color:var(--nav-blue);text-decoration:none;font-size:15px;font-weight:600}
+    .sidebar a:hover{color:var(--green);text-decoration:underline}
+    .main{padding-left:20px;line-height:1.8}
+    .main h2{color:var(--nav-blue);font-size:26px;border-bottom:2px solid #ccc;padding-bottom:8px;margin:40px 0 20px}
+    .hero,.exec-box,.pillar,.cta-section{margin:30px 0;border-radius:8px}
+    .hero{text-align:center;padding:40px 20px;border-bottom:2px solid #ccc}
+    .exec-box{background:#f0f8ff;border:2px solid #99b3cc;padding:30px}
+    .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
     .pillar{background:white;border:2px solid #ccc;padding:30px;border-radius:8px;text-align:center}
-    .pillar h3{margin-top:0}
-    .exec-box{background:#f0f8ff;border:2px solid #99b3cc;padding:30px;margin:30px 0;border-radius:8px}
-    .exec-box h3{margin-top:0;color:var(--nav-blue)}
-    .cta-button{display:inline-block;background:var(--green);color:white;padding:15px 40px;text-decoration:none;font-weight:bold;border-radius:5px;font-size:18px;margin:10px}
-    .cta-button:hover{background:#32CD32}
-    .cta-section{text-align:center;padding:40px 20px;margin:40px 0;border:2px solid #ccc;border-radius:8px}
+    .cta-section{background:var(--green);color:white;text-align:center;padding:40px 20px}
+    .cta-button{display:inline-block;background:white;color:var(--green);padding:15px 40px;border-radius:5px;font-weight:bold;font-size:18px;margin:10px}
+    .cta-button:hover{background:#002147;color:white}
     footer{text-align:center;padding:20px;color:#555;border-top:1px solid #ccc;margin-top:60px;font-size:14px}
-    @media (max-width:768px){nav{flex-wrap:wrap;gap:15px}.pillars{grid-template-columns:1fr}}
+    @media (max-width:768px){
+      .content{grid-template-columns:1fr}
+      .sidebar{border-right:none;border-bottom:2px solid #ccc;padding-bottom:20px;margin-bottom:20px}
+    }
   </style>
 </head>
 <body>
+
   <header>
-   <img src="new_Temple_sharpened.jpg" alt="Temple Icon" style="height:80px;">
+    <img src="new_Temple_sharpened.jpg" alt="Temple Icon" style="height:80px;">
     <h1>Missionary Training Institute</h1>
-    <h2>of Berean Bible College</h2>
+    <h2>Berean Bible College</h2>
   </header>
+
   <nav>
-    <a href="../news.html">News</a>
     <a href="../index.html">Home</a>
-    <a href="../bible/library1.html">Bible</a>
-    <a href="../prayer.html">Prayer</a>
-    <a href="../scriptorium.html">Scriptorium</a>
-    <a href="mti.html">MTI</a>
+    <a href="../news/index.html">News</a>
+    <a href="../bible/index.html">Bible</a>
+    <a href="../prayer/index.html">Prayer</a>
+    <a href="../store/narthex.html">Store</a>
+    <a href="home.html">Eden / MTI</a>
   </nav>
+
   <div class="ticker">
-    <p> LAUNCHING FALL 2026: Applications now being accepted for inaugural cohort | Veterans: Use Your GI Bill to graduate debt-free | Elite training. Biblical languages. Cross-cultural missiology. Restoration theology. | Three years. Year-round. No shortcuts.</p>
+    <p>LAUNCHING FALL 2026: Applications now being accepted • Veterans: Use Your GI Bill to graduate debt-free • Elite training. Biblical languages. Cross-cultural missiology. Restoration theology. • Three years. Year-round. No shortcuts.</p>
   </div>
-  
-  <div class="container">
-    
-<div class="hero">
-  <h2>Forging Missionaries for the Harvest</h2>
-  <p><em>Elite Training. Biblical Languages. Cross-Cultural Experience. Restoration Theology.</em></p>
-  <p>Three Years. Year-Round. No Shortcuts. The Mission Field Is Waiting.</p>
-</div>
+
+  <div class="content">
+
+    <!-- LEFT SIDEBAR — identical on every MTI page -->
+    <div class="sidebar">
+      <h3>Featured Training</h3>
+      <iframe src="https://www.youtube.com/embed/sjQiZOQfWB0" title="MTI Introduction" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/eGzprqZfw3U" title="Languages First" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/_7watmvWVN4" title="Restoration Theology" allowfullscreen></iframe>
+
+      <h3 style="margin-top:30px">Quick Links</h3>
+      <ul>
+        <li><a href="about.html">→ About MTI</a></li>
+        <li><a href="academics.html">→ Academics</a></li>
+        <li><a href="admissions.html">→ Admissions</a></li>
+        <li><a href="veterans.html">→ Veterans (GI Bill)</a></li>
+        <li><a href="why-languages-first.html">→ Why Languages First?</a></li>
+        <li><a href="../store/scriptorium.html">→ Scriptorium (Bookstore)</a></li>
+        <li><a href="contact.html">→ Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT — your entire original page, perfectly preserved -->
+    <div class="main">
+
+      <div class="hero">
+        <h2>Forging Missionaries for the Harvest</h2>
+        <p><em>Elite Training. Biblical Languages. Cross-Cultural Experience. Restoration Theology.</em></p>
+        <p>Three Years. Year-Round. No Shortcuts. The Mission Field Is Waiting.</p>
+      </div>
 
 <!-- EXECUTIVE SUMMARY -->
-<h2>Mission Statement</h2>
-<div class="exec-box">
-  <p><strong>The Missionary Training Institute exists for one purpose:</strong> to train and equip committed Christians to be career missionaries who faithfully proclaim the Gospel to the nations—prepared to endure even unto death.</p>
-  
-  <h3 style="margin-top:25px">Core Distinctives</h3>
-  <ul>
-    <li><strong>Languages First:</strong> Biblical Hebrew, Koine Greek, and Aramaic mastery required before admission</li>
-    <li><strong>Context Always:</strong> Ancient Near East, Second Temple Judaism, Greco-Roman world immersion</li>
-    <li><strong>Restoration Theology:</strong> God's plan is restoration of creation—Millennium, New Jerusalem, eternity on renewed Earth</li>
-    <li><strong>Missionary Focus:</strong> We train missionaries, not pastors. Field deployment is the goal.</li>
-    <li><strong>Veterans Pipeline:</strong> Military → MTI → Missions. GI Bill approved. Modified prerequisites recognizing deployment experience.</li>
-    <li><strong>Excellence for God's Glory:</strong> Rigorous standards, intensive training, highest academic quality</li>
-  </ul>
-</div>
+      <h2>Mission Statement</h2>
+      <div class="exec-box">
+        <p><strong>The Missionary Training Institute exists for one purpose:</strong> to train and equip committed Christians to be career missionaries who faithfully proclaim the Gospel to the nations—prepared to endure even unto death.</p>
+        <h3 style="margin-top:25px">Core Distinctives</h3>
+        <ul>
+          <li><strong>Languages First:</strong> Biblical Hebrew, Koine Greek, and Aramaic mastery required before admission</li>
+          <li><strong>Context Always:</strong> Ancient Near East, Second Temple Judaism, Greco-Roman world immersion</li>
+          <li><strong>Restoration Theology:</strong> God's plan is restoration of creation—Millennium, New Jerusalem, eternity on renewed Earth</li>
+          <li><strong>Missionary Focus:</strong> We train missionaries, not pastors. Field deployment is the goal.</li>
+          <li><strong>Veterans Pipeline:</strong> Military → MTI → Missions. GI Bill approved. Modified prerequisites recognizing deployment experience.</li>
+          <li><strong>Excellence for God's Glory:</strong> Rigorous standards, intensive training, highest academic quality</li>
+        </ul>
+      </div>
 
 <!-- THREE PILLARS -->
-<h2>Three Pillars of MTI Training</h2>
-<div class="pillars">
-  <div class="pillar">
-    <h3> Academic Excellence</h3>
-    <p><strong>Languages First.</strong> Master Biblical Hebrew, Koine Greek, Aramaic. Study Scripture in original languages and ancient contexts. Build theology on primary sources, not translations.</p>
-    <p style="margin-top:15px"><em>No commentaries—only the Holy Spirit and the text.</em></p>
-  </div>
-  
-  <div class="pillar">
-    <h3> Missiology</h3>
-    <p><strong>Field-Ready Training.</strong> Cross-cultural communication, world religions, church planting, security in hostile environments, persecution preparation.</p>
-    <p style="margin-top:15px"><em>Prerequisite field experience ensures readiness.</em></p>
-  </div>
-  
-  <div class="pillar">
-    <h3> Restoration Vision</h3>
-    <p><strong>Eden Theology.</strong> God's plan: Millennium → New Jerusalem → Eternal kingdom on renewed Earth. We're not escaping—we're preparing to reign.</p>
-  </div>
-</div>
+      <h2>Three Pillars of MTI Training</h2>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Academic Excellence</h3>
+          <p><strong>Languages First.</strong> Master Biblical Hebrew, Koine Greek, Aramaic. Study Scripture in original languages and ancient contexts. Build theology on primary sources, not translations.</p>
+          <p style="margin-top:15px"><em>No commentaries—only the Holy Spirit and the text.</em></p>
+        </div>
+        <div class="pillar">
+          <h3>Missiology</h3>
+          <p><strong>Field-Ready Training.</strong> Cross-cultural communication, world religions, church planting, security in hostile environments, persecution preparation.</p>
+          <p style="margin-top:15px"><em>Prerequisite field experience ensures readiness.</em></p>
+        </div>
+        <div class="pillar">
+          <h3>Restoration Vision</h3>
+          <p><strong>Eden Theology.</strong> God's plan: Millennium → New Jerusalem → Eternal kingdom on renewed Earth. We're not escaping—we're preparing to reign.</p>
+        </div>
+      </div>
 
-<!-- WHY RESTORATION THEOLOGY -->
+      <!-- WHY RESTORATION THEOLOGY -->
 <h2>Why Restoration Theology Matters</h2>
 <p><strong>The Problem in Western Christianity:</strong> Most evangelical teaching focuses on fear, anxiety about tribulation, and escapist "rapture" theology. Believers wait to be whisked away from a doomed planet.</p>
 
@@ -150,16 +179,19 @@
 <p style="margin-top:15px"><strong>That's proof this works.</strong> We've successfully trained international Christian leaders. MTI brings that same excellence to missionary training.</p>
 
 <!-- CALL TO ACTION -->
-<div class="cta-section">
-  <h2 style="border:none;margin-bottom:20px">Ready to Be Trained?</h2>
-  <p style="font-size:16px;margin-bottom:25px">"Now the Bereans were of more noble character... for they examined the Scriptures every day to see if what Paul said was true." (Acts 17:11)</p>
-  <p style="margin-bottom:30px">If you meet the prerequisites and sense God's calling to missionary service, we want to hear from you.</p>
-  <a href="admissions.html" class="cta-button">View Admission Requirements</a>
-  <a href="application-standard.html" class="cta-button">Apply Now</a>
-</div>  </div>
-  
+      <div class="cta-section">
+        <h2 style="border:none;margin-bottom:20px">Ready to Be Trained?</h2>
+        <p style="font-size:16px;margin-bottom:25px">"Now the Bereans were of more noble character... for they examined the Scriptures every day to see if what Paul said was true." (Acts 17:11)</p>
+        <p style="margin-bottom:30px">If you meet the prerequisites and sense God's calling to missionary service, we want to hear from you.</p>
+        <a href="admissions.html" class="cta-button">View Admission Requirements</a>
+        <a href="application-standard.html" class="cta-button">Apply Now</a>
+      </div>
+
+    </div>
+  </div>
+
   <footer>
-    &copy; 2025 Missionary Training Institute of Berean Bible College. All rights reserved.<br>
+    © 2025 Berean Bible College • Missionary Training Institute<br>
     Languages First. Context Always. Truth Above Tradition.
   </footer>
 </body>
