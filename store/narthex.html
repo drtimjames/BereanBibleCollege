@@ -23,11 +23,12 @@ nav{display:flex;justify-content:center;gap:25px;padding:10px 0;border-bottom:1p
     nav a{color:var(--text);text-decoration:none;margin:0 10px;font-weight:600;font-size:14px}
     nav a:hover{color:var(--green)}
     .ticker{max-width:var(--max);margin:8px auto;padding:4px 0;border-top:1px solid #eee;border-bottom:1px solid #eee;overflow:hidden;white-space:nowrap}
-    .ticker p{display:inline-block;animation:scroll 18s linear infinite;font-size:13px;color:var(--muted);margin:0}
+    .ticker p{display:inline-block;animation:scroll 18s linear infinite;font-size:13px;color:#0066CC;margin:0}
     @keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
     
     /* FORCE TWO COLUMN LAYOUT */
     .wrap{
+      position:relative;
       display:grid !important;
       grid-template-columns:280px 1fr !important;
       gap:18px;
@@ -46,7 +47,7 @@ nav{display:flex;justify-content:center;gap:25px;padding:10px 0;border-bottom:1p
     .cameo img{width:160px;height:auto;border-radius:6px;display:block;margin:0 auto 6px;box-shadow:0 3px 8px rgba(0,0,0,0.1)}
     .author-name{text-align:center;font-weight:700;margin-bottom:8px}
     .bio{font-size:14px;line-height:1.5;color:var(--text);margin-bottom:18px}
-    .enter-btn{display:block;background:var(--green);color:#fff;text-align:center;padding:10px;border-radius:6px;text-decoration:none;font-weight:700;margin-top:auto}
+    .enter-btn{position:absolute;bottom:100px;left:50px;width:180px;display:block;background:var(--green);color:#fff;text-align:center;padding:10px;border-radius:6px;text-decoration:none;font-weight:700}
     .enter-btn:hover{background:var(--green-hover);color:#000}
     main{padding-bottom:30px}
     .book{display:flex;gap:14px;border-bottom:1px solid #f1f1f1;padding:14px 0;align-items:flex-start}
@@ -269,4 +270,3 @@ nav{display:flex;justify-content:center;gap:25px;padding:10px 0;border-bottom:1p
 </footer>
 </body>
 </html>
-
