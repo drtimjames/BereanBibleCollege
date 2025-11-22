@@ -50,18 +50,369 @@
 <nav>
   <a href="../index.html">BBC Home</a>
   <a href="../bible/index.html">Bible</a>
-  <a href="../prayer/index.html">Prayer</a>
   <a href="../eden/index.html">Eden</a>
   <a href="../news/index.html">Day Watch News</a>
 </nav>
 
 <div class="ticker"><p>Featured Author — Dr. Tim James • Presuppositions • Tree of Life • God's Whispers • Day of the Lord Vol 1 & 2 • Coming Soon: Vol 3 • Support Berean Bible College Research</p></div>
 
+<!-- ==================== BROWSE BY CATEGORY SECTION ==================== -->
+<!-- Insert this section AFTER the ticker and BEFORE the main content container -->
+
+<style>
+.category-index {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 2px solid #002147;
+  border-radius: 8px;
+}
+
+.category-index h2 {
+  color: #002147;
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.category-index h2:hover {
+  color: #228B22;
+}
+
+.toggle-icon {
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.toggle-icon.open {
+  transform: rotate(180deg);
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.category-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.category-card h3 {
+  color: #002147;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #228B22;
+}
+
+.category-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.category-card li {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.category-card a {
+  color: #002147;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.category-card a:hover {
+  color: #228B22;
+  padding-left: 5px;
+}
+
+.category-card a::before {
+  content: "→ ";
+  color: #228B22;
+}
+
+.category-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.category-content.open {
+  max-height: 3000px;
+  transition: max-height 0.5s ease-in;
+}
+
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="category-index">
+  <h2 onclick="toggleCategories()">
+    📚 Browse by Category
+    <span class="toggle-icon" id="toggleIcon">▼</span>
+  </h2>
+  
+  <div class="category-content" id="categoryContent">
+    <div class="category-grid">
+      
+      <!-- FOUNDATION (Year 1) -->
+      <div class="category-card">
+        <h3>Biblical Languages</h3>
+        <ul>
+          <li><a href="#Bowen-Lewis">Bowen-Lewis (Sumerian Vol. 1 & 2)</a></li>
+          <li><a href="#Chappell">Chappell (Sahidic Coptic)</a></li>
+          <li><a href="#Cooper">Cooper (Latin)</a></li>
+          <li><a href="#Hardy-McAffee">Hardy-McAffee (Hebrew Advanced)</a></li>
+          <li><a href="#Hugenberger-Erickson">Hugenberger-Erickson (Akkadian)</a></li>
+          <li><a href="#Ibrahim">Ibrahim (Arabic)</a></li>
+          <li><a href="#Koehler-Baumgartner">Koehler-Baumgartner (Hebrew Lexicon)</a></li>
+          <li><a href="#Merkle-Plummer">Merkle-Plummer (NT Greek)</a></li>
+          <li><a href="#W. Mounce">Mounce (Biblical Greek)</a></li>
+          <li><a href="#Pratico-Van Pelt">Pratico-Van Pelt (Biblical Hebrew)</a></li>
+          <li><a href="#Snell">Snell (Cuneiform)</a></li>
+          <li><a href="#Van Pelt">Van Pelt (Biblical Aramaic)</a></li>
+          <li><a href="#Wallace">Wallace (Greek Beyond Basics)</a></li>
+          <li><a href="#A. Wright">Wright (Ancient Ethiopic)</a></li>
+        </ul>
+      </div>
+
+      <div class="category-card">
+        <h3>Missiology</h3>
+        <ul>
+          <li><a href="#Adeney">Adeney, Frances (Graceful Evangelism)</a></li>
+          <li><a href="#Adeney">Adeney, Miriam (Kingdom Without Borders)</a></li>
+          <li><a href="#Allen">Allen, Roland (Missionary Methods)</a></li>
+          <li><a href="#Conn-Ortiz">Conn-Ortiz (Urban Ministry)</a></li>
+          <li><a href="#Elmer">Elmer (Cross-Cultural Connections)</a></li>
+          <li><a href="#Escobar">Escobar (New Global Mission)</a></li>
+          <li><a href="#Garrison">Garrison (Church Planting Movements)</a></li>
+          <li><a href="#Hesselgrave">Hesselgrave (Communicating Christ)</a></li>
+          <li><a href="#Hiebert">Hiebert (Anthropological Insights)</a></li>
+          <li><a href="#Jenkins">Jenkins (Next Christendom)</a></li>
+          <li><a href="#Lingenfelter-Mayers">Lingenfelter-Mayers (Ministering Cross-Culturally)</a></li>
+          <li><a href="#Livermore">Livermore (Cultural Intelligence)</a></li>
+          <li><a href="#Mandryk">Mandryk (Operation World)</a></li>
+          <li><a href="#Newbigin">Newbigin (Gospel in Pluralist Society)</a></li>
+          <li><a href="#Ott-Strauss-Tennent">Ott-Strauss-Tennent (Theology of Mission)</a></li>
+          <li><a href="#Parshall">Parshall (Muslim Evangelism)</a></li>
+          <li><a href="#Pierson">Pierson (Dynamics of Christian Mission)</a></li>
+          <li><a href="#Piper">Piper (Let the Nations Be Glad)</a></li>
+          <li><a href="#Pocock-Rheenen-McConnell-Moreaus">Pocock et al. (Changing Face of Missions)</a></li>
+          <li><a href="#Priest-Howell">Priest-Howell (Short-Term Missions)</a></li>
+          <li><a href="#Richardson">Richardson, Don (Peace Child)</a></li>
+          <li><a href="#Steffen-Barnett">Steffen-Barnett (Business as Mission)</a></li>
+          <li><a href="#Tennent">Tennent (Invitation to World Missions)</a></li>
+          <li><a href="#Winter-Hawthorne">Winter-Hawthorne (Perspectives)</a></li>
+        </ul>
+      </div>
+
+      <!-- OLD TESTAMENT -->
+      <div class="category-card">
+        <h3>Old Testament Studies</h3>
+        <ul>
+          <li><a href="#Richard Hess">Hess (The Old Testament)</a></li>
+          <li><a href="#Hill-Walton">Hill-Walton (Survey of OT)</a></li>
+          <li><a href="#Kitchen">Kitchen (Reliability of OT)</a></li>
+          <li><a href="#Richter">Richter (Epic of Eden)</a></li>
+          <li><a href="#Schneider">Schneider (Mesopotamian Religion)</a></li>
+        </ul>
+      </div>
+
+      <div class="category-card">
+        <h3>Ancient Near East</h3>
+        <ul>
+          <li><a href="#Bertman">Bertman (Life in Ancient Mesopotamia)</a></li>
+          <li><a href="#Black-Green">Black-Green (Gods, Demons & Symbols)</a></li>
+          <li><a href="#Blackwell">Blackwell History Series (6-10 vols)</a></li>
+          <li><a href="#Bottéro">Bottéro (Religion in Ancient Mesopotamia)</a></li>
+          <li><a href="#Hoerth">Hoerth (Peoples of OT World)</a></li>
+          <li><a href="#Jacobsen">Jacobsen (Treasures of Darkness)</a></li>
+          <li><a href="#Pinch">Pinch (Egyptian Myth)</a></li>
+          <li><a href="#Sasson">Sasson (Civilizations of ANE)</a></li>
+          <li><a href="#Teeter">Teeter (Religion & Ritual in Ancient Egypt)</a></li>
+          <li><a href="#Toorn-Becking-Horst">Toorn et al. (Dictionary of Deities & Demons)</a></li>
+          <li><a href="#Van De Mieroop">Van De Mieroop (History of ANE & Egypt)</a></li>
+          <li><a href="#Von Soden">Von Soden (The Ancient Orient)</a></li>
+          <li><a href="#White">White (Everyday Life in Ancient Egypt)</a></li>
+        </ul>
+      </div>
+
+      <!-- INTERTESTAMENTAL -->
+      <div class="category-card">
+        <h3>Second Temple Judaism</h3>
+        <ul>
+          <li><a href="#Collins">Collins, J.J. (Scepter and the Star)</a></li>
+          <li><a href="#Collins-Evans">Collins-Evans (Christian Beginnings & DSS)</a></li>
+          <li><a href="#Collins-Kugler">Collins-Kugler (Religion in DSS)</a></li>
+          <li><a href="#Evans">Evans, C.A. (World of Jesus)</a></li>
+          <li><a href="#Evans-Flint">Evans-Flint (Eschatology & DSS)</a></li>
+          <li><a href="#Fitzmyer">Fitzmyer (DSS & Christian Origins)</a></li>
+          <li><a href="#Flint-VanderKam">Flint-VanderKam (Meaning of DSS)</a></li>
+          <li><a href="#Flusser">Flusser (Judaism of Second Temple)</a></li>
+          <li><a href="#Grabbe">Grabbe (Introduction to Second Temple)</a></li>
+          <li><a href="#Sacchi">Sacchi (History of Second Temple)</a></li>
+          <li><a href="#Schiffman">Schiffman (Text to Tradition)</a></li>
+          <li><a href="#Skarsaune">Skarsaune (In the Shadow of the Temple)</a></li>
+          <li><a href="#Skarsaune-Hvalvik">Skarsaune-Hvalvik (Jewish Believers in Jesus)</a></li>
+        </ul>
+      </div>
+
+      <!-- NEW TESTAMENT -->
+      <div class="category-card">
+        <h3>New Testament Studies</h3>
+        <ul>
+          <li><a href="#IVP">IVP Dictionary: Paul and His Letters</a></li>
+          <li><a href="#IVP">IVP Dictionary: Jesus and the Gospels</a></li>
+          <li><a href="#IVP">IVP Dictionary: Later NT & Developments</a></li>
+          <li><a href="#IVP">IVP Dictionary: NT Background</a></li>
+        </ul>
+      </div>
+
+      <!-- SYNTHESIS -->
+      <div class="category-card">
+        <h3>Hermeneutics</h3>
+        <ul>
+          <li><a href="#Beale">Beale (NT Use of OT)</a></li>
+          <li><a href="#Doriani">Doriani (Getting the Message)</a></li>
+          <li><a href="#Fee">Fee (NT Exegesis)</a></li>
+          <li><a href="#Fee-Douglas">Fee-Douglas (How to Read the Bible)</a></li>
+          <li><a href="#Kaiser">Kaiser (Exegetical Theology)</a></li>
+          <li><a href="#Klein-Bloomberg-Hubbard">Klein et al. (Biblical Interpretation)</a></li>
+          <li><a href="#Osborne">Osborne (Hermeneutical Spiral)</a></li>
+          <li><a href="#Poythress">Poythress (Reading in God's Presence)</a></li>
+          <li><a href="#Stewart">Stewart (OT Exegesis)</a></li>
+          <li><a href="#Thiselton">Thiselton (Hermeneutics)</a></li>
+          <li><a href="#Vanhoozer">Vanhoozer (Mere Christian Hermeneutics)</a></li>
+        </ul>
+      </div>
+
+      <div class="category-card">
+        <h3>Systematic Theology</h3>
+        <ul>
+          <li><a href="#Bavinck">Bavinck (Reformed Dogmatics)</a></li>
+          <li><a href="#Berkhof">Berkhof (Systematic Theology)</a></li>
+          <li><a href="#Demarest-Feinberg">Demarest-Feinberg (The Cross & Salvation)</a></li>
+          <li><a href="#Erickson">Erickson (Christian Theology)</a></li>
+          <li><a href="#Frame">Frame (Systematic Theology)</a></li>
+          <li><a href="#Grudem">Grudem (Systematic Theology)</a></li>
+          <li><a href="#Hoekema">Hoekema (Created in God's Image)</a></li>
+          <li><a href="#Letham">Letham (Systematic Theology)</a></li>
+          <li><a href="#Reymond">Reymond (New Systematic Theology)</a></li>
+        </ul>
+      </div>
+
+      <!-- SPECIALIZED -->
+      <div class="category-card">
+        <h3>Eschatology & Prophecy</h3>
+        <ul>
+          <li><a href="#James">James, Dr. Tim (The Restoration Series)</a></li>
+          <li><a href="#Kurschner">Kurschner (Prewrath, Antichrist, Pretrib)</a></li>
+          <li><a href="#Richardson">Richardson, Joel (Islamic Antichrist, Mystery Babylon)</a></li>
+        </ul>
+      </div>
+
+      <!-- REFERENCE RESOURCES -->
+      <div class="category-card">
+        <h3>Reference Resources</h3>
+        <ul>
+          <li><a href="#De Vaux">De Vaux (Ancient Israel)</a></li>
+          <li><a href="#Dever">Dever (Lives of Ordinary People)</a></li>
+          <li><a href="#Ebeling">Ebeling (Women's Lives in Biblical Times)</a></li>
+          <li><a href="#Richard Hess">Hess (Israelite Religions)</a></li>
+          <li><a href="#Mettinger">Mettinger (In Search of God)</a></li>
+          <li><a href="#Miller">Miller (Religion of Ancient Israel)</a></li>
+          <li><a href="#Walton">Walton (ANE Thought & OT, Lost Worlds)</a></li>
+          <li><a href="#Westbrook-Wells">Westbrook-Wells (Everyday Law in Biblical Israel)</a></li>
+        </ul>
+      </div>
+
+      <!-- PRACTICAL -->
+      <div class="category-card">
+        <h3>Christian Living</h3>
+        <ul>
+          <li><a href="#Bunyan">Bunyan (Pilgrim's Progress, Holy War)</a></li>
+          <li><a href="#Lewis">Lewis, C.S. (Signature Classics, Narnia, Space Trilogy)</a></li>
+          <li><a href="#Tozer">Tozer (Attributes of God, Knowledge of the Holy)</a></li>
+          <li><a href="#Wright">Wright, N.T. (Surprised by Hope, Simply Christian)</a></li>
+        </ul>
+      </div>
+
+      <div class="category-card">
+        <h3>Children, Homeschooling & Gifts</h3>
+        <ul>
+          <li><a href="#Hergé">Hergé (Adventures of Tintin - Complete Set)</a></li>
+          <li><a href="#Watterson">Watterson (Complete Calvin & Hobbes)</a></li>
+          <li><a href="#Lewis">Lewis (Chronicles of Narnia Box Sets)</a></li>
+          <li><a href="#Tolkien">Tolkien (Lord of the Rings, Hobbit, Collections)</a></li>
+          <li><strong>Homeschool Curriculum</strong> (Coming Soon)</li>
+          <li><strong>Gift Bundles & Collections</strong> (Coming Soon)</li>
+        </ul>
+      </div>
+
+      <div class="category-card">
+        <h3>Literary & Biographical</h3>
+        <ul>
+          <li><a href="#Loconte">Loconte (Hobbit, Wardrobe & Great War)</a></li>
+          <li><a href="#Tolkien">Tolkien (Complete Works & Collections)</a></li>
+          <li><a href="#Wright">Wright, N.T. (Paul: A Biography)</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleCategories() {
+  const content = document.getElementById('categoryContent');
+  const icon = document.getElementById('toggleIcon');
+  
+  if (content.classList.contains('open')) {
+    content.classList.remove('open');
+    icon.classList.remove('open');
+  } else {
+    content.classList.add('open');
+    icon.classList.add('open');
+  }
+}
+
+// Optional: Start with categories visible
+window.addEventListener('load', function() {
+  document.getElementById('categoryContent').classList.add('open');
+  document.getElementById('toggleIcon').classList.add('open');
+});
+</script>
+
+<!-- ==================== END BROWSE BY CATEGORY SECTION ==================== -->
+
 <div class="content">
   <!-- ==================== SIDEBAR ==================== -->
   <div class="sidebar">
     <h3 style="color:#002147; margin-bottom:10px;">Browse Category</h3>
-    <div style="font-size:13px; line-height:1.9; margin-bottom:25px;">
+  
+  <!-- PASTE THIS INSTRUCTION BOX HERE -->
+  <div style="background:#fff8dc; border-left:4px solid #228B22; padding:10px; margin-bottom:15px; font-size:13px; line-height:1.5;">
+    <strong>📚 How to Browse:</strong><br>
+    Use the <strong>"Browse by Category"</strong> dropdown above to find authors and books by subject area.
+  </div>
+  
+  <div style="font-size:13px; line-height:1.9; margin-bottom:25px;">
+    
       <!-- FOUNDATION -->
       <a href="#biblical-languages" style="color:#002147; text-decoration:none; display:block;">• Biblical Languages</a>
       <a href="#missiology" style="color:#002147; text-decoration:none; display:block;">• Missiology</a>
