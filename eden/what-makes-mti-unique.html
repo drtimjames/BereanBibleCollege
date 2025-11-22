@@ -14,32 +14,24 @@
     nav{display:flex;justify-content:center;gap:25px;padding:10px 0;border-bottom:1px solid #ccc}
     nav a{color:var(--nav-blue);text-decoration:none;font-weight:bold}
     nav a:hover{color:var(--green)}
-    .ticker{overflow:hidden;white-space:nowrap;background:white;padding:10px 0;margin-bottom:15px}
-    .ticker p{display:inline-block;animation:scroll-left 40s linear infinite;color:var(--nav-blue);margin:0;font-size:15px}
+    .ticker{overflow:hidden;white-space:nowrap;background:white;padding:10px 0;margin-bottom:0}
+    .ticker p{display:inline-block;animation:scroll-left 40s linear infinite;color:#0066CC;margin:0;font-size:15px}
     @keyframes scroll-left{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
-    .content{display:grid;grid-template-columns:280px 1fr;gap:20px;padding:20px;max-width:1200px;margin:0 auto}
-    .sidebar{border-right:2px solid #ccc;padding-right:15px}
-    .sidebar h3{color:var(--nav-blue);font-size:18px;margin-bottom:15px}
-    .sidebar iframe{width:100%;height:160px;border:none;margin-bottom:15px;border-radius:4px}
-    .sidebar ul{list-style:none;padding:0;margin:30px 0 0 0}
-    .sidebar li{margin-bottom:12px}
-    .sidebar a{color:var(--nav-blue);text-decoration:none;font-size:15px;font-weight:600}
-    .sidebar a:hover{color:var(--green);text-decoration:underline}
-    .main{padding-left:20px;line-height:1.8}
+    
+    /* SINGLE COLUMN LAYOUT */
+    .content{max-width:900px;margin:0 auto;padding:0 20px 20px 20px}
+    
+    .main{line-height:1.8}
     .main h2{color:var(--nav-blue);font-size:26px;border-bottom:2px solid #ccc;padding-bottom:8px;margin:40px 0 20px}
-    .hero,.exec-box,.pillar,.cta-section{margin:30px 0;border-radius:8px}
-    .hero{text-align:center;padding:40px 20px;border-bottom:2px solid #ccc}
+    .hero,.exec-box,.pillar,.cta-section{margin:0 0 30px 0;border-radius:8px}
+    .hero{text-align:center;padding:5px 20px 40px 20px;border-bottom:2px solid #ccc}
     .exec-box{background:#f0f8ff;border:2px solid #99b3cc;padding:30px}
-    .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
     .pillar{background:white;border:2px solid #ccc;padding:30px;border-radius:8px;text-align:center}
     .cta-section{background:var(--green);color:white;text-align:center;padding:40px 20px}
-    .cta-button{display:inline-block;background:white;color:var(--green);padding:15px 40px;border-radius:5px;font-weight:bold;font-size:18px;margin:10px}
+    .cta-button{display:inline-block;background:white;color:var(--green);padding:15px 40px;border-radius:5px;font-weight:bold;font-size:18px;margin:10px;text-decoration:none}
     .cta-button:hover{background:#002147;color:white}
     footer{text-align:center;padding:20px;color:#555;border-top:1px solid #ccc;margin-top:60px;font-size:14px}
-    @media (max-width:768px){
-      .content{grid-template-columns:1fr}
-      .sidebar{border-right:none;border-bottom:2px solid #ccc;padding-bottom:20px;margin-bottom:20px}
-    }
   </style>
 </head>
 <body>
@@ -63,34 +55,7 @@
   </div>
 
   <div class="content">
-
-    <!-- LEFT SIDEBAR — identical on every MTI page -->
-    <div class="sidebar">
-      <h3>Featured Training</h3>
-      <iframe src="https://www.youtube.com/embed/sjQiZOQfWB0" title="MTI Introduction" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/eGzprqZfw3U" title="Languages First" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/_7watmvWVN4" title="Restoration Theology" allowfullscreen></iframe>
-
-      <h3 style="margin-top:30px">Quick Links</h3>
-      <ul>
-        <li><a href="about.html">→ About MTI</a></li>
-        <li><a href="academics.html">→ Academics</a></li>
-        <li><a href="admissions.html">→ Admissions</a></li>
-        <li><a href="veterans.html">→ Veterans (GI Bill)</a></li>
-        <li><a href="why-languages-first.html">→ Why Languages First?</a></li>
-        <li><a href="../store/scriptorium.html">→ Scriptorium (Bookstore)</a></li>
-        <li><a href="contact.html">→ Contact Us</a></li>
-      </ul>
-    </div>
-
-    <!-- MAIN CONTENT — your entire original page, perfectly preserved -->
     <div class="main">
-
-      <div class="hero">
-        <h2>Forging Missionaries for the Harvest</h2>
-        <p><em>Elite Training. Biblical Languages. Cross-Cultural Experience. Restoration Theology.</em></p>
-        <p>Three Years. Year-Round. No Shortcuts. The Mission Field Is Waiting.</p>
-      </div>
 
 <!-- EXECUTIVE SUMMARY -->
       <h2>Mission Statement</h2>
@@ -162,7 +127,7 @@
 </ul>
 
 <!-- VETERANS PIPELINE -->
-<h2> From the Battlefield to the Mission Field</h2>
+<h2>From the Battlefield to the Mission Field</h2>
 <p><strong>Why Veterans Make Ideal Missionaries:</strong> Cross-cultural deployment experience, security training, hardship endurance, discipline, team dynamics, sacrifice mindset.</p>
 
 <p style="margin-top:15px"><strong>GI Bill Benefits:</strong> Veterans use Post-9/11 GI Bill to cover full tuition ($27K/year), monthly housing allowance ($1,500-$2,500/month), and books ($1,000/year). <strong>Graduate completely debt-free.</strong></p>
@@ -195,4 +160,3 @@
   </footer>
 </body>
 </html>
-
