@@ -5,41 +5,31 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Why Languages First? | Berean Bible College</title>
   <style>
-    :root{
-      --navy:#002147;
-      --green:#228B22;
-      --muted:#555;
-      --text:#111;
-    }
+    :root{--navy:#002147;--green:#228B22;--muted:#555;--text:#111}
     body{margin:0;padding:0;background:#fff;color:var(--text);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;line-height:1.7}
-    
-    /* STANDARD HEADER */
     header{text-align:center;border-bottom:2px solid #ddd;padding:20px 0 20px 0}
     header img{width:80px;height:auto;display:block;margin:0 auto 10px}
     header h1{font-size:28px;margin:0 0 18px 0;color:var(--navy)}
-    header h2{font-size:24px;margin:0 0 18px 0;color:var(--text)}
-    
-    /* TICKER */
     .ticker{overflow:hidden;white-space:nowrap;border-top:1px solid #eee;border-bottom:1px solid #eee;background:white;padding:10px 0;margin-bottom:0}
-    .ticker p{display:inline-block;animation:scroll-left 30s linear infinite;color:#0066CC;margin:0;font-size:15px;font-weight:400}
+    .ticker p{display:inline-block;animation:scroll-left 40s linear infinite;color:#0066CC;margin:0;font-size:15px;font-weight:400}
     @keyframes scroll-left{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
     
     /* TWO-COLUMN LAYOUT */
     .container{display:grid;grid-template-columns:300px 1fr;gap:30px;max-width:1200px;margin:30px auto;padding:0 20px}
     
-    /* LEFT COLUMN - SITE HIERARCHY */
+    /* LEFT COLUMN – NO FLEX AT ALL */
     .sidebar{border-right:2px solid #ddd;padding-right:25px}
     .sidebar h3{color:var(--navy);font-size:20px;margin:0 0 20px 0;border-bottom:2px solid var(--green);padding-bottom:8px}
-    .sidebar nav{display:flex;flex-direction:column;gap:0}
+    .sidebar nav{display:block}
     .sidebar .section{margin-bottom:25px}
     .sidebar .section-title{font-weight:700;color:var(--navy);font-size:16px;margin-bottom:10px;display:block}
     .sidebar .section-title:hover{color:var(--green)}
-    .sidebar .sub-links{margin-left:15px;display:flex;flex-direction:column;gap:8px}
+    .sidebar .sub-links{margin-left:15px;display:block}
+    .sidebar .sub-links a{display:block;margin-bottom:8px}
     .sidebar a{color:var(--text);text-decoration:none;font-size:14px;line-height:1.6;transition:0.2s}
     .sidebar a:hover{color:var(--green);padding-left:5px}
     .sidebar .sub-links a::before{content:"→ ";color:var(--green)}
     
-    /* RIGHT COLUMN - CONTENT */
     .main{padding-left:20px}
     .main h2{color:var(--navy);font-size:26px;margin:0 0 15px 0;line-height:1.3}
     .main h3{color:var(--navy);font-size:20px;margin:30px 0 12px 0}
@@ -51,12 +41,10 @@
     .main li{margin-bottom:8px}
     .main strong{color:var(--navy)}
     .main em{color:var(--muted)}
-    
     .cta{background:var(--green);color:white;padding:25px;text-align:center;margin:40px 0;border-radius:8px}
     .cta h3{color:white;margin:0 0 10px 0}
     .cta p{margin:0;font-size:16px}
     .cta .tagline{font-style:italic;font-size:14px;margin-top:15px;opacity:0.9}
-    
     footer{text-align:center;padding:20px;color:var(--muted);border-top:1px solid #ddd;margin-top:50px;font-size:14px}
     
     @media (max-width:900px){
@@ -79,21 +67,17 @@
 
 <div class="container">
   
-  <!-- LEFT COLUMN: SITE HIERARCHY -->
   <aside class="sidebar">
     <h3>Explore BBC</h3>
     <nav>
-      
       <div class="section">
         <a href="index.html" class="section-title">BBC Home</a>
       </div>
-      
       <div class="section">
-          <a href="why-languages-first.html" class="section-title">Why Languages First?</a>
-          <a href="what-languages-first-looks-like.html" class="section-title">What Languages First Looks Like</a>
-          <a href="bbc-competitive-analysis.html" class="section-title">Competitive Analysis</a>
+        <a href="why-languages-first.html" class="section-title">Why Languages First?</a>
+        <a href="what-languages-first-looks-like.html" class="section-title">What Languages First Looks Like</a>
+        <a href="bbc-competitive-analysis.html" class="section-title">Competitive Analysis</a>
       </div>
-      
       <div class="section">
         <a href="eden/contact.html" class="section-title">Contact MTI</a>
         <div class="sub-links">
@@ -105,7 +89,6 @@
           <a href="childrenshelp/impact.html" class="section-title">Charity's Impact Report</a>
         </div>
       </div>
-      
       <div class="section">
         <a href="o-l-research-lab.html" class="section-title">Original Language Research Lab</a>
         <div class="sub-links">
@@ -114,119 +97,83 @@
           <a href="theology.html">Theology</a>
         </div>
       </div>
-      
       <div class="section">
         <a href="store/inner-sanctum-bookstore.html" class="section-title">Inner Sanctum Bookstore</a>
         <div class="sub-links">
-          <a href="../store/narthex.html">Featured: Dr. Tim James</a>
-          <a href="../store/inner-sanctum-bookstore.html">Browse All Books</a>
+          <a href="store/narthex.html">Featured Author: Dr. Tim James</a>
+          <a href="store/inner-sanctum-bookstore.html">Browse All Books</a>
         </div>
       </div>
-      
       <div class="section">
-        <a href="../news/home.html" class="section-title">Day Watch News</a>
+        <a href="news/home.html" class="section-title">Day Watch News</a>
         <div class="sub-links">
-          <a href="../news/current.html">Current Events</a>
-          <a href="../news/analysis.html">Biblical Analysis</a>
+          <a href="news/current.html">Current Events</a>
+          <a href="news/analysis.html">Biblical Analysis</a>
         </div>
       </div>
-      
       <div class="section">
-        <a href="../childrenshelp/index.html" class="section-title">Children's H.E.L.P.</a>
+        <a href="childrenshelp/index.html" class="section-title">Children's H.E.L.P.</a>
         <div class="sub-links">
-          <a href="../childrenshelp/impact.html">Impact Report</a>
-          <a href="../childrenshelp/donate.html">Support the Mission</a>
+          <a href="childrenshelp/impact.html">Impact Report</a>
         </div>
       </div>
-      
     </nav>
   </aside>
   
-  <!-- RIGHT COLUMN: WHY LANGUAGES FIRST CONTENT -->
   <main class="main">
-    
     <h2>Why Languages First?</h2>
-    
     <p class="lead">"If you don't understand the original language, and you don't understand what was happening in the world at the time those words were written, how can you have any idea of the context of the original author... or of God, for that matter?!"</p>
-    
     <h3>The Problem with Traditional Bible Education</h3>
     <p>Most Bible colleges teach students <em>about</em> the Bible before teaching them to <strong>read</strong> the Bible. Students spend their first two years learning theology, doctrine, and interpretations—all filtered through English translations and the perspectives of modern commentators.</p>
-    
     <p>By the time they encounter Greek and Hebrew (if they ever do), they've already formed theological conclusions. Now they must either:</p>
-    
     <ul>
       <li>Defend their existing beliefs by forcing the original languages to fit what they've already been taught, or</li>
       <li>Unlearn years of false foundations and start over—a painful and often incomplete process.</li>
     </ul>
-    
     <p>This backwards approach produces graduates who can quote systematic theology but cannot read Romans in Greek. They know <em>about</em> God's Word, but they've never truly encountered it.</p>
-    
     <div class="callout">
       <h3>The Berean Difference: Languages First</h3>
       <p>At Berean Bible College, we do it differently—and correctly.</p>
       <p><strong>We teach you to READ the Bible before we teach you ABOUT the Bible.</strong></p>
       <p>Our curriculum begins where it should: with Biblical Hebrew, Koine Greek, and Aramaic. From day one, you're learning to read Scripture as it was actually written—not as it's been translated, interpreted, or filtered through centuries of theological tradition.</p>
     </div>
-    
     <h3>Why Does This Matter?</h3>
-    
     <p><strong>Every translation is an interpretation.</strong> When you read "love" in English, are you reading <em>agape</em>, <em>phileo</em>, <em>storge</em>, or <em>eros</em>? Each has radically different meanings. When you read "repent," do you understand the Hebrew <em>shub</em> (turn around, return) or the Greek <em>metanoia</em> (change your mind, transform your thinking)?</p>
-    
     <p><strong>Context is everything.</strong> When Paul wrote to first-century believers in Corinth, he was addressing people living in a Roman city saturated with pagan temple prostitution, imperial cult worship, and Greek philosophical debates. When Isaiah prophesied to eighth-century BC Jerusalem, he was speaking into the political turmoil of the Assyrian invasion, royal corruption, and covenant unfaithfulness.</p>
-    
     <p>If you don't know the language, you miss the wordplay, the literary structure, the prophetic echoes, the nuance. If you don't know the ancient world, you miss the shocking nature of what was being said.</p>
-    
     <p><strong>How can you understand the author's original intent — God's intent — without understanding their language and their contemporary world?</strong></p>
-    
     <h3>The Berean Approach: A Three-Year Journey</h3>
-    
-    <p><strong>Year 1: Foundation</strong><br>
-    Master Biblical Hebrew, Koine Greek, and Aramaic. Learn the grammar, syntax, and vocabulary. Begin reading simple biblical texts in the original languages.</p>
-    
-    <p><strong>Year 2: Context</strong><br>
-    Study the Ancient Near East and Second Temple Judaism. Understand the cultures, religions, politics, and daily life of the biblical world. Now, when you read Scripture, you're reading it in context.</p>
-    
-    <p><strong>Year 3: Immersion & Synthesis</strong><br>
-    Read extensively in the Hebrew Bible and the Greek New Testament. Study Old Testament and New Testament theology — but now you'll be forming conclusions from the original text, not from English translations or commentaries. Engage with Biblical Theology, Systematic Theology, and your chosen specializations (Eschatology, Apologetics, etc.). Now you can evaluate theological systems against what Scripture actually says — because you can read it and understand it for yourself. Just you and the Holy Spirit.</p>
-
+    <p><strong>Year 1: Foundation</strong><br>Master Biblical Hebrew, Koine Greek, and Aramaic. Learn the grammar, syntax, and vocabulary. Begin reading simple biblical texts in the original languages.</p>
+    <p><strong>Year 2: Context</strong><br>Study the Ancient Near East and Second Temple Judaism. Understand the cultures, religions, politics, and daily life of the biblical world. Now, when you read Scripture, you're reading it in context.</p>
+    <p><strong>Year 3: Immersion & Synthesis</strong><br>Read extensively in the Hebrew Bible and the Greek New Testament. Study Old Testament and New Testament theology — but now you'll be forming conclusions from the original text, not from English translations or commentaries. Engage with Biblical Theology, Systematic Theology, and your chosen specializations (Eschatology, Apologetics, etc.). Now you can evaluate theological systems against what Scripture actually says — because you can read it and understand it for yourself. Just you and the Holy Spirit.</p>
     <div class="callout">
-  <h3>2 Timothy 4:1-5 - Why God Commands This Training</h3>
-  <p><em>"Preach the word and be ready. Convict, rebuke, and exhort - for a time is coming when they will be deceived and turn away from sound teaching. And having itching ears, they will accumulate for themselves teachers who will turn them away from listening to the truth. They will be deceived and turned aside to fables."</em> (2 Timothy 4:1-5, adapted)</p>
-  <p><strong>That time has come.</strong> God called Timothy, and <strong>today</strong> He calls us. Be prepared when false teachers accumulate followers by tickling their ears with fanciful speech that is contrary to biblical truth.</p>
-</div>
-    
+      <h3>2 Timothy 4:1-5 - Why God Commands This Training</h3>
+      <p><em>"Preach the word and be ready. Convict, rebuke, and exhort - for a time is coming when they will be deceived and turn away from sound teaching. And having itching ears, they will accumulate for themselves teachers who will turn them away from listening to the truth. They will be deceived and turned aside to fables."</em> (2 Timothy 4:1-5, adapted)</p>
+      <p><strong>That time has come.</strong> God called Timothy, and <strong>today</strong> He calls us. Be prepared when false teachers accumulate followers by tickling their ears with fanciful speech that is contrary to biblical truth.</p>
+    </div>
     <div class="callout">
       <h3>Acts 17:11 – The Berean Standard</h3>
       <p><em>"Now the Bereans were of more noble character than those in Thessalonica, for they received the message with great eagerness and examined the Scriptures every day to see if what Paul said was true."</em></p>
       <p>You cannot truly examine the Scriptures if you're dependent on translations, commentaries, and second-hand interpretations. The Bereans didn't just listen to teachers—they checked the source documents themselves.</p>
       <p><strong>That's what we're training you to do.</strong></p>
     </div>
-    
     <h3>Who Should Study at Berean Bible College?</h3>
-    
     <p>This approach isn't for everyone. It requires:</p>
-    
     <ul>
       <li><strong>Intellectual humility</strong> – the willingness to learn languages and history before forming theological opinions</li>
       <li><strong>Academic rigor</strong> – languages are demanding, and context requires extensive reading</li>
       <li><strong>Spiritual hunger</strong> – a deep desire to encounter God's Word as it was given, not as it's been filtered</li>
     </ul>
-    
     <p>If you're willing to do the hard work—if you want to be a Berean who examines the Scriptures directly — then this is your college.</p>
-    
     <h3>The Result: Scholars Who Know the Source</h3>
-    
     <p>When you graduate from Berean Bible College, you won't just have a theology degree. You'll have:</p>
-    
     <ul>
       <li>The ability to read the Bible in its original languages</li>
       <li>A deep understanding of ancient context (ANE, Second Temple Judaism, Roman world)</li>
       <li>The tools to evaluate theological claims against the original text</li>
       <li>The confidence to study Scripture independently for the rest of your life</li>
     </ul>
-    
     <p>You'll be equipped not just to repeat what others have said, but to discover what God has actually revealed.</p>
-    
     <div class="cta">
       <h3>Join Us</h3>
       <p>If you're tired of second-hand theology...</p>
@@ -235,9 +182,7 @@
       <p style="margin-top:20px; font-size:18px; font-weight:700;">Welcome to Berean Bible College.</p>
       <p class="tagline">"Languages first. Context always. Truth above tradition."<br>— The Berean Standard</p>
     </div>
-    
   </main>
-  
 </div>
 
 <footer>
