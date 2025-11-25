@@ -1,0 +1,422 @@
+/* ============================================
+   BEREAN BIBLE COLLEGE - GLOBAL STYLES
+   Consolidated from inline styles across pages
+   ============================================ */
+
+:root {
+  /* Brand colors */
+  --navy: #002147;
+  --green: #228B22;
+  --green-hover: #32CD32;
+  --muted: #555;
+  --text: #111;
+  --bg: #fff;
+  --border: #ccc;
+  --border-light: #ddd;
+  --bg-alt: #f9f9f9;
+  --bg-card: #fafafa;
+
+  /* Layout */
+  --max-width: 1200px;
+  --sidebar-width: 240px;
+
+  /* Typography */
+  --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+
+header {
+  text-align: center;
+  padding: 18px 0;
+  border-bottom: 2px solid var(--border-light);
+}
+
+header img {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin: 0 0 18px 0;
+  color: var(--navy);
+}
+
+header h2 {
+  font-size: 24px;
+  color: var(--muted);
+  margin: 5px 0 0 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+nav a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--green);
+}
+
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+
+.breadcrumb {
+  max-width: var(--max-width);
+  margin: 15px auto;
+  padding: 0 20px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.breadcrumb a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   TWO-COLUMN LAYOUT (Store pages)
+   ============================================ */
+
+.content {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.sidebar {
+  border-right: 2px solid var(--border);
+  padding-right: 10px;
+}
+
+.sidebar h3 {
+  color: var(--navy);
+  margin-top: 0;
+}
+
+.sidebar iframe {
+  width: 100%;
+  height: 150px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.main {
+  padding-left: 20px;
+}
+
+/* ============================================
+   BOOK CARDS (List view - category pages)
+   ============================================ */
+
+.book-card {
+  display: flex;
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+  padding: 10px;
+  background: white;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.book-card img {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--navy);
+}
+
+.book-info p {
+  margin: 2px 0;
+  font-size: 0.95rem;
+}
+
+.book-info .subtitle {
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.buttons {
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.buttons a {
+  background: var(--green);
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.buttons a:hover {
+  background: var(--green-hover);
+  color: black;
+}
+
+.toc-link {
+  font-size: 0.9rem;
+  color: var(--navy);
+  margin-top: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.toc-link:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   AUTHOR SECTIONS
+   ============================================ */
+
+.author-section {
+  margin-bottom: 40px;
+}
+
+h2.author-name {
+  color: var(--navy);
+  margin-top: 30px;
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 5px;
+}
+
+.author-bio {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ============================================
+   CATEGORY NAVIGATION
+   ============================================ */
+
+.category-nav {
+  text-align: center;
+  margin: 30px 0;
+  padding: 15px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+}
+
+.category-nav a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.category-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   PAGE TITLES
+   ============================================ */
+
+.page-title {
+  color: var(--navy);
+  border-bottom: 3px solid var(--green);
+  padding-bottom: 8px;
+}
+
+.page-subtitle {
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+/* ============================================
+   BOOK GRID (Narthex/Featured pages)
+   ============================================ */
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.book-grid .book-card {
+  border: 1px solid var(--border-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-grid .book-card img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.book-grid .book-card.coming-soon {
+  background: #f0f0f0;
+  opacity: 0.9;
+}
+
+.book-grid .book-card.coming-soon img {
+  filter: grayscale(30%);
+}
+
+.download-btn {
+  display: inline-block;
+  margin: 0.8rem 0 0.5rem;
+  padding: 0.7rem 1.4rem;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.download-btn:hover {
+  background: var(--green);
+}
+
+/* ============================================
+   TICKER (News banner)
+   ============================================ */
+
+.ticker {
+  max-width: var(--max-width);
+  margin: 8px auto;
+  padding: 4px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker p {
+  display: inline-block;
+  animation: scroll 18s linear infinite;
+  font-size: 13px;
+  color: #0066CC;
+  margin: 0;
+}
+
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 30px;
+}
+
+footer a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+  }
+
+  .main {
+    padding-left: 0;
+  }
+
+  .book-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-card img {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}

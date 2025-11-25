@@ -1,0 +1,17 @@
+# Packer, J.I. - Knowing God
+title: "Knowing God"
+subtitle: "50th Anniversary Edition"
+
+author:
+  lastName: "Packer"
+  firstName: "J.I."
+  display: "Packer, J.I."
+
+cover: packer-ji-knowing.jpg
+
+links:
+  hardback: "1514007789"
+  paperback: "1514007762"
+  kindle: "B0BXFPJDJP"
+
+sortOrder: 1

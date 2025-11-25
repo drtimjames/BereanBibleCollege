@@ -1,0 +1,39 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '@components/Header.astro';
+import Nav from '@components/Nav.astro';
+import Sidebar from '@components/Sidebar.astro';
+import Footer from '@components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  breadcrumb?: string;
+  breadcrumbLink?: string;
+}
+
+const {
+  title,
+  description,
+  breadcrumb = 'Inner Sanctum Bookstore',
+  breadcrumbLink = '/store/inner-sanctum'
+} = Astro.props;
+---
+
+<BaseLayout title={`${title} | Inner Sanctum Bookstore`} description={description}>
+  <Header />
+  <Nav />
+
+  <div class="breadcrumb">
+    <a href={breadcrumbLink}>&larr; Back to {breadcrumb}</a>
+  </div>
+
+  <div class="content">
+    <Sidebar />
+    <main class="main">
+      <slot />
+    </main>
+  </div>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,21 @@
+---
+// Sidebar component with featured YouTube videos
+const videos = [
+  { id: 'sjQiZOQfWB0', title: 'Featured Lesson 1' },
+  { id: 'eGzprqZfw3U', title: 'Featured Lesson 2' },
+  { id: '_7watmvWVN4', title: 'Featured Lesson 3' },
+];
+---
+
+<aside class="sidebar">
+  <h3>Featured Lessons</h3>
+  {videos.map((video) => (
+    <iframe
+      src={`https://www.youtube.com/embed/${video.id}`}
+      title={video.title}
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    />
+  ))}
+</aside>

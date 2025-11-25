@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Application for Admission — Berean Bible College</title>
+<style>
+  body {margin:0; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; background:#f5f5f5; color:#333;}
+  .container {max-width:900px; margin:40px auto; background:white; padding:40px; border:1px solid #ddd; border-radius:8px;}
+  
+  header {text-align:center; margin-bottom:40px; padding-bottom:20px; border-bottom:3px solid #228B22;}
+  header img {width:80px; height:auto; margin:0 auto 10px;}
+  header h1 {font-size:28px; color:#002147; margin:10px 0;}
+  header p {color:#555; font-size:14px;}
+  
+  h2 {color:#002147; font-size:22px; margin-top:35px; margin-bottom:20px; border-bottom:2px solid #228B22; padding-bottom:8px;}
+  h3 {color:#228B22; font-size:18px; margin-top:25px; margin-bottom:15px;}
+  
+  .section {margin-bottom:30px;}
+  
+  label {display:block; font-weight:bold; color:#002147; margin-bottom:5px; margin-top:15px;}
+  input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+    width:100%; 
+    padding:10px; 
+    border:1px solid #ccc; 
+    border-radius:4px; 
+    font-size:14px; 
+    font-family:inherit;
+    box-sizing:border-box;
+  }
+  textarea {min-height:120px; resize:vertical;}
+  
+  .row {display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  
+  .checkbox-group {margin:15px 0;}
+  .checkbox-group label {display:inline; font-weight:normal; margin-left:8px;}
+  .checkbox-group input[type="checkbox"] {width:auto; margin-right:5px;}
+  
+  .info-box {background:#f0f8ff; border-left:4px solid #228B22; padding:20px; margin:25px 0; border-radius:5px;}
+  .info-box p {margin:10px 0; line-height:1.7;}
+  
+  .warning-box {background:#fff8dc; border:2px solid #002147; padding:20px; margin:25px 0; border-radius:5px;}
+  .warning-box strong {color:#002147;}
+  
+  .submit-section {background:#228B22; color:white; padding:30px; text-align:center; margin-top:40px; border-radius:8px;}
+  .submit-section h2 {color:white; border:none; margin-top:0;}
+  .submit-section p {font-size:15px; line-height:1.7; margin-bottom:20px;}
+  
+  button {background:#002147; color:white; padding:15px 40px; border:none; border-radius:5px; font-size:16px; font-weight:bold; cursor:pointer; transition:0.3s;}
+  button:hover {background:#004080;}
+  
+  footer {text-align:center; margin-top:40px; padding-top:20px; border-top:1px solid #ddd; color:#777; font-size:13px;}
+  
+  @media (max-width:768px) {
+    .container {padding:20px;}
+    .row {grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+  <header>
+    <img src="new_Temple_sharpened.jpg" alt="Berean Bible College Logo">
+    <h1>APPLICATION FOR ADMISSION</h1>
+    <p>Berean Bible College — Missionary Training Institute</p>
+  </header>
+  
+  <div class="info-box">
+    <p><strong>Before You Apply:</strong> Berean Bible College is a selective missionary training institute. We require proof of commitment through prerequisites. Please ensure you meet all requirements before submitting this application.</p>
+    
+    <p><strong>Application Deadline:</strong> Rolling admissions. Applications reviewed on the 1st and 15th of each month.</p>
+    
+    <p><strong>Application Fee:</strong> $50 (non-refundable)</p>
+  </div>
+  
+  <form id="applicationForm" method="post" action="/submit-application">
+    
+    <!-- SECTION 1: PERSONAL INFORMATION -->
+    <h2>Section 1: Personal Information</h2>
+    
+    <div class="section">
+      <div class="row">
+        <div>
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div>
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="middleName">Middle Name</label>
+          <input type="text" id="middleName" name="middleName">
+        </div>
+        <div>
+          <label for="preferredName">Preferred Name</label>
+          <input type="text" id="preferredName" name="preferredName">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="dob">Date of Birth *</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+        <div>
+          <label for="gender">Gender *</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+      
+      <label for="address">Street Address *</label>
+      <input type="text" id="address" name="address" required>
+      
+      <div class="row">
+        <div>
+          <label for="city">City *</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+        <div>
+          <label for="state">State/Province *</label>
+          <input type="text" id="state" name="state" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="zip">Zip/Postal Code *</label>
+          <input type="text" id="zip" name="zip" required>
+        </div>
+        <div>
+          <label for="country">Country *</label>
+          <input type="text" id="country" name="country" value="United States" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+      
+      <label for="citizenship">Citizenship/Nationality *</label>
+      <input type="text" id="citizenship" name="citizenship" required>
+    </div>
+    
+    <!-- SECTION 2: CHURCH & SPIRITUAL BACKGROUND -->
+    <h2>Section 2: Church & Spiritual Background</h2>
+    
+    <div class="section">
+      <label for="salvationDate">Approximate date of salvation (conversion to Christ) *</label>
+      <input type="text" id="salvationDate" name="salvationDate" placeholder="Month/Year or general timeframe" required>
+      
+      <label for="salvationStory">Briefly describe your conversion experience (250 words max) *</label>
+      <textarea id="salvationStory" name="salvationStory" rows="6" required></textarea>
+      
+      <label for="churchName">Current Church Name *</label>
+      <input type="text" id="churchName" name="churchName" required>
+      
+      <div class="row">
+        <div>
+          <label for="churchCity">Church City *</label>
+          <input type="text" id="churchCity" name="churchCity" required>
+        </div>
+        <div>
+          <label for="churchState">Church State *</label>
+          <input type="text" id="churchState" name="churchState" required>
+        </div>
+      </div>
+      
+      <label for="pastorName">Pastor's Name *</label>
+      <input type="text" id="pastorName" name="pastorName" required>
+      
+      <label for="pastorEmail">Pastor's Email Address *</label>
+      <input type="email" id="pastorEmail" name="pastorEmail" required>
+      
+      <label for="churchInvolvement">Describe your involvement in your local church (ministries, service, leadership) *</label>
+      <textarea id="churchInvolvement" name="churchInvolvement" rows="5" required></textarea>
+    </div>
+    
+    <!-- SECTION 3: EDUCATIONAL BACKGROUND -->
+    <h2>Section 3: Educational Background</h2>
+    
+    <div class="section">
+      <h3>High School</h3>
+      <label for="hsName">High School Name *</label>
+      <input type="text" id="hsName" name="hsName" required>
+      
+      <div class="row">
+        <div>
+          <label for="hsCity">City *</label>
+          <input type="text" id="hsCity" name="hsCity" required>
+        </div>
+        <div>
+          <label for="hsState">State *</label>
+          <input type="text" id="hsState" name="hsState" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="hsGradDate">Graduation Date *</label>
+          <input type="text" id="hsGradDate" name="hsGradDate" placeholder="Month/Year" required>
+        </div>
+        <div>
+          <label for="hsGPA">GPA (if available)</label>
+          <input type="text" id="hsGPA" name="hsGPA">
+        </div>
+      </div>
+      
+      <h3>College/University (if applicable)</h3>
+      <label for="collegeName">Institution Name</label>
+      <input type="text" id="collegeName" name="collegeName">
+      
+      <div class="row">
+        <div>
+          <label for="collegeCity">City</label>
+          <input type="text" id="collegeCity" name="collegeCity">
+        </div>
+        <div>
+          <label for="collegeState">State</label>
+          <input type="text" id="collegeState" name="collegeState">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="collegeDegree">Degree Earned/In Progress</label>
+          <input type="text" id="collegeDegree" name="collegeDegree" placeholder="e.g., B.A. in Biblical Studies">
+        </div>
+        <div>
+          <label for="collegeGradDate">Graduation Date (or expected)</label>
+          <input type="text" id="collegeGradDate" name="collegeGradDate" placeholder="Month/Year">
+        </div>
+      </div>
+      
+      <label for="collegeGPA">GPA</label>
+      <input type="text" id="collegeGPA" name="collegeGPA">
+      
+      <p style="margin-top:20px; font-size:14px; color:#555;"><em>Note: Official transcripts from all institutions attended will be required if accepted.</em></p>
+    </div>
+    
+    <!-- SECTION 4: BIBLICAL LANGUAGE PROFICIENCY (PREREQUISITE) -->
+    <h2>Section 4: Biblical Language Proficiency (PREREQUISITE)</h2>
+    
+    <div class="warning-box">
+      <p><strong>REQUIRED PREREQUISITE:</strong> All applicants must have completed at least <strong>two semesters (one academic year)</strong> of Biblical Hebrew, Koine Greek, or Biblical Aramaic with a minimum grade of <strong>B (80%) or better</strong>.</p>
+    </div>
+    
+    <div class="section">
+      <label for="languageStudied">Which biblical language(s) have you studied? *</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="hebrew" name="languages" value="Hebrew">
+        <label for="hebrew">Biblical Hebrew</label><br>
+        <input type="checkbox" id="greek" name="languages" value="Greek">
+        <label for="greek">Koine Greek</label><br>
+        <input type="checkbox" id="aramaic" name="languages" value="Aramaic">
+        <label for="aramaic">Biblical Aramaic</label>
+      </div>
+      
+      <h3>Language Course 1</h3>
+      <label for="lang1Name">Course Name *</label>
+      <input type="text" id="lang1Name" name="lang1Name" placeholder="e.g., Biblical Hebrew I" required>
+      
+      <label for="lang1Institution">Institution *</label>
+      <input type="text" id="lang1Institution" name="lang1Institution" required>
+      
+      <div class="row">
+        <div>
+          <label for="lang1Semester">Semester/Term *</label>
+          <input type="text" id="lang1Semester" name="lang1Semester" placeholder="e.g., Fall 2023" required>
+        </div>
+        <div>
+          <label for="lang1Grade">Final Grade *</label>
+          <input type="text" id="lang1Grade" name="lang1Grade" placeholder="Must be B (80%) or better" required>
+        </div>
+      </div>
+      
+      <label for="lang1Instructor">Instructor Name *</label>
+      <input type="text" id="lang1Instructor" name="lang1Instructor" required>
+      
+      <h3>Language Course 2</h3>
+      <label for="lang2Name">Course Name *</label>
+      <input type="text" id="lang2Name" name="lang2Name" placeholder="e.g., Biblical Hebrew II" required>
+      
+      <label for="lang2Institution">Institution *</label>
+      <input type="text" id="lang2Institution" name="lang2Institution" required>
+      
+      <div class="row">
+        <div>
+          <label for="lang2Semester">Semester/Term *</label>
+          <input type="text" id="lang2Semester" name="lang2Semester" placeholder="e.g., Spring 2024" required>
+        </div>
+        <div>
+          <label for="lang2Grade">Final Grade *</label>
+          <input type="text" id="lang2Grade" name="lang2Grade" placeholder="Must be B (80%) or better" required>
+        </div>
+      </div>
+      
+      <label for="lang2Instructor">Instructor Name *</label>
+      <input type="text" id="lang2Instructor" name="lang2Instructor" required>
+      
+      <label for="additionalLanguages">Have you completed additional biblical language courses beyond the two required semesters?</label>
+      <textarea id="additionalLanguages" name="additionalLanguages" rows="3" placeholder="List any additional courses, grades, and institutions"></textarea>
+      
+      <p style="margin-top:20px; font-size:14px; color:#555;"><em>Note: Official transcripts showing biblical language coursework and grades will be required.</em></p>
+    </div>
+    
+    <!-- SECTION 5: MISSIONARY FIELD EXPERIENCE (PREREQUISITE) -->
+    <h2>Section 5: Missionary Field Experience (PREREQUISITE)</h2>
+    
+    <div class="warning-box">
+      <p><strong>REQUIRED PREREQUISITE:</strong> All applicants must have completed at least <strong>3-6 months of missionary service</strong> in a cross-cultural setting (domestic or overseas) under the supervision of a <strong>career missionary</strong>.</p>
+      <p style="margin-top:10px;"><strong>Note:</strong> Youth pastor experience, camp counseling, or church volunteer work does NOT fulfill this requirement. You must have served under a career missionary in a cross-cultural field setting.</p>
+    </div>
+    
+    <div class="section">
+      <label for="missionOrg">Missionary Organization/Sending Agency *</label>
+      <input type="text" id="missionOrg" name="missionOrg" placeholder="e.g., IMB, OMF, SIM, Pioneers, etc." required>
+      
+      <label for="missionLocation">Mission Field Location *</label>
+      <input type="text" id="missionLocation" name="missionLocation" placeholder="City, Country or Region" required>
+      
+      <div class="row">
+        <div>
+          <label for="missionStart">Start Date *</label>
+          <input type="text" id="missionStart" name="missionStart" placeholder="Month/Year" required>
+        </div>
+        <div>
+          <label for="missionEnd">End Date *</label>
+          <input type="text" id="missionEnd" name="missionEnd" placeholder="Month/Year" required>
+        </div>
+      </div>
+      
+      <label for="missionDuration">Total Duration of Service *</label>
+      <input type="text" id="missionDuration" name="missionDuration" placeholder="e.g., 6 months" required>
+      
+      <label for="missionRole">Your Role/Responsibilities *</label>
+      <textarea id="missionRole" name="missionRole" rows="4" placeholder="Describe what you did during your missionary service" required></textarea>
+      
+      <h3>Supervising Missionary Information</h3>
+      <p style="color:#555; margin-bottom:15px;"><em>You must have served under a career missionary. This person will provide a letter of recommendation.</em></p>
+      
+      <label for="supervisorName">Supervising Missionary's Name *</label>
+      <input type="text" id="supervisorName" name="supervisorName" required>
+      
+      <label for="supervisorTitle">Title/Position *</label>
+      <input type="text" id="supervisorTitle" name="supervisorTitle" placeholder="e.g., Field Director, Church Planting Team Leader" required>
+      
+      <label for="supervisorEmail">Email Address *</label>
+      <input type="email" id="supervisorEmail" name="supervisorEmail" required>
+      
+      <label for="supervisorPhone">Phone Number *</label>
+      <input type="tel" id="supervisorPhone" name="supervisorPhone" required>
+      
+      <p style="margin-top:20px; font-size:14px; color:#555;"><em>Note: A letter of recommendation from your supervising missionary is required and must be submitted separately.</em></p>
+    </div>
+    
+    <!-- SECTION 6: MISSIONARY CALLING & SENDING ORGANIZATION -->
+    <h2>Section 6: Missionary Calling & Sending Organization</h2>
+    
+    <div class="section">
+      <label for="callingStory">Describe how God called you to missionary service (500 words max) *</label>
+      <textarea id="callingStory" name="callingStory" rows="8" required></textarea>
+      
+      <label for="targetField">What region or people group do you sense God calling you to serve? *</label>
+      <input type="text" id="targetField" name="targetField" placeholder="e.g., North Africa, Southeast Asia, Unreached People Group X" required>
+      
+      <label for="sendingOrgStatus">Have you applied to a missionary sending organization? *</label>
+      <select id="sendingOrgStatus" name="sendingOrgStatus" required>
+        <option value="">Select...</option>
+        <option value="accepted">Yes, I have been accepted</option>
+        <option value="applied">Yes, I have applied and am awaiting decision</option>
+        <option value="planning">No, but I plan to apply to [organization name]</option>
+        <option value="researching">No, I am still researching organizations</option>
+      </select>
+      
+      <label for="sendingOrgName">If you have applied or been accepted, which organization? *</label>
+      <input type="text" id="sendingOrgName" name="sendingOrgName" placeholder="e.g., IMB, OMF, SIM, Frontiers, Pioneers">
+      
+      <label for="deploymentTimeline">When do you anticipate deploying to the mission field? *</label>
+      <input type="text" id="deploymentTimeline" name="deploymentTimeline" placeholder="e.g., Within 6 months of graduation, 2027" required>
+    </div>
+    
+    <!-- SECTION 7: GREAT COMMISSION ESSAY (PREREQUISITE) -->
+    <h2>Section 7: Great Commission Essay (PREREQUISITE)</h2>
+    
+    <div class="warning-box">
+      <p><strong>REQUIRED PREREQUISITE:</strong> Submit a <strong>1,500-word essay</strong> addressing the prompts below. This essay demonstrates your theological understanding of mission and your readiness for missionary training.</p>
+    </div>
+    
+    <div class="section">
+      <p style="margin-bottom:20px;"><strong>Essay Prompts (address all four):</strong></p>
+      
+      <p style="margin-bottom:10px;">1. <strong>Great Commission Experience:</strong> What did you learn from your cross-cultural missionary experience (Matthew 28:18-20, Mark 16:14-15, Luke 24:46, Acts 1:8, John 20:21)? Be specific about challenges, growth, and lessons learned.</p>
+      
+      <p style="margin-bottom:10px;">2. <strong>Future Ministry Application:</strong> How will you employ what you learned during your missionary experience in your future ministry? Give concrete examples.</p>
+      
+      <p style="margin-bottom:10px;">3. <strong>Evidence of Calling:</strong> What specific evidence do you have that God has called you to be a missionary? (Note: Dreams and feelings are not evidence. Fruit, confirmed calling through church leadership, providential circumstances, and tested commitment are evidence.)</p>
+      
+      <p style="margin-bottom:20px;">4. <strong>Why Berean?:</strong> Why are you applying to Berean Bible College specifically? What attracts you to our "Languages First" approach and intensive missionary training model?</p>
+      
+      <label for="essayUpload">Upload Your Essay (PDF or Word document) *</label>
+      <input type="file" id="essayUpload" name="essayUpload" accept=".pdf,.doc,.docx" required style="padding:10px; border:1px solid #ccc; border-radius:4px;">
+      
+      <p style="margin-top:15px; font-size:14px; color:#555;"><em>Essay must be 1,500 words (+/- 100 words). Format: 12pt font, double-spaced, 1-inch margins.</em></p>
+    </div>
+    
+    <!-- SECTION 8: ADDITIONAL INFORMATION -->
+    <h2>Section 8: Additional Information</h2>
+    
+    <div class="section">
+      <label for="modernLanguages">What modern languages do you speak (besides English)?</label>
+      <textarea id="modernLanguages" name="modernLanguages" rows="2" placeholder="List languages and proficiency level (e.g., Spanish - Intermediate, Arabic - Beginner)"></textarea>
+      
+      <label for="healthConditions">Do you have any health conditions or disabilities that we should be aware of?</label>
+      <textarea id="healthConditions" name="healthConditions" rows="3" placeholder="Optional - This information helps us provide appropriate support"></textarea>
+      
+      <label for="financialPlan">How do you plan to finance your education at Berean? *</label>
+      <textarea id="financialPlan" name="financialPlan" rows="4" placeholder="e.g., Personal savings, church support, family support, work, scholarships, etc." required></textarea>
+      
+      <label for="howHeard">How did you hear about Berean Bible College? *</label>
+      <select id="howHeard" name="howHeard" required>
+        <option value="">Select...</option>
+        <option value="website">Website/Internet search</option>
+        <option value="pastor">Pastor/Church leader</option>
+        <option value="missionary">Missionary/Mission organization</option>
+        <option value="friend">Friend/Family</option>
+        <option value="social">Social media</option>
+        <option value="conference">Conference/Event</option>
+        <option value="other">Other</option>
+      </select>
+      
+      <label for="additionalInfo">Is there anything else you would like us to know about your application?</label>
+      <textarea id="additionalInfo" name="additionalInfo" rows="5"></textarea>
+    </div>
+    
+    <!-- SECTION 9: REQUIRED DOCUMENTS CHECKLIST -->
+    <h2>Section 9: Required Documents Checklist</h2>
+    
+    <div class="info-box">
+      <p><strong>In addition to this application, you must submit:</strong></p>
+      <div class="checkbox-group" style="margin-top:15px;">
+        <input type="checkbox" id="doc1" name="documents" value="transcripts">
+        <label for="doc1">Official transcripts from all institutions attended (showing biblical language courses and grades)</label><br>
+        
+        <input type="checkbox" id="doc2" name="documents" value="essay">
+        <label for="doc2">Great Commission Essay (1,500 words, uploaded above)</label><br>
+        
+        <input type="checkbox" id="doc3" name="documents" value="missionaryLetter">
+        <label for="doc3">Letter of recommendation from supervising missionary</label><br>
+        
+        <input type="checkbox" id="doc4" name="documents" value="pastorLetter">
+        <label for="doc4">Letter of recommendation from current pastor</label><br>
+        
+        <input type="checkbox" id="doc5" name="documents" value="photoID">
+        <label for="doc5">Copy of government-issued photo ID</label><br>
+        
+        <input type="checkbox" id="doc6" name="documents" value="appFee">
+        <label for="doc6">$50 application fee (non-refundable)</label>
+      </div>
+      
+      <p style="margin-top:20px;"><strong>Send all required documents to:</strong><br>
+      Berean Bible College<br>
+      Admissions Office<br>
+      [Address to be provided]<br>
+      Email: admissions@bereanbible.college</p>
+    </div>
+    
+    <!-- SECTION 10: APPLICANT STATEMENT & SIGNATURE -->
+    <h2>Section 10: Applicant Statement & Signature</h2>
+    
+    <div class="section">
+      <div style="background:#f5f5f5; padding:20px; border:1px solid #ccc; border-radius:5px; margin-bottom:20px;">
+        <p style="line-height:1.8;"><strong>I affirm that:</strong></p>
+        <ul style="margin-left:20px; margin-top:10px; line-height:1.9;">
+          <li>All information provided in this application is true and accurate to the best of my knowledge.</li>
+          <li>I understand that any false or misleading information may result in denial of admission or dismissal from Berean Bible College.</li>
+          <li>I have read and understand the admission prerequisites and requirements.</li>
+          <li>I am committed to completing the full three-year program and deploying to the mission field upon graduation.</li>
+          <li>I agree to abide by Berean Bible College's Statement of Faith and community standards.</li>
+          <li>I authorize Berean Bible College to contact my references and verify the information provided in this application.</li>
+        </ul>
+      </div>
+      
+      <div class="row">
+        <div>
+          <label for="signature">Full Name (Electronic Signature) *</label>
+          <input type="text" id="signature" name="signature" placeholder="Type your full name" required>
+        </div>
+        <div>
+          <label for="signatureDate">Date *</label>
+          <input type="date" id="signatureDate" name="signatureDate" required>
+        </div>
+      </div>
+    </div>
+    
+    <!-- SUBMIT SECTION -->
+    <div class="submit-section">
+      <h2>Ready to Submit Your Application?</h2>
+      <p>Review all information carefully before submitting. Once submitted, you will receive a confirmation email with next steps.</p>
+      <p style="font-size:14px; margin-bottom:25px;">Questions? Contact us at admissions@bereanbible.college</p>
+      <button type="submit">Submit Application</button>
+    </div>
+    
+  </form>
+  
+</div>
+
+ <footer>
+    &copy; 2025 Missionary Training Institute of Berean Bible College. All rights reserved.<br>
+    Languages First. Context Always. Truth Above Tradition.
+  </footer>
+</body>
+</html>

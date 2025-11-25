@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Day Watch — World News | Berean Bible College</title>
+  <style>
+    :root{--nav-blue:#002147;--muted:#555;--green:#228B22}
+    html,body{margin:0;padding:0;background:white;color:#111;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
+    header{text-align:center;padding:18px 0 10px 0;border-bottom:2px solid #ddd}
+    header img{width:80px;height:auto;display:block;margin:0 auto 10px}
+    header h1{font-size:28px;margin:18;color:var(--nav-blue)}
+    header h2{font-size:24px;color:var(--muted);margin-top:5px}
+    nav{display:flex;justify-content:center;gap:25px;padding:10px 0;border-bottom:1px solid #ccc}
+    nav a{color:var(--nav-blue);text-decoration:none;font-weight:bold}
+    nav a:hover{color:var(--green)}
+
+/* TWO-COLUMN LAYOUT */    
+    .content{display:grid;grid-template-columns:280px 1fr;gap:20px;padding:20px;max-width:1200px;margin:0 auto}
+    .sidebar{border-right:2px solid #ccc;padding-right:15px}
+    .sidebar h3{color:var(--nav-blue);font-size:18px;margin-bottom:15px}
+    .sidebar iframe{width:100%;height:160px;border:none;margin-bottom:15px;border-radius:4px}
+    .sidebar ul{list-style:none;padding:0;margin:20px 0 0 0}
+    .sidebar li{margin-bottom:12px}
+    .sidebar a{color:var(--nav-blue);text-decoration:none;font-size:15px;font-weight:600}
+    .sidebar a:hover{color:var(--green);text-decoration:underline}
+    
+    .main{padding-left:20px;line-height:1.7}
+    .main h2{color:var(--nav-blue);font-size:26px;border-bottom:2px solid #ccc;padding-bottom:8px;margin-bottom:20px}
+    .main h3{color:var(--nav-blue);font-size:20px;margin-top:30px;margin-bottom:15px}
+    .main p{margin-bottom:15px}
+    
+    .news-link{display:block;padding:12px;margin-bottom:10px;background:#f9f9f9;border-left:4px solid var(--green);border-radius:4px;text-decoration:none;color:#111;transition:0.3s}
+    .news-link:hover{background:#f0f8ff;border-left-color:var(--nav-blue)}
+    .news-link h4{margin:0 0 5px 0;color:var(--nav-blue);font-size:16px}
+    .news-link p{margin:0;font-size:13px;color:#666}
+    .news-link .date{font-size:11px;color:#999;margin-top:5px}
+    
+    /* HERO BANNER - Full dramatic impact */
+    .hero {
+      background: url('shofar-watchman.jpg') center/cover no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 70vh;           /* Taller for drama */
+      max-height: 600px;
+      margin: 0 0 20px 0;
+      border-bottom: 2px solid #ddd;
+      overflow: hidden;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #555;
+      border-top: 1px solid #ccc;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+    
+    @media (max-width:850px){
+      .content{grid-template-columns:1fr}
+      .sidebar{border-right:none;border-bottom:2px solid #ccc;padding-bottom:15px;margin-bottom:20px}
+      .hero { min-height: 50vh; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="new_Temple_sharpened.jpg" alt="Temple Logo">
+    <h1>U.S.A. & World News Today</h1>
+    <h2>Berean Bible College</h2>
+  </header>
+  
+  <nav>
+    <a href="../index.html">BBC Home</a>
+    <a href="../bible/o-l-research-lab.html">Research Lab</a>
+    <a href="../store/narthex.html">Narthex</a>
+    <a href="../eden/veterans.html">Missionary Training</a>
+    <a href="../childrenshelp/impact.html">Children's H.E.L.P.</a>
+  </nav>
+
+  <!-- HERO BANNER - Pure Image, No Text, Max Drama -->
+  <div class="hero"></div>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <p>Breaking news from Israel, Europe, the Middle East & beyond * Be a watchman! * Matthew 25:13, (Ten Bridesmaids): Because you do not know the day or the hour the Bridegroom will return, be prepared and watch! * Mark 13:28-37, "Watch!" * 1 Thessalonians 5:1-6, (paraphrased): "...the day of the Lord will come without warning for the unrighteous. But the righteous are children of the light and of the day - so remain alert! * <strong>TheDayWatch.com</strong></p>
+  </div>
+
+  <style>
+    @keyframes scroll-left {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+    .ticker {
+      background: white;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 15px 0;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .ticker p {
+      display: inline-block;
+      animation: scroll-left 60s linear infinite;
+      color: #0066CC;
+      font-weight: normal;
+      padding: 8px 0;
+      margin: 0;
+      font-size: 1rem;
+    }
+  </style>
+  
+  <div class="content">
+    
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+<h3 style="margin-top:30px">Quick Links</h3>
+      <ul>
+        <li><a href="https://www.jpost.com" target="_blank">→ Jerusalem Post</a></li>
+        <li><a href="https://www.timesofisrael.com" target="_blank">→ Times of Israel</a></li>
+        <li><a href="https://www.christianpost.com/news/world.html" target="_blank">→ Christian Post World</a></li>
+        <li><a href="https://english.alarabiya.net" target="_blank">→ Al Arabiya English</a></li>
+        <li><a href="https://www.dw.com/en/top-stories/s-9097" target="_blank">→ DW News</a></li>
+        <li><a href="https://www.i24news.tv/en" target="_blank">→ i24NEWS</a></li>
+      </ul>      
+
+<h3>Featured Teaching</h3>
+
+<p style="font-size:13px;color:#555;margin-bottom:10px"><strong>Latest Message – N.T. "Tom" Wright</strong></p>
+<iframe src="https://www.youtube.com/embed/EVSXdHywnQY" title="Tom Wright - Ask N.T. Wright Anything" allowfullscreen></iframe>
+
+<!-- Friendly notice so people aren’t alarmed by YouTube’s black “error” banner -->
+<p style="font-size:12px; color:#0066CC; background:#f8f8f8; padding:8px 10px; border-left:4px solid #0066CC; margin:15px 0;">
+  <strong>Note:</strong> The black rectangle that sometimes appears is <em>not</em> a website error. 
+  It’s just YouTube’s normal way of showing a recorded video (Featured Teaching) versus a true live stream (Live News below). 
+  Simply click “Watch on YouTube” or the play button and it will play normally.
+</p>
+
+<h3 style="margin-top:30px">Weekly News: Biblical Perspective</h3>
+<p style="font-size:13px;color:#555;margin-bottom:10px"><strong>Catching Up With Jacob: Nov. 22, 2025</strong></p>
+<iframe src="https://www.youtube.com/embed/i-WdoDrePRU?si=YkvhlJPFnPJwnbbz" title="Moriel TV" allowfullscreen></iframe>
+
+<h3 style="margin-top:30px">Domestic (USA) Affairs</h3>
+<p style="font-size:13px;color:#555;margin-bottom:10px"><strong>Victor Davis Hanson: Nov. 23, 2025</strong></p>
+<iframe src="https://www.youtube.com/embed/MWN5lnuyuYU" title="Victor Davis Hanson" allowfullscreen></iframe>
+
+
+<h3 style="margin-top:30px">Domestic (USA) Real Estate</h3>
+<p style="font-size:13px;color:#555;margin-bottom:10px"><strong>Rebel Capitalist: Nov. 24, 2025</strong></p>
+<iframe src="https://www.youtube.com/embed/iHL6Y0g7MG0" title="Rebel Capitalist" allowfullscreen></iframe>
+    
+    </div>
+    
+    <!-- Main -->
+    <div class="main">
+      <h2>Prophecy Watch — World Headlines</h2>
+      
+      <p>Welcome to The Day Watch, where we monitor world events through the lens of biblical prophecy. We track developments in Israel, the Middle East, Europe, and beyond—watching for the signs of the times.</p>
+      
+      <p style="font-style:italic;color:#555;">"Watch therefore, for you do not know on what day your Lord is coming." (Matthew 24:42)</p>
+      
+      <h3>Today's Focus</h3>
+      
+      <p>The news sources in the sidebar provide 24/7 coverage of prophecy-relevant events. Click the links to stay informed about:</p>
+      
+      <ul style="margin-left:20px;line-height:2">
+        <li>Israeli-Palestinian developments</li>
+        <li>Middle East conflicts and alliances</li>
+        <li>European political shifts</li>
+        <li>Global economic trends</li>
+        <li>Persecution of Christians worldwide</li>
+        <li>Natural disasters and "birth pains"</li>
+        <li>Technological advances relevant to end-times prophecy</li>
+      </ul>
+      
+      <h3>Featured News Sources</h3>
+      
+      <a href="https://www.jpost.com" target="_blank" class="news-link">
+        <h4>Jerusalem Post</h4>
+        <p>Israel's leading English-language news source. Essential for understanding Israeli politics, security, and regional developments.</p>
+      </a>
+      
+      <a href="https://www.timesofisrael.com" target="_blank" class="news-link">
+        <h4>Times of Israel</h4>
+        <p>Comprehensive coverage of Israel and the Jewish world, with balanced reporting and in-depth analysis.</p>
+      </a>
+      
+      <a href="https://www.christianpost.com/news/world.html" target="_blank" class="news-link">
+        <h4>Christian Post World News</h4>
+        <p>Christian perspective on global events, with special attention to persecution and religious freedom issues.</p>
+      </a>
+      
+      <a href="https://english.alarabiya.net" target="_blank" class="news-link">
+        <h4>Al Arabiya English</h4>
+        <p>Gulf States perspective on Middle Eastern affairs. Saudi-owned, generally moderate.</p>
+      </a>
+      
+      <a href="https://www.dw.com/en/top-stories/s-9097" target="_blank" class="news-link">
+        <h4>Deutsche Welle (DW News)</h4>
+        <p>German public broadcaster with reliable European and global coverage.</p>
+      </a>
+      
+      <a href="https://www.i24news.tv/en" target="_blank" class="news-link">
+        <h4>i24NEWS</h4>
+        <p>Israeli international news channel broadcasting 24/7 from Tel Aviv in multiple languages.</p>
+      </a>
+      
+      <h3 style="margin-top:40px">About The Day Watch</h3>
+      
+      <p>This page serves as a resource for believers who want to stay informed about world events while maintaining a biblical perspective. We don't promote fear-mongering or date-setting, but rather encourage watchfulness and discernment.</p>
+      
+      <p style="font-style:italic;color:#555;margin-top:20px">"Now when these things begin to take place, straighten up and raise your heads, because your redemption is drawing near." (Luke 21:28)</p>
+      
+    </div>
+  </div>
+  
+  <footer>
+    © 2025 Berean Bible College. All rights reserved.<br>
+    <a href="https://thedaywatch.com" style="color:var(--green);text-decoration:none;font-weight:bold">TheDayWatch.com</a> • 
+    Watching and waiting for His return
+  </footer>
+</body>
+</html>
+

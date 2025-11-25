@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  cover: string;
+  tocPdf?: string;
+  links?: {
+    hardback?: string;
+    paperback?: string;
+    kindle?: string;
+    audible?: string;
+  };
+  freePdf?: string;
+  isComingSoon?: boolean;
+}
+
+const { title, subtitle, cover, tocPdf, links, freePdf, isComingSoon } = Astro.props;
+
+// Amazon affiliate tag
+const AFFILIATE_TAG = 'themissiontod-20';
+
+// Build Amazon URL from ASIN
+function amazonUrl(asin: string): string {
+  return `https://www.amazon.com/dp/${asin}?tag=${AFFILIATE_TAG}`;
+}
+
+// Dynamic import for cover images from src/assets/covers/
+const covers = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/covers/**/*.{jpg,jpeg,png,webp,gif}',
+  { eager: true }
+);
+
+// Find the cover image
+const coverPath = `/src/assets/covers/${cover}`;
+const coverImage = covers[coverPath]?.default;
+
+// Fallback to public folder if not in assets (for migration period)
+const fallbackCover = `/covers/${cover}`;
+---
+
+<div class:list={['book-card', { 'coming-soon': isComingSoon }]}>
+  {coverImage ? (
+    <Image
+      src={coverImage}
+      alt={title}
+      width={200}
+      format="webp"
+      quality={80}
+      loading="lazy"
+    />
+  ) : (
+    <img src={fallbackCover} alt={title} loading="lazy" />
+  )}
+
+  <div class="book-info">
+    <h3>{title}</h3>
+    {subtitle && <p class="subtitle">{subtitle}</p>}
+
+    <div class="buttons">
+      {freePdf && (
+        <a href={freePdf} class="download-btn" download>FREE PDF</a>
+      )}
+      {links?.hardback && (
+        <a href={amazonUrl(links.hardback)} target="_blank" rel="noopener noreferrer">Hardback</a>
+      )}
+      {links?.paperback && (
+        <a href={amazonUrl(links.paperback)} target="_blank" rel="noopener noreferrer">Paperback</a>
+      )}
+      {links?.kindle && (
+        <a href={amazonUrl(links.kindle)} target="_blank" rel="noopener noreferrer">Kindle</a>
+      )}
+      {links?.audible && (
+        <a href={amazonUrl(links.audible)} target="_blank" rel="noopener noreferrer">Audible</a>
+      )}
+    </div>
+
+    {tocPdf && (
+      <a class="toc-link" href={`/pdf/${tocPdf}`} target="_blank" rel="noopener noreferrer">
+        Table of Contents
+      </a>
+    )}
+  </div>
+</div>

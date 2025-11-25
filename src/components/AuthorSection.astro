@@ -1,0 +1,51 @@
+---
+import BookCard from './BookCard.astro';
+
+interface Book {
+  title: string;
+  subtitle?: string;
+  cover: string;
+  tocPdf?: string;
+  links?: {
+    hardback?: string;
+    paperback?: string;
+    kindle?: string;
+    audible?: string;
+  };
+  freePdf?: string;
+  isComingSoon?: boolean;
+  sortOrder?: number;
+}
+
+interface Props {
+  authorName: string;
+  authorBio?: string;
+  books: Book[];
+}
+
+const { authorName, authorBio, books } = Astro.props;
+
+// Sort books by sortOrder if provided
+const sortedBooks = [...books].sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
+
+// Create anchor ID from author name
+const anchorId = authorName.split(',')[0].trim();
+---
+
+<div class="author-section" id={anchorId}>
+  <h2 class="author-name">{authorName}</h2>
+
+  {authorBio && <p class="author-bio">{authorBio}</p>}
+
+  {sortedBooks.map((book) => (
+    <BookCard
+      title={book.title}
+      subtitle={book.subtitle}
+      cover={book.cover}
+      tocPdf={book.tocPdf}
+      links={book.links}
+      freePdf={book.freePdf}
+      isComingSoon={book.isComingSoon}
+    />
+  ))}
+</div>

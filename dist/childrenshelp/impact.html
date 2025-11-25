@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Impact - Educating Girls, Transforming Lives - Children's H.E.L.P.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #F4EBDE;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+        }
+        
+        section:nth-child(even) {
+            background-color: white;
+        }
+        
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5em;
+            color: #8B4513;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8em;
+            color: #D2691E;
+            margin: 30px 0 15px 0;
+        }
+        
+        /* Story Grid */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            margin: 40px 0;
+        }
+        
+        .story-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .story-content p {
+            margin-bottom: 20px;
+        }
+        
+        .story-image {
+            text-align: center;
+        }
+        
+        .story-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        .story-image figcaption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        /* Emphasis Box */
+        .emphasis-box {
+            background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
+            border-left: 5px solid #D2691E;
+            padding: 30px;
+            margin: 40px 0;
+            font-size: 1.2em;
+            line-height: 1.8;
+            border-radius: 5px;
+        }
+        
+        .emphasis-box strong {
+            color: #8B4513;
+        }
+        
+        /* Stats Box */
+        .stats-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5em;
+            color: #D2691E;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        /* Profile Card */
+        .profile-card {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 40px 0;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .profile-content h3 {
+            margin-top: 0;
+            color: #8B4513;
+        }
+        
+        .profile-title {
+            font-size: 1.3em;
+            color: #D2691E;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .profile-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: #8B4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .profile-link:hover {
+            background-color: #D2691E;
+        }
+        
+        /* Photo Grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .photo-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Video Embeds */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+        /* Quote Box */
+        .quote-box {
+            background-color: #FFF8DC;
+            border-left: 5px solid #D2691E;
+            padding: 30px;
+            margin: 40px 0;
+            font-size: 1.2em;
+            font-style: italic;
+            line-height: 1.8;
+        }
+        
+        /* Call to Action */
+        .cta {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .donate-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background-color: white;
+            color: #8B4513;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .donate-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .story-grid,
+            .profile-card {
+                grid-template-columns: 1fr;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+            
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Educating Girls, Transforming Lives</h1>
+            <p>In Kenya, education is a privilege many girls will never experience. We're changing that—one scholarship at a time.</p>
+        </div>
+    </div>
+
+    <!-- The Crisis Section -->
+    <section>
+        <div class="container">
+            <h2>The Crisis: "Send Your Girl Child to School"</h2>
+            
+            <div class="story-grid">
+                <div class="story-image">
+                    <figure>
+                        <img src="Jeanne-James-Nairobi-1995.jpg" alt="Jeanne James in Nairobi, 1995">
+                        <figcaption>Jeanne James in Nairobi, 1995—when her passion for educating girls was born</figcaption>
+                    </figure>
+                </div>
+                <div class="story-content">
+                    <p>In 1995, Jeanne James was living in Nairobi with her family during their missionary year when she saw a television commercial that would change her life: <strong>"Send your girl child to school."</strong></p>
+                    
+                    <p>The commercial revealed a heartbreaking truth. In Kenya, a former British colony, education is so expensive that extended families must pool their resources to send just ONE child to school. Cultural tradition dictates that the child will be the boy showing the most promise.</p>
+                    
+                    <p>Girls are left behind—not because they lack potential, but because their families simply cannot afford to educate them.</p>
+                </div>
+            </div>
+
+            <div class="emphasis-box">
+                <p><strong>For uneducated girls in Kenya, the consequences are devastating.</strong> Without family support or economic options, they face exploitation, abuse, and desperate circumstances. In rural areas, they are vulnerable to dangers that protected girls never encounter. In cities like Nairobi, arriving without family networks, they are forced into survival situations that rob them of dignity and future.</p>
+                
+                <p><strong>Education isn't just opportunity—it's protection. It's safety. It's dignity. It's hope.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sister Freda Section -->
+    <section>
+        <div class="container">
+            <h2>The Partnership: Sister Freda's Foundation</h2>
+            
+            <div class="story-content" style="text-align: center; max-width: 900px; margin: 0 auto 40px;">
+                <p style="font-size: 1.2em;">In 1996, Dr. Tim James traveled to Kitale, Kenya, with a medical mission team from Saddleback Church. There, he met a remarkable Kenyan woman named <strong>Freda Wafula Robinson</strong>—known to everyone as "Sister Freda."</p>
+            </div>
+
+            <div class="story-grid">
+                <div class="story-content">
+                    <h3>Sister Freda's Story</h3>
+                    <p>Sister Freda knows poverty firsthand. Born in 1950 to a struggling family, she walked daily to Kitale Primary School, passed her examinations, and was admitted to Nasokol Girls High School. She excelled and qualified for advanced classes—but couldn't continue due to a lack of school fees.</p>
+                    
+                    <p>Despite this setback, Freda pursued nursing, earning her diploma and working at Mt. Elgon Private Hospital for 15 years. But she couldn't forget the "countless people suffering" she witnessed—those too poor to reach a hospital or afford medical care.</p>
+                    
+                    <p>In 1995, with her British husband Richard Robinson, Sister Freda opened a small clinic to serve the poorest in Kitale. That clinic grew into a full medical center, then a hospital. But Sister Freda's vision didn't stop there.</p>
+                    
+                    <p><strong>She knew that health alone wasn't enough. Girls needed education. They needed protection. They needed an opportunity.</strong></p>
+                </div>
+                
+                <div class="story-image">
+                    <figure>
+                        <img src="Nzoia-College-Nursing-Kitale.jpg" alt="Nzoia College of Nursing sign in Kitale">
+                        <figcaption>Nzoia College of Nursing—where Children's H.E.L.P. scholarships are transforming lives</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="stats-box">
+                <div class="stat-item">
+                    <div class="stat-number">1995</div>
+                    <div class="stat-label">Sister Freda Foundation Established</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2010</div>
+                    <div class="stat-label">Nzoia College of Nursing Opens</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2014</div>
+                    <div class="stat-label">Dr. Ken Gerdes Girls High School Opens</div>
+                </div>
+            </div>
+
+            <div class="story-content" style="max-width: 900px; margin: 40px auto;">
+                <h3>What Sister Freda Built</h3>
+                <p style="font-size: 1.15em; line-height: 1.8;">Today, Sister Freda's Foundation operates on a single campus 15km south of Kitale Town:</p>
+                <ul style="font-size: 1.1em; line-height: 2; margin: 20px 0 20px 40px;">
+                    <li><strong>Sister Freda Medical Centre & Hospital</strong> — Full medical care, 24/7</li>
+                    <li><strong>Dr. Ken Gerdes Girls High School</strong> — One of the best performing private schools in Trans Nzoia County</li>
+                    <li><strong>Nzoia College of Nursing</strong> — Training diploma-level registered nurses</li>
+                    <li><strong>Nursery School & Feeding Program</strong> — For vulnerable children ages 3-6</li>
+                    <li><strong>HIV/AIDS Testing & Counseling</strong></li>
+                    <li><strong>Mobile Clinics</strong> — Reaching remote villages, slums, and refugee camps</li>
+                </ul>
+                
+                <p style="font-size: 1.15em; margin-top: 30px;"><strong>This is where Children's H.E.L.P. scholarships transform lives.</strong> Girls who would never have the chance to attend school are now living in safe boarding facilities, receiving excellent education, and preparing for professional careers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Mission: Girls' Education Section -->
+    <section>
+        <div class="container">
+            <h2>Education Opens Every Door</h2>
+            
+            <div class="emphasis-box" style="text-align: center;">
+                <p style="margin-bottom: 20px; font-size: 1.3em; font-weight: bold; color: #8B4513;">The same transformation that educated Meshack Simati is now happening for GIRLS—who face even greater barriers.</p>
+            </div>
+
+            <div class="story-content" style="max-width: 900px; margin: 0 auto;">
+                <h3>The C.HELP Pipeline</h3>
+                <p style="font-size: 1.15em; line-height: 1.8; margin-bottom: 30px;">When Children's H.E.L.P. provides a scholarship to an orphaned or impoverished girl, we're not just paying school fees. We're providing:</p>
+                
+                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 30px 0;">
+                    <h4 style="color: #D2691E; margin-bottom: 20px; font-size: 1.4em;">🛡️ Safety & Protection</h4>
+                    <p style="margin-bottom: 20px;">Safe boarding school environment on Sister Freda's Christian campus, away from exploitation and abuse</p>
+                    
+                    <h4 style="color: #D2691E; margin-bottom: 20px; font-size: 1.4em;">👨‍👩‍👧‍👦 Extended Family Network</h4>
+                    <p style="margin-bottom: 20px;">Christian community of staff, teachers, and supporters—no girl is alone or abandoned</p>
+                    
+                    <h4 style="color: #D2691E; margin-bottom: 20px; font-size: 1.4em;">📚 Excellent Education</h4>
+                    <p style="margin-bottom: 20px;">High-quality academics at one of Trans Nzoia County's best-performing schools</p>
+                    
+                    <h4 style="color: #D2691E; margin-bottom: 20px; font-size: 1.4em;">🎓 Multiple Career Pathways</h4>
+                    <p>Graduates pursue:</p>
+                    <ul style="margin: 15px 0 20px 40px; line-height: 1.8;">
+                        <li><strong>Nursing</strong> — Nzoia College of Nursing (right on campus!)</li>
+                        <li><strong>Law</strong> — University programs in Nairobi</li>
+                        <li><strong>Teaching</strong> — Education degrees</li>
+                        <li><strong>Medicine</strong> — Medical school</li>
+                        <li><strong>Business</strong> — Professional careers</li>
+                    </ul>
+                    
+                    <h4 style="color: #D2691E; margin-bottom: 20px; font-size: 1.4em;">💼 Economic Independence</h4>
+                    <p style="margin-bottom: 20px;">Professional careers mean these young women support themselves AND their families—breaking the cycle of poverty for the next generation</p>
+                    
+                    <h4 style="color: #D2691E; margin-bottom: 20px; font-size: 1.4em;">✝️ Spiritual Foundation</h4>
+                    <p>Christ-centered environment teaching self-worth, purpose, and hope</p>
+                </div>
+
+                <div class="quote-box" style="margin-top: 40px;">
+                    "We're not just educating girls. We're protecting them. We're giving them dignity, independence, and hope. We're showing them they are valued, loved, and have a God-given purpose."
+                    <br><br>— Jeanne James, Co-Founder, Children's H.E.L.P.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meshack's Story (Briefer) -->
+    <section>
+        <div class="container">
+            <h2>The First Student: Dr. Meshack Simati</h2>
+            
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img src="Meshack-Simati-CSUSM.jpg" alt="Dr. Meshack Simati">
+                </div>
+                <div class="profile-content">
+                    <h3>Proof of What's Possible</h3>
+                    <div class="profile-title">Associate Professor of Political Science<br>California State University, San Marcos</div>
+                    
+                    <p>Before Children's H.E.L.P. officially existed, before Sister Freda's girls' schools opened, there was Meshack Simati—a young man with a high school diploma and a dream.</p>
+                    
+                    <p>In 1996, Dr. Tim James met Meshack while staying with missionary Harmon Parker (CNN Hero) in Kitale. Meshack had been accepted to Daystar University in Nairobi but had no way to pay. Dr. Tim prayed about it overnight and woke with his answer: he wrote the first check from his personal account.</p>
+                    
+                    <p>That check—combined with Harmon Parker's mentorship—enabled Meshack to attend Daystar University, earn his Ph.D., and become an Associate Professor at Cal State San Marcos.</p>
+                    
+                    <p><strong>Meshack proved the concept: Education transforms lives.</strong> His story inspired the founding of Children's H.E.L.P. in 1999. Today, the same transformation is happening for dozens of girls through Sister Freda's schools.</p>
+                    
+                    <a href="https://www.csusm.edu/politicalscience/faculty/meshack_simati.html" target="_blank" class="profile-link">View Dr. Simati's Faculty Profile</a>
+                </div>
+            </div>
+
+            <div class="emphasis-box">
+                <p style="font-size: 1.15em;"><strong>What happened for one young man in 1996 is now happening for young women who face even greater obstacles.</strong> Every girl educated through Children's H.E.L.P. at Sister Freda's schools is a testimony to what's possible when someone believes in their potential and opens the door of opportunity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Harmon Parker Section (Brief) -->
+    <section>
+        <div class="container">
+            <h2>The Partner: Harmon Parker, CNN Hero</h2>
+            
+            <div class="story-content" style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+                <p style="font-size: 1.2em;">Harmon Parker, the missionary who introduced Dr. Tim to Meshack, has been recognized worldwide for his transformative work in Kenya.</p>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/OUGG4SOSijg" title="Harmon Parker CNN Hero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p style="text-align: center; margin-top: 20px; font-style: italic; color: #666;">Harmon Parker receives CNN Hero recognition for his work in Kenya</p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div class="cta">
+        <div class="container">
+            <h2>Change a Life Today</h2>
+            <p>Right now, there are girls in Kenya who have the potential to become nurses, lawyers, teachers, and leaders—but without a Children's H.E.L.P. scholarship, they will never have the chance.</p>
+            <p style="margin-top: 20px; font-size: 1.3em; font-weight: bold;">Your gift provides safety, education, dignity, and hope.</p>
+            <p style="margin-top: 20px;">Help us sponsor the next generation of young women at Sister Freda's schools in Kitale.</p>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=donate@childrenshelp.org&item_name=Children's+H.E.L.P.&currency_code=USD" class="donate-button">Sponsor a Girl's Education</a>
+            <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.9;">Children's Health, Education & Leadership Project (H.E.L.P.) is a 501(c)(3) nonprofit organization. Tax ID: 33-0847988</p>
+        </div>
+    </div>
+
+</body>
+</html>

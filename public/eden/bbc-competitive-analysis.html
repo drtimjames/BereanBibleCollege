@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Competitive Analysis | Berean Bible College</title>
+  <style>
+    :root{
+      --navy:#002147;
+      --green:#228B22;
+      --muted:#555;
+      --text:#111;
+    }
+    body{margin:0;padding:0;background:#fff;color:var(--text);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;line-height:1.7}
+    
+    /* METADATA */
+    .metadata{color:var(--muted);font-size:14px;font-style:italic;padding:20px;text-align:center;background:#f9f9f9;border-bottom:1px solid #ddd}
+    
+    /* TICKER */
+    .ticker{overflow:hidden;white-space:nowrap;border-bottom:2px solid #ddd;background:white;padding:12px 0}
+    .ticker p{display:inline-block;animation:scroll-left 50s linear infinite;color:#0066CC;margin:0;font-size:15px;font-weight:400}
+    @keyframes scroll-left{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+    
+    /* CONTENT */
+    .container{max-width:1100px;margin:30px auto;padding:0 20px}
+    
+    h1{color:var(--navy);font-size:32px;margin:40px 0 20px 0;border-bottom:3px solid var(--green);padding-bottom:10px}
+    h2{color:var(--navy);font-size:26px;margin:35px 0 15px 0;border-bottom:2px solid #ddd;padding-bottom:8px}
+    h3{color:var(--navy);font-size:20px;margin:25px 0 12px 0}
+    h4{color:var(--text);font-size:18px;margin:20px 0 10px 0;font-weight:600}
+    
+    p{margin:0 0 15px 0;font-size:15px}
+    
+    .executive-summary{background:#f0f8ff;border-left:5px solid var(--green);padding:25px;margin:30px 0;border-radius:8px}
+    .executive-summary h2{margin-top:0;border-bottom:none}
+    
+    .callout{background:#fff8dc;border-left:5px solid var(--green);padding:20px;margin:25px 0;border-radius:5px}
+    .callout h3{margin-top:0}
+    
+    .highlight{background:#fffacd;padding:20px;margin:25px 0;border-radius:5px;border:2px solid var(--green)}
+    
+    .school-card{border:2px solid #ddd;padding:20px;margin:25px 0;border-radius:8px;background:#fafafa}
+    .school-card h3{margin-top:0;color:var(--navy)}
+    .school-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:15px}
+    .school-header h3{margin:0}
+    .school-type{color:var(--muted);font-size:14px;font-style:italic}
+    
+    .year-box{background:white;border:1px solid #ddd;padding:15px;margin:15px 0;border-radius:5px}
+    .year-box h4{margin-top:0;color:var(--green)}
+    
+    ul{margin:10px 0 20px 25px}
+    li{margin-bottom:8px}
+    
+    strong{color:var(--navy)}
+    em{color:var(--muted)}
+    
+    .comparison-table{width:100%;border-collapse:collapse;margin:25px 0;font-size:14px}
+    .comparison-table th{background:var(--navy);color:white;padding:12px;text-align:left;font-weight:600}
+    .comparison-table td{border:1px solid #ddd;padding:10px}
+    .comparison-table tr:nth-child(even){background:#f9f9f9}
+    .comparison-table .mti-row{background:#f0f8ff;font-weight:600}
+    
+    .advantage-box{background:var(--green);color:white;padding:25px;margin:30px 0;border-radius:8px;text-align:center}
+    .advantage-box h2, .advantage-box h3{color:white;margin-top:0}
+    .advantage-box ul{text-align:left;max-width:800px;margin:20px auto}
+    
+    .sequence-comparison{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:30px 0}
+    .sequence-box{border:2px solid #ddd;padding:20px;border-radius:8px}
+    .sequence-box.traditional{border-color:#cc0000}
+    .sequence-box.mti{border-color:var(--green);background:#f0f8ff}
+    .sequence-box h3{margin-top:0}
+    
+    footer{text-align:center;padding:20px;color:var(--muted);border-top:1px solid #ddd;margin-top:50px;font-size:14px}
+    
+    @media (max-width:768px){
+      .sequence-comparison{grid-template-columns:1fr}
+      .comparison-table{font-size:12px}
+      .comparison-table th, .comparison-table td{padding:8px}
+    }
+  </style>
+</head>
+<body>
+
+<div class="metadata">
+<strong>Prepared for:</strong> Missionary Training Institute, Berean Bible College<br>
+<strong>Date:</strong> November 21, 2025<br>
+<strong>Purpose:</strong> Executive Summary for Business Plan
+</div>
+
+<div class="ticker">
+  <p>📊 Competitive Analysis: Why MTI's "Languages First" Approach Revolutionizes Bible Education • Traditional schools teach ABOUT the Bible before teaching students to READ the Bible • MTI does it right: Master Hebrew, Greek, and Aramaic FIRST - then study Ancient Near Eastern and Second Temple contexts - then theology in the original languages</p>
+</div>
+
+<div class="container">
+
+<h1>Bible College Competitive Analysis</h1>
+<h2 style="text-align:center;color:var(--green);border:none">Top 5 Bible Colleges: Year 1 & Year 2 Curriculum Comparison</h2>
+
+<div class="executive-summary">
+<h2>Executive Summary</h2>
+
+<h3>The Problem with Traditional Bible Education:</h3>
+<ul>
+<li>Most Bible colleges teach students <strong>ABOUT</strong> the Bible before teaching them to <strong>READ</strong> the Bible</li>
+<li>Languages (if offered at all) come in Year 2-3, <strong>AFTER</strong> theological conclusions are formed</li>
+<li>Students spend 2+ years learning interpretations filtered through English translations</li>
+<li>By the time they encounter Greek/Hebrew, they must defend existing beliefs or painfully unlearn</li>
+</ul>
+
+<h3>The MTI Advantage:</h3>
+<ul>
+<li><strong>Languages FIRST</strong> (Year 1): Hebrew, Greek, Aramaic from day one</li>
+<li>Students <strong>READ</strong> Scripture in original languages <strong>BEFORE</strong> forming theological opinions</li>
+<li><strong>Context integrated</strong> throughout (Year 2): Ancient Near East, Second Temple Judaism</li>
+<li><strong>Year 3: Theology and synthesis</strong> - now students can evaluate systems against original text</li>
+</ul>
+</div>
+
+<h1>Top 5 Bible Colleges Analyzed</h1>
+
+<!-- MOODY -->
+<div class="school-card">
+<div class="school-header">
+<h3>1. Moody Bible Institute</h3>
+<div class="school-type">Chicago, IL | Founded 1886</div>
+</div>
+<p><strong>Accreditation:</strong> Higher Learning Commission, ABHE<br>
+<strong>Theological Position:</strong> Non-charismatic, dispensational, generally Calvinistic<br>
+<strong>Enrollment:</strong> ~3,000 students</p>
+
+<div class="year-box">
+<h4>YEAR 1: Typical Curriculum</h4>
+<ul>
+<li>Introduction to the Bible</li>
+<li>Old Testament Survey</li>
+<li>New Testament Survey</li>
+<li>Basic Bible Doctrines</li>
+<li>Church History I</li>
+<li>Theology I: Introduction to Systematic Theology</li>
+<li>General Education courses (English, Math, Sciences)</li>
+<li>Ministry practicum/chapel requirements</li>
+</ul>
+</div>
+
+<div class="year-box">
+<h4>YEAR 2: Typical Curriculum</h4>
+<ul>
+<li>Hermeneutics (Bible interpretation methods)</li>
+<li>Theology II: Systematic Theology continued</li>
+<li>Church History II</li>
+<li><em>Optional:</em> Elementary Greek OR Elementary Hebrew (1 semester each, if chosen)</li>
+<li>Electives in ministry specialization</li>
+<li>Continued general education</li>
+<li>Ministry practicum</li>
+</ul>
+</div>
+
+<p><strong>LANGUAGES:</strong></p>
+<ul>
+<li>NOT required for most programs</li>
+<li>If taken at all: 1-2 semesters in Year 2 or later</li>
+<li>Associate degree programs may have NO language requirement</li>
+</ul>
+
+<p><strong>Strengths:</strong> Strong practical ministry training, excellent missions reputation<br>
+<strong>Weaknesses:</strong> Students form theological conclusions BEFORE learning languages, heavy dependence on English translations, dispensational bias baked into curriculum from Year 1</p>
+</div>
+
+<!-- WHEATON -->
+<div class="school-card">
+<div class="school-header">
+<h3>2. Wheaton College</h3>
+<div class="school-type">Wheaton, IL | Founded 1860</div>
+</div>
+<p><strong>Accreditation:</strong> Higher Learning Commission<br>
+<strong>Theological Position:</strong> Evangelical, interdenominational<br>
+<strong>Enrollment:</strong> ~2,400 undergraduate students</p>
+
+<div class="year-box">
+<h4>YEAR 1: Biblical & Theological Studies Major</h4>
+<ul>
+<li>Old Testament Literature (in English)</li>
+<li>New Testament Literature (in English)</li>
+<li>Introduction to Christian Theology</li>
+<li>Church History</li>
+<li><em>Encouraged but not required:</em> Elementary Greek OR Hebrew</li>
+<li>General education core ("Christ at the Core" curriculum)</li>
+</ul>
+</div>
+
+<div class="year-box">
+<h4>YEAR 2: Biblical & Theological Studies Major</h4>
+<ul>
+<li>Hermeneutics</li>
+<li>Biblical Theology</li>
+<li>Systematic Theology I</li>
+<li><em>If continuing languages:</em> Intermediate Greek or Hebrew (if started Year 1)</li>
+<li>Christian Thought and History</li>
+<li>Electives in biblical studies</li>
+</ul>
+</div>
+
+<p><strong>LANGUAGES:</strong></p>
+<ul>
+<li>Undergraduate: Encouraged but NOT required until upper-level courses</li>
+<li>Graduate M.A. in Biblical Exegesis: Requires 2 semesters Greek AND 2 semesters Hebrew as prerequisites</li>
+<li>Languages are learned AFTER core theology courses</li>
+</ul>
+
+<p><strong>Strengths:</strong> Excellent academic reputation, strong emphasis on languages at graduate level, faculty with advanced degrees from top institutions<br>
+<strong>Weaknesses:</strong> Undergraduate programs don't require languages first, core theology taught in English before language acquisition, languages treated as "tools" rather than "foundation"</p>
+</div>
+
+<!-- BIOLA -->
+<div class="school-card">
+<div class="school-header">
+<h3>3. Biola University</h3>
+<div class="school-type">La Mirada, CA | Founded 1908</div>
+</div>
+<p><strong>Accreditation:</strong> WASC Senior College and University Commission<br>
+<strong>Theological Position:</strong> Evangelical, interdenominational<br>
+<strong>Enrollment:</strong> ~6,000 students</p>
+
+<div class="year-box">
+<h4>YEAR 1: Biblical & Theological Studies Core (30 credits required for ALL students)</h4>
+<ul>
+<li>Old Testament Introduction</li>
+<li>New Testament Introduction</li>
+<li>Christian Theology I</li>
+<li>Christian Life and Thought</li>
+<li>Biblical Studies elective</li>
+<li>General education requirements</li>
+</ul>
+</div>
+
+<div class="year-box">
+<h4>YEAR 2: Biblical & Theological Studies Core</h4>
+<ul>
+<li>Hermeneutics</li>
+<li>Christian Theology II</li>
+<li>Biblical Studies electives (various books/topics)</li>
+<li>Christian Theology electives</li>
+<li>Integration seminars (Scripture + chosen discipline)</li>
+</ul>
+</div>
+
+<p><strong>LANGUAGES:</strong></p>
+<ul>
+<li>NOT required for undergraduate Biblical Studies major</li>
+<li>Greek and Hebrew offered as electives</li>
+<li>Languages typically taken Year 3-4 if at all</li>
+</ul>
+
+<p><strong>Strengths:</strong> Large course catalog (51 BBST courses), strong integration of faith and learning across disciplines, good preparation for seminary<br>
+<strong>Weaknesses:</strong> Core theology established before language study, English-based Bible study for first 2 years, languages optional for most students</p>
+</div>
+
+<!-- LIBERTY -->
+<div class="school-card">
+<div class="school-header">
+<h3>4. Liberty University</h3>
+<div class="school-type">Lynchburg, VA | Founded 1971</div>
+</div>
+<p><strong>Accreditation:</strong> SACSCOC<br>
+<strong>Theological Position:</strong> Baptist, Evangelical, <em>sola scriptura</em> emphasis<br>
+<strong>Enrollment:</strong> ~15,000 residential + 110,000 online</p>
+
+<div class="year-box">
+<h4>YEAR 1: Religion/Theology Programs</h4>
+<ul>
+<li>Old Testament Survey</li>
+<li>New Testament Survey</li>
+<li>Introduction to Theology</li>
+<li>Church History I</li>
+<li>Evangelism and Christian Life</li>
+<li>General education (extensive - Liberty is comprehensive university)</li>
+</ul>
+</div>
+
+<div class="year-box">
+<h4>YEAR 2: Religion/Theology Programs</h4>
+<ul>
+<li>Hermeneutics</li>
+<li>Systematic Theology I</li>
+<li>Church History II</li>
+<li>Christian Apologetics</li>
+<li>Ministry/Practical Theology courses</li>
+<li>General education continued</li>
+</ul>
+</div>
+
+<p><strong>LANGUAGES:</strong></p>
+<ul>
+<li>Generally NOT required for undergraduate programs</li>
+<li>Greek and Hebrew available as electives</li>
+<li>Online programs typically have NO language requirement</li>
+<li>Focus on practical ministry over academic biblical studies</li>
+</ul>
+
+<p><strong>Strengths:</strong> Affordable tuition (~$23,800/year), flexible online options, strong commitment to Scripture authority<br>
+<strong>Weaknesses:</strong> Very little emphasis on original languages, denominational bias (Baptist distinctives emphasized), online model limits deep language study</p>
+</div>
+
+<!-- ORU -->
+<div class="school-card">
+<div class="school-header">
+<h3>5. Oral Roberts University</h3>
+<div class="school-type">Tulsa, OK | Founded 1963</div>
+</div>
+<p><strong>Accreditation:</strong> Higher Learning Commission<br>
+<strong>Theological Position:</strong> Charismatic, Pentecostal<br>
+<strong>Enrollment:</strong> ~4,000 students</p>
+
+<div class="year-box">
+<h4>YEAR 1: Theology/Ministry Programs</h4>
+<ul>
+<li>Old Testament Survey</li>
+<li>New Testament Survey</li>
+<li>Introduction to Theology</li>
+<li>"Spirit-Empowered Living" (charismatic distinctives)</li>
+<li>"Whole Person Assessment"</li>
+<li>General education requirements</li>
+</ul>
+</div>
+
+<div class="year-box">
+<h4>YEAR 2: Theology/Ministry Programs</h4>
+<ul>
+<li>Hermeneutics</li>
+<li>Systematic Theology</li>
+<li>Church History</li>
+<li>Pneumatology (study of Holy Spirit)</li>
+<li>Ministry practicum</li>
+<li>Spiritual formation courses</li>
+</ul>
+</div>
+
+<p><strong>LANGUAGES:</strong></p>
+<ul>
+<li>Generally NOT required</li>
+<li>Greek and Hebrew available as electives for serious students</li>
+<li>Charismatic emphasis on "Spirit-led interpretation"</li>
+<li>Focus on experiential knowledge over academic rigor</li>
+</ul>
+
+<p><strong>Strengths:</strong> Strong missions emphasis, Spirit-empowered worldview integrated, military-friendly (GI Bill accepted)<br>
+<strong>Weaknesses:</strong> Charismatic bias established before biblical study, languages not emphasized, risk of subjectivism without language tools</p>
+</div>
+
+<div class="callout">
+<h2>Common Patterns Across All 5 Schools</h2>
+
+<h3>YEAR 1 (Typical):</h3>
+<ol>
+<li>Old Testament Survey/Introduction (in English)</li>
+<li>New Testament Survey/Introduction (in English)</li>
+<li>Introduction to Theology/Systematic Theology I</li>
+<li>Church History I</li>
+<li>Basic Doctrines</li>
+<li>General Education courses</li>
+<li>Ministry practicum/chapel</li>
+</ol>
+
+<h3>YEAR 2 (Typical):</h3>
+<ol>
+<li>Hermeneutics (interpretation methods - still in English)</li>
+<li>Systematic Theology II</li>
+<li>Church History II</li>
+<li>Biblical Theology courses</li>
+<li><em>Maybe</em> 1 semester of Greek OR Hebrew (if chosen as elective)</li>
+<li>Ministry specialization courses</li>
+<li>Continued general education</li>
+</ol>
+
+<h3>LANGUAGES (If Offered):</h3>
+<ul>
+<li><strong>When:</strong> Year 2-4, usually as electives</li>
+<li><strong>Requirement:</strong> Optional for most programs</li>
+<li><strong>Duration:</strong> 1-2 semesters maximum</li>
+<li><strong>Sequence:</strong> AFTER core theology established</li>
+<li><strong>Problem:</strong> Students already have theological framework before encountering original text</li>
+</ul>
+</div>
+
+<h1>The Critical Difference: Backwards Sequence</h1>
+
+<div class="sequence-comparison">
+<div class="sequence-box traditional">
+<h3 style="color:#cc0000">❌ Traditional Approach (All 5 Schools)</h3>
+<p><strong>YEAR 1:</strong> Learn theology → Form opinions → Establish framework (in English)</p>
+<p><strong>YEAR 2:</strong> Learn interpretation methods → More theology (still in English)</p>
+<p><strong>YEAR 3-4:</strong> Maybe learn some Greek/Hebrew → Must fit original languages into pre-existing framework</p>
+<p style="margin-top:20px;font-weight:600;color:#cc0000">RESULT: Graduates who can quote systematic theology but can't read Romans in Greek</p>
+</div>
+
+<div class="sequence-box mti">
+<h3 style="color:var(--green)">✓ MTI's Revolutionary Approach: LANGUAGES FIRST</h3>
+<p><strong>YEAR 1:</strong> Master Hebrew, Greek, Aramaic → BEGIN reading biblical texts in original languages</p>
+<p><strong>YEAR 2:</strong> Study Ancient Near East, Second Temple Judaism → Understand the world of Scripture</p>
+<p><strong>YEAR 3:</strong> Theology and synthesis → Form conclusions FROM original text, not translations</p>
+<p style="margin-top:20px;font-weight:600;color:var(--green)">RESULT: Graduates who can READ the Bible in original languages for life</p>
+</div>
+</div>
+
+<div class="highlight">
+<h2 style="text-align:center;margin-top:0">MTI's Three-Year Journey: The Berean Difference</h2>
+
+<h3>YEAR 1: FOUNDATION</h3>
+<ul>
+<li>Biblical Hebrew (2 semesters)</li>
+<li>Koine Greek (2 semesters)</li>
+<li>Aramaic (introduction)</li>
+<li>Grammar, syntax, vocabulary mastery</li>
+<li>BEGIN reading simple biblical texts in original languages</li>
+<li><strong>NO theology courses yet - just learning to READ</strong></li>
+</ul>
+
+<h3>YEAR 2: CONTEXT</h3>
+<ul>
+<li>Ancient Near Eastern studies</li>
+<li>Second Temple Judaism</li>
+<li>Greco-Roman world</li>
+<li>Historical backgrounds, cultural contexts, literary structures</li>
+<li><strong>NOW students can read Scripture in its world</strong></li>
+</ul>
+
+<h3>YEAR 3: IMMERSION & SYNTHESIS</h3>
+<ul>
+<li>Extensive reading in Hebrew Bible</li>
+<li>Extensive reading in Greek New Testament</li>
+<li>Old Testament Theology (NOW - reading original text)</li>
+<li>New Testament Theology (NOW - reading original text)</li>
+<li>Biblical Theology</li>
+<li>Systematic Theology (NOW - can evaluate against original)</li>
+<li>Specializations: Eschatology, Apologetics, Missiology, etc.</li>
+<li><strong>Students form conclusions FROM original text, not from translations</strong></li>
+</ul>
+</div>
+
+<div class="advantage-box">
+<h2>Six Competitive Advantages of MTI</h2>
+
+<ul>
+<li><strong>1. Students Graduate with Actual Skill, Not Just Knowledge</strong><br>
+Traditional schools: "I know what scholars say about <em>agape</em> vs. <em>phileo</em>"<br>
+MTI graduates: "I can read John 21 in Greek and see it myself"</li>
+
+<li><strong>2. No Need to Unlearn</strong><br>
+Traditional schools: 2 years of conclusions, then languages reveal different meanings → cognitive dissonance<br>
+MTI graduates: Languages FIRST → form conclusions from source → no unlearning needed</li>
+
+<li><strong>3. Independent Bible Study for Life</strong><br>
+Traditional schools: Forever dependent on commentaries and translations<br>
+MTI graduates: Can read Hebrew Bible and Greek NT independently</li>
+
+<li><strong>4. Protection from False Teaching</strong><br>
+Traditional schools: Must trust that teachers are accurate<br>
+MTI graduates: Can fact-check ANY teacher against original text (Acts 17:11)</li>
+
+<li><strong>5. Doctoral Program Readiness</strong><br>
+Traditional schools: Must take language remediation before doctoral work<br>
+MTI graduates: Language-ready from day one</li>
+
+<li><strong>6. Mission Field Advantage</strong><br>
+Traditional schools: Dependent on English resources in field<br>
+MTI graduates: Can translate, can train nationals in languages, can check translations</li>
+</ul>
+</div>
+
+<h1>Quick Reference Comparison Chart</h1>
+
+<table class="comparison-table">
+<thead>
+<tr>
+<th>School</th>
+<th>Year 1 Focus</th>
+<th>Year 2 Focus</th>
+<th>Languages Required?</th>
+<th>When Languages Taught</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moody</td>
+<td>Surveys, Doctrine</td>
+<td>Theology, Hermeneutics</td>
+<td>No</td>
+<td>Year 2-4 (elective)</td>
+</tr>
+<tr>
+<td>Wheaton</td>
+<td>Surveys, Theology</td>
+<td>Theology, Hermeneutics</td>
+<td>Encouraged</td>
+<td>Year 1-2 (encouraged)</td>
+</tr>
+<tr>
+<td>Biola</td>
+<td>Surveys, Theology</td>
+<td>Theology, Hermeneutics</td>
+<td>No</td>
+<td>Year 3-4 (elective)</td>
+</tr>
+<tr>
+<td>Liberty</td>
+<td>Surveys, Doctrine</td>
+<td>Theology, Apologetics</td>
+<td>No</td>
+<td>Rarely offered</td>
+</tr>
+<tr>
+<td>ORU</td>
+<td>Surveys, Spirit-led</td>
+<td>Theology, Ministry</td>
+<td>No</td>
+<td>Rarely required</td>
+</tr>
+<tr class="mti-row">
+<td><strong>MTI</strong></td>
+<td><strong>HEBREW & GREEK</strong></td>
+<td><strong>CONTEXT (ANE, Second Temple)</strong></td>
+<td><strong>YES - REQUIRED</strong></td>
+<td><strong>YEAR 1 - FIRST</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Financial Comparison</h1>
+
+<div class="callout">
+<h3>Tuition Costs at Competitor Schools:</h3>
+<ul>
+<li>Moody Bible Institute: ~$12,000-15,000/year (subsidized)</li>
+<li>Wheaton College: ~$42,000/year</li>
+<li>Biola University: ~$36,700/year</li>
+<li>Liberty University: ~$23,800/year</li>
+<li>Oral Roberts University: ~$30,070/year</li>
+</ul>
+
+<h3>MTI Target:</h3>
+<ul>
+<li>Keep tuition competitive: <strong>$10,000-15,000/year</strong></li>
+<li>Offer GI Bill acceptance (Post-9/11 covers ~$26,000/year)</li>
+<li>Merit scholarships for language proficiency</li>
+<li>Need-based aid available</li>
+<li><strong>3-year program = graduate faster = lower total cost</strong></li>
+</ul>
+
+<h3>Value Proposition:</h3>
+<ul>
+<li>Graduate in 3 years (vs. 4 years)</li>
+<li>Language mastery (vs. minimal/no language training)</li>
+<li>Mission-ready (vs. pastoral training)</li>
+<li>GI Bill eligible (vs. limited options)</li>
+<li><strong>Read the Bible in original languages FOR LIFE (priceless)</strong></li>
+</ul>
+</div>
+
+<div class="advantage-box">
+<h2>Conclusion: The Berean Difference</h2>
+<p style="font-size:18px;margin:20px 0">Every school analyzed teaches students ABOUT the Bible before teaching them to READ the Bible.</p>
+<p style="font-size:22px;font-weight:700;margin:20px 0">MTI does it right: LANGUAGES FIRST.</p>
+
+<p style="font-size:16px;text-align:left;max-width:900px;margin:25px auto">When students graduate from Berean Bible College's Missionary Training Institute, they will:</p>
+<ol style="text-align:left;max-width:900px;margin:20px auto;font-size:15px">
+<li>Read the Hebrew Bible fluently</li>
+<li>Read the Greek New Testament fluently</li>
+<li>Understand Ancient Near Eastern context</li>
+<li>Understand Second Temple Judaism</li>
+<li>Understand Greco-Roman world</li>
+<li>Be able to evaluate ANY theological system against the original text</li>
+<li>Be independent Bible students for life</li>
+<li>Be equipped for cross-cultural missions</li>
+<li>Be ready to teach and train nationals</li>
+<li>Be Bereans (Acts 17:11)</li>
+</ol>
+
+<p style="font-size:20px;font-style:italic;margin-top:30px">"Languages first. Context always. Truth above tradition."</p>
+<p style="font-size:16px">— The Berean Standard</p>
+</div>
+
+</div>
+
+<footer>
+  &copy; 2025 Berean Bible College. All rights reserved.<br>
+  Languages First. Context Always. Truth Above Tradition.
+</footer>
+
+</body>
+</html>

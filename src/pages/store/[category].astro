@@ -1,0 +1,83 @@
+---
+import { getCollection } from 'astro:content';
+import StoreLayout from '@layouts/StoreLayout.astro';
+import AuthorSection from '@components/AuthorSection.astro';
+import { CATEGORIES, type CategorySlug } from '@/data/categories';
+
+// Generate static paths for all categories
+export function getStaticPaths() {
+  return Object.keys(CATEGORIES).map((slug) => ({
+    params: { category: slug },
+  }));
+}
+
+const { category } = Astro.params;
+const categoryInfo = CATEGORIES[category as CategorySlug];
+
+if (!categoryInfo) {
+  return Astro.redirect('/store/');
+}
+
+// Get all books for this category
+const allBooks = await getCollection('books', (entry) => {
+  // Books are in src/content/books/{category}/{slug}.yaml
+  return entry.id.startsWith(`${category}/`);
+});
+
+// Group books by author
+const booksByAuthor = allBooks.reduce((acc, book) => {
+  const authorName = book.data.author.display;
+  if (!acc[authorName]) {
+    acc[authorName] = {
+      bio: book.data.authorBio,
+      books: [],
+    };
+  }
+  acc[authorName].books.push({
+    title: book.data.title,
+    subtitle: book.data.subtitle,
+    cover: book.data.cover,
+    tocPdf: book.data.tocPdf,
+    links: book.data.links,
+    freePdf: book.data.freePdf,
+    isComingSoon: book.data.isComingSoon,
+    sortOrder: book.data.sortOrder,
+  });
+  return acc;
+}, {} as Record<string, { bio?: string; books: any[] }>);
+
+// Sort authors alphabetically by last name
+const sortedAuthors = Object.keys(booksByAuthor).sort((a, b) => {
+  const lastA = a.split(',')[0].trim();
+  const lastB = b.split(',')[0].trim();
+  return lastA.localeCompare(lastB);
+});
+---
+
+<StoreLayout title={categoryInfo.name} description={categoryInfo.description}>
+  <h1 class="page-title">{categoryInfo.name}</h1>
+  <p class="page-subtitle">{categoryInfo.subtitle}</p>
+  {categoryInfo.description && <p style="color: var(--muted); margin-bottom: 30px;">{categoryInfo.description}</p>}
+
+  {sortedAuthors.length > 0 ? (
+    sortedAuthors.map((authorName) => (
+      <AuthorSection
+        authorName={authorName}
+        authorBio={booksByAuthor[authorName].bio}
+        books={booksByAuthor[authorName].books}
+      />
+    ))
+  ) : (
+    <p style="color: var(--muted); font-style: italic;">
+      Books for this category are being migrated. Check back soon!
+    </p>
+  )}
+
+  <div class="category-nav">
+    <a href={`/store/${categoryInfo.prev.slug}`}>&larr; {categoryInfo.prev.name}</a>
+    <span>|</span>
+    <a href="/store/inner-sanctum">Back to Inner Sanctum</a>
+    <span>|</span>
+    <a href={`/store/${categoryInfo.next.slug}`}>{categoryInfo.next.name} &rarr;</a>
+  </div>
+</StoreLayout>

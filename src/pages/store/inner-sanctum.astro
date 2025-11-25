@@ -1,0 +1,117 @@
+---
+import { getCollection } from 'astro:content';
+import StoreLayout from '@layouts/StoreLayout.astro';
+import AuthorSection from '@components/AuthorSection.astro';
+import { CATEGORIES } from '@/data/categories';
+
+// Get ALL books from all categories
+const allBooks = await getCollection('books');
+
+// Group books by author
+const booksByAuthor = allBooks.reduce((acc, book) => {
+  const authorName = book.data.author.display;
+  if (!acc[authorName]) {
+    acc[authorName] = {
+      bio: book.data.authorBio,
+      books: [],
+    };
+  }
+  acc[authorName].books.push({
+    title: book.data.title,
+    subtitle: book.data.subtitle,
+    cover: book.data.cover,
+    tocPdf: book.data.tocPdf,
+    links: book.data.links,
+    freePdf: book.data.freePdf,
+    isComingSoon: book.data.isComingSoon,
+    sortOrder: book.data.sortOrder,
+  });
+  return acc;
+}, {} as Record<string, { bio?: string; books: any[] }>);
+
+// Sort authors alphabetically
+const sortedAuthors = Object.keys(booksByAuthor).sort((a, b) => {
+  const lastA = a.split(',')[0].trim();
+  const lastB = b.split(',')[0].trim();
+  return lastA.localeCompare(lastB);
+});
+
+const totalBooks = allBooks.length;
+const categoryList = Object.entries(CATEGORIES);
+---
+
+<StoreLayout
+  title="Inner Sanctum Bookstore"
+  breadcrumb="Store"
+  breadcrumbLink="/store/"
+>
+  <h1 class="page-title">Inner Sanctum Bookstore</h1>
+  <p class="page-subtitle">Curated resources for serious Bible students</p>
+
+  <div class="stats">
+    <strong>{totalBooks} books</strong> across {categoryList.length} categories
+  </div>
+
+  <div class="category-index">
+    <h3>Browse by Category</h3>
+    <div class="category-links">
+      {categoryList.map(([slug, cat]) => (
+        <a href={`/store/${slug}/`}>{cat.name}</a>
+      ))}
+    </div>
+  </div>
+
+  <h2 style="margin-top: 40px; color: var(--navy);">All Books by Author</h2>
+
+  {sortedAuthors.map((authorName) => (
+    <AuthorSection
+      authorName={authorName}
+      authorBio={booksByAuthor[authorName].bio}
+      books={booksByAuthor[authorName].books}
+    />
+  ))}
+</StoreLayout>
+
+<style>
+  .stats {
+    background: var(--bg-alt);
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .category-index {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+
+  .category-index h3 {
+    margin: 0 0 15px 0;
+    color: var(--navy);
+  }
+
+  .category-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .category-links a {
+    background: var(--green);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+  }
+
+  .category-links a:hover {
+    background: var(--green-hover);
+    color: black;
+  }
+</style>
