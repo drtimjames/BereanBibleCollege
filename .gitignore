@@ -1,4 +1,4 @@
 node_modules/
 # ignore DS_Store everywhere
 .DS_Store
-**/.DS_Store.DS_Store
+**/.DS_Store
