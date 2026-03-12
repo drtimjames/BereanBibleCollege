@@ -5,57 +5,143 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Berean Bible College — News</title>
   <style>
-    html,body{margin:0;padding:0;height:100%;font-family:'Helvetica Neue',Helvetica,Arial,serif;background:black;color:#fff}
-    .hero{
-      width:100%;height:100vh;position:relative;
-      background-image:url("https://cdn.shopify.com/s/files/1/0754/3570/4578/files/Jesus_figure_holding_boys_hand_in_fog.png?v=1746574956");
-      background-size:cover;background-position:center top;background-repeat:no-repeat;
-      display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;padding:3% 5%;box-sizing:border-box;overflow:hidden;
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Helvetica Neue", Helvetica, Arial, serif;
+      background: black;
+      color: #fff;
     }
-    .hero h1{font-size:2.5rem;margin:0 0 1rem 0}
-    .callout,.subtitle{font-size:1rem;line-height:1.2;margin:0.2rem 0;max-width:300px}
-    .subtitle{font-style:italic}
-    .links{display:flex;flex-direction:column;gap:.3rem;margin-top:1rem}
-    .links a{font-size:1rem;color:white;text-decoration:none}
-    .links a:hover{color:#D4AF37}
-    .enter-button{
-      position:absolute;
-      bottom:100px;
-      left:50px;
-      background-color:#228B22;
-      color:white;
-      padding:12px 24px;
-      font-size:1.1rem;
-      text-decoration:none;
-      border-radius:6px;
-      transition:background-color 0.3s ease;
+
+    .hero {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background-image: url("https://cdn.shopify.com/s/files/1/0754/3570/4578/files/Jesus_figure_holding_boys_hand_in_fog.png?v=1746574956");
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 3% 5%;
+      box-sizing: border-box;
+      overflow: hidden;
     }
-    .enter-button:hover{
-      background-color:#32CD32;
-      color:black;
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0 0 1rem 0;
     }
-    @media (max-width:768px){
-      .hero h1{font-size:2rem}
-      .callout,.subtitle,.links a{font-size:.9rem}
+
+    .callout,
+    .subtitle {
+      font-size: 1rem;
+      line-height: 1.2;
+      margin: 0.2rem 0;
+      max-width: 300px;
+    }
+
+    .subtitle {
+      font-style: italic;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-top: 1rem;
+    }
+
+    .links a {
+      font-size: 1rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      color: #D4AF37;
+    }
+
+    .button-group {
+      position: absolute;
+      bottom: 60px;
+      left: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .enter-button {
+      background-color: #228B22;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .enter-button:hover {
+      background-color: #32CD32;
+      color: black;
+    }
+
+    .charlemagne-button {
+      background-color: #1E3A8A;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .charlemagne-button:hover {
+      background-color: #3B82F6;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .callout,
+      .subtitle,
+      .links a {
+        font-size: 0.9rem;
+      }
+
+      .button-group {
+        left: 25px;
+        bottom: 30px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="hero">
     <h1>News</h1>
+
     <div class="callout">
       <p>"You will hear of wars and rumors of wars..."</p>
       <p>— Matthew 24:6</p>
     </div>
+
     <div class="subtitle">Jesus came. He's coming again…to stay!</div>
-    
-    <!-- Green ENTER DAY WATCH NEWS button -->
-    <a href="home.html" class="enter-button">ENTER NEWS</a>
+
+    <div class="callout" style="margin-top:10px;max-width:420px;">
+      <p><strong>New Analysis Series:</strong></p>
+      <p><em>The Charlemagne Brief</em> — A strategic intelligence commentary connecting world headlines with long-range historical and prophetic patterns.</p>
+    </div>
+
+    <div class="button-group">
+      <a href="home.html" class="enter-button">ENTER NEWS</a>
+      <a href="charlemagne/index.html" class="charlemagne-button">ENTER CHARLEMAGNE BRIEF</a>
+    </div>
   </div>
 </body>
 </html>
-
-
-
-
-
