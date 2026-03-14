@@ -218,3 +218,68 @@ h2{font-size:clamp(1.5rem,3vw,2rem);margin-top:28px}
   letter-spacing:.14em;
   text-transform:uppercase;
 }
+/* =============================== */
+/* HOMEPAGE HERO TWEAKS */
+/* =============================== */
+
+.hero{
+  padding-left:8%;
+  padding-right:5%;
+}
+
+.hero-grid{
+  align-items:center;
+  gap:42px;
+}
+
+.hero h1{
+  max-width:9ch;
+  line-height:0.95;
+}
+
+.hero p.lead{
+  max-width:34ch;
+}
+
+.hero-meta{
+  margin-top:34px;
+}
+
+.visual-stack{
+  transform:scale(0.94);
+  transform-origin:center center;
+}
+
+@media (max-width:960px){
+  .hero{
+    padding-left:5%;
+    padding-right:5%;
+  }
+
+  .visual-stack{
+    transform:none;
+  }
+}
+/* =============================== */
+/* HOMEPAGE FINAL POSITION TWEAKS */
+/* =============================== */
+
+.hero{
+  padding-top: 90px;
+}
+
+.hero-grid{
+  min-height: calc(100vh - 90px);
+}
+
+.visual-stack{
+  margin-right: -20px;
+}
+
+.map-panel{
+  transform: rotate(-2deg) scale(0.96);
+}
+
+.dossier-card{
+  transform: rotate(3deg) scale(0.96);
+}
