@@ -283,3 +283,16 @@ h2{font-size:clamp(1.5rem,3vw,2rem);margin-top:28px}
 .dossier-card{
   transform: rotate(3deg) scale(0.96);
 }
+/* Prevent large images from overflowing the page */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure map containers stay within page width */
+.map-frame img,
+.panel img {
+  max-width: 100%;
+  height: auto;
+}
