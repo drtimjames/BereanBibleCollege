@@ -134,3 +134,87 @@ h2{font-size:clamp(1.5rem,3vw,2rem);margin-top:28px}
   .article,.dispatch,.archive-intel-intro{padding:22px}
   .brief-meta{grid-template-columns:1fr}
 }
+/* =============================== */
+/* CHARLEMAGNE STRATEGIC MAP ROOM */
+/* =============================== */
+
+.map-container{
+  position:relative;
+  max-width:1000px;
+  margin:30px auto;
+  border:1px solid rgba(201,165,92,.18);
+  border-radius:14px;
+  overflow:hidden;
+  background:#e9e9e9;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.map-image{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.dot{
+  position:absolute;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:#c40000;
+  color:white;
+  font-weight:bold;
+  font-size:14px;
+  text-align:center;
+  line-height:28px;
+  border:2px solid white;
+  box-shadow:0 0 6px rgba(0,0,0,.5);
+}
+
+/* Move these until the dots sit exactly where you want */
+
+.dot1{ top:43%; left:57%; }   /* Kharg Island */
+.dot2{ top:45%; left:59%; }   /* Strait of Hormuz */
+.dot3{ top:38%; left:54%; }   /* Suez Canal */
+.dot4{ top:49%; left:55%; }   /* Bab el-Mandeb */
+.dot5{ top:56%; left:70%; }   /* Strait of Malacca */
+
+.map-legend{
+  margin-top:20px;
+  padding:18px;
+  border:1px solid rgba(201,165,92,.2);
+  border-radius:12px;
+  background:rgba(18,25,34,.95);
+}
+
+.map-legend p{
+  margin:6px 0;
+}
+
+.map-caption{
+  margin-top:14px;
+  font-size:0.9rem;
+  color:#b8c0cc;
+}
+/* PROPHETIC WATCH ANALYST NOTE */
+
+.intel-note{
+  margin-top:20px;
+  padding:22px;
+  border:1px solid rgba(201,165,92,.28);
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(14,20,28,.96),rgba(9,13,18,.96));
+  box-shadow:var(--shadow);
+}
+
+.intel-label{
+  display:inline-block;
+  margin-bottom:10px;
+  padding:5px 10px;
+  border-radius:999px;
+  background:rgba(201,165,92,.12);
+  border:1px solid var(--line);
+  color:var(--gold2);
+  font-size:.72rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
