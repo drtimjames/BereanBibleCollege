@@ -466,8 +466,7 @@ ul,ol{
 }
 
 .status-badge,
-.archive-badge,
-.intel-label{
+.archive-badge{
   display:inline-block;
   margin-bottom:12px;
   padding:6px 10px;
@@ -500,27 +499,6 @@ ul,ol{
   margin:auto;
 }
 
-.dot{
-  position:absolute;
-  width:28px;
-  height:28px;
-  border-radius:50%;
-  background:#c40000;
-  color:#fff;
-  font-weight:700;
-  font-size:14px;
-  text-align:center;
-  line-height:28px;
-  border:2px solid #fff;
-  box-shadow:0 0 6px rgba(0,0,0,.5);
-}
-
-.dot1{ top:46.5%; left:58.2%; }  /* Kharg Island */
-.dot2{ top:48.8%; left:60.0%; }  /* Strait of Hormuz */
-.dot3{ top:42.0%; left:55.0%; }  /* Suez Canal */
-.dot4{ top:52.5%; left:56.0%; }  /* Bab el-Mandeb */
-.dot5{ top:58.8%; left:71.0%; }  /* Strait of Malacca */
-
 .map-legend{
   margin-top:20px;
   padding:18px;
@@ -535,6 +513,27 @@ ul,ol{
 
 .note-callout{
   padding:22px;
+  margin:24px 0;
+  border-left:3px solid var(--gold);
+  background:rgba(18,25,34,.95);
+  border-radius:10px;
+}
+
+.intel-note{
+  padding:22px;
+  margin:24px 0;
+  border-left:3px solid var(--gold);
+  background:rgba(18,25,34,.95);
+  border-radius:10px;
+}
+
+.intel-label{
+  display:block;
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--gold-soft);
+  margin-bottom:8px;
 }
 
 .footer{
@@ -549,6 +548,22 @@ ul,ol{
   justify-content:space-between;
   gap:18px;
   flex-wrap:wrap;
+}
+
+.briefing-bar{
+  width:100%;
+  margin:20px 0 30px 0;
+  padding:10px 18px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  font-size:.75rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--gold-soft);
 }
 
 @media (max-width:960px){
