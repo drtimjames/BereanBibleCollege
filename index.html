@@ -1,65 +1,319 @@
-<!-- correct file structure to refresh GitHub Pages CDN -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Berean Bible College — Landing</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Berean Bible College</title>
+  <meta name="description" content="Berean Bible College: languages first, context always, and a guided path into the Day Watch News, The Charlemagne Brief, research tools, missionary training, and the bookstore.">
+  <link rel="canonical" href="https://bereanbible.college/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Berean Bible College">
+  <meta property="og:description" content="Languages first, context always, and a guided path into Berean Bible College's core sections.">
+  <meta property="og:url" content="https://bereanbible.college/">
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0754/3570/4578/files/Jesus_figure_holding_boys_hand_in_fog.png?v=1746574956">
   <style>
-    html,body{margin:0;padding:0;height:100%;font-family:'Helvetica Neue',Helvetica,Arial,serif;background:black;color:#fff}
-    .hero{
-      width:100%;height:100vh;position:relative;
-      background-image:url("https://cdn.shopify.com/s/files/1/0754/3570/4578/files/Jesus_figure_holding_boys_hand_in_fog.png?v=1746574956");
-      background-size:cover;background-position:center top;background-repeat:no-repeat;
-      display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;padding:3% 5%;box-sizing:border-box;overflow:hidden;
+    :root{
+      --navy:#102138;
+      --navy-deep:#0a1424;
+      --gold:#d0ab58;
+      --gold-soft:#f0e0b8;
+      --green:#2f7d45;
+      --mist:#dce6ef;
+      --line:rgba(255,255,255,.16);
+      --panel:rgba(11,20,34,.8);
+      --shadow:0 18px 50px rgba(0,0,0,.24);
     }
-    .hero h1{font-size:2.5rem;margin:0 0 1rem 0}
-    .callout,.subtitle{font-size:1rem;line-height:1.2;margin:0.2rem 0;max-width:300px}
-    .subtitle{font-style:italic}
-    .links{display:flex;flex-direction:column;gap:.3rem;margin-top:1rem}
-    .links a{font-size:1rem;color:white;text-decoration:none}
-    .links a:hover{color:#D4AF37}
-    .logo-stack{position:absolute;bottom:20px;left:20px;display:flex;flex-direction:column;gap:8px;align-items:flex-start;z-index:10}
-    .logo-row{display:flex;gap:15px;align-items:center}
-    .logo-row img{display:block;height:50px;width:auto}
-    .ucsvm-row{display:flex;gap:12px;align-items:center}
-    .ucsvm-row img{display:block;height:40px}
-    .ucsvm-text{color:white;font-size:1rem;white-space:nowrap}
-    
-    .enter-button{
-     position:absolute;
-     bottom:100px;
-     left:50px;
-     background:#228B22;
-     color:white;
-     padding:15px 40px;
-     text-decoration:none;
-     font-weight:bold;
-     font-size:1.1rem;
-     border-radius:6px;
-     transition:0.3s;}
-    .enter-button:hover{background:#32CD32;color:black}
 
-    @media (max-width:768px){
-      .hero h1{font-size:2rem}
-      .callout,.subtitle,.links a{font-size:.9rem}
-      .logo-row img{height:40px}
-      .ucsvm-row img{height:30px}
-      .ucsvm-text{font-size:.9rem}
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:Georgia,"Times New Roman",serif;
+      color:#fff;
+      background:
+        linear-gradient(180deg, rgba(7,13,22,.58), rgba(7,13,22,.88)),
+        url("https://cdn.shopify.com/s/files/1/0754/3570/4578/files/Jesus_figure_holding_boys_hand_in_fog.png?v=1746574956") center/cover fixed no-repeat;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    a:focus-visible{
+      outline:2px solid var(--gold-soft);
+      outline-offset:4px;
+    }
+
+    .shell{
+      min-height:100vh;
+      padding:28px 20px 42px;
+    }
+
+    .wrap{
+      max-width:1180px;
+      margin:0 auto;
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:18px;
+      margin-bottom:54px;
+    }
+
+    .brand{
+      max-width:640px;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:16px;
+      padding:6px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--gold-soft);
+      font-size:.76rem;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      background:rgba(255,255,255,.05);
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(3rem,7vw,5.8rem);
+      line-height:.95;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+    }
+
+    .lede{
+      margin:0;
+      max-width:58ch;
+      color:#edf3f8;
+      line-height:1.72;
+      font-size:1.08rem;
+    }
+
+    .utility{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .utility a,
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:0 18px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      font-size:.88rem;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+      transition:transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+
+    .utility a{
+      background:rgba(255,255,255,.05);
+    }
+
+    .utility a:hover,
+    .btn:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.12);
+      border-color:rgba(255,255,255,.28);
+    }
+
+    .hero-card{
+      max-width:760px;
+      padding:30px;
+      border-radius:28px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(11,20,34,.74), rgba(11,20,34,.92));
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(8px);
+    }
+
+    .hero-card p{
+      margin:0 0 16px;
+      color:#e7eef5;
+      line-height:1.72;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:24px;
+    }
+
+    .btn.primary{
+      background:linear-gradient(180deg, rgba(208,171,88,.34), rgba(208,171,88,.16));
+    }
+
+    .btn.secondary{
+      background:rgba(255,255,255,.05);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+      margin-top:30px;
+    }
+
+    .card{
+      padding:22px;
+      border-radius:24px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      box-shadow:var(--shadow);
+      transition:transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-2px);
+      border-color:rgba(255,255,255,.32);
+      background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
+    }
+
+    .card .tag{
+      display:inline-block;
+      margin-bottom:10px;
+      color:var(--gold-soft);
+      font-size:.74rem;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+
+    .card h2{
+      margin:0 0 10px;
+      font-size:1.35rem;
+      color:#fff;
+    }
+
+    .card p{
+      margin:0;
+      color:#dbe5ef;
+      line-height:1.65;
+    }
+
+    footer{
+      margin-top:36px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.16);
+      color:#d6dfeb;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      font-size:.95rem;
+    }
+
+    @media (max-width:960px){
+      .grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media (max-width:720px){
+      .shell{
+        padding:20px 16px 32px;
+      }
+
+      .topbar,
+      .grid{
+        display:grid;
+        gap:16px;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-card,
+      .card{
+        padding:20px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>Berean Bible College</h1>
-    <div class="callout">
-      <p>"While we await the return of our King, we walk hand-in-hand with our Savior."</p>
-  </div>
+  <div class="shell">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <span class="eyebrow">Berean Bible College</span>
+          <h1>Languages First. Context Always.</h1>
+          <p class="lede">Berean Bible College is built around a simple conviction: believers should learn to read Scripture carefully, understand its world faithfully, and follow today's headlines with discernment rather than confusion.</p>
+        </div>
 
-    <div class="subtitle">Jesus came. He's coming again…to stay!</div>
-    
-    <!-- Green WHY LANGUAGES FIRST? button -->
-    <a href="why-languages-first.html" class="enter-button">ENTER HERE</a>
+        <nav class="utility" aria-label="Primary navigation">
+          <a href="why-languages-first.html">Why Languages First?</a>
+          <a href="news/index.html">News Portal</a>
+          <a href="news/charlemagne/index.html">Charlemagne Brief</a>
+        </nav>
+      </div>
+
+      <section class="hero-card">
+        <p>"While we await the return of our King, we walk hand-in-hand with our Savior."</p>
+        <p>Use this page as the front door to the site: begin with the core academic vision, move into live news and analysis, or jump directly into the deeper editorial work now housed inside the news section.</p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="why-languages-first.html">Begin Here</a>
+          <a class="btn secondary" href="news/index.html">Open The Day Watch</a>
+          <a class="btn secondary" href="news/charlemagne/index.html">Read Charlemagne</a>
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Main site sections">
+        <a class="card" href="why-languages-first.html">
+          <span class="tag">Core Vision</span>
+          <h2>Why Languages First?</h2>
+          <p>The main explanation of Berean Bible College's academic philosophy and why original languages come before second-hand theology.</p>
+        </a>
+
+        <a class="card" href="news/index.html">
+          <span class="tag">News</span>
+          <h2>The Day Watch News</h2>
+          <p>Enter the news portal for global watch resources, current-events tracking, domestic pressure points, and editorial analysis.</p>
+        </a>
+
+        <a class="card" href="news/charlemagne/index.html">
+          <span class="tag">Featured Series</span>
+          <h2>The Charlemagne Brief</h2>
+          <p>Long-form strategic memoranda linking world headlines, energy systems, alliance shifts, and prophetic watch themes.</p>
+        </a>
+
+        <a class="card" href="bible/index.html">
+          <span class="tag">Research</span>
+          <h2>Original Language Lab</h2>
+          <p>Research tools, language resources, and supporting material for deeper scriptural study.</p>
+        </a>
+
+        <a class="card" href="eden/index.html">
+          <span class="tag">Training</span>
+          <h2>Missionary Training Institute</h2>
+          <p>Explore the missionary-training track, academics, admissions, and the broader vision for formation and service.</p>
+        </a>
+
+        <a class="card" href="store/index.html">
+          <span class="tag">Books</span>
+          <h2>Inner Sanctum Bookstore</h2>
+          <p>Browse authors, categories, and titles that support the college's theological, historical, and missional interests.</p>
+        </a>
+      </section>
+
+      <footer>
+        <div>&copy; 2026 Berean Bible College</div>
+        <div>Jesus came. He's coming again to stay.</div>
+      </footer>
+    </div>
   </div>
 </body>
 </html>
