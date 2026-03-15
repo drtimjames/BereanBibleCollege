@@ -508,11 +508,11 @@ ul,ol{
   box-shadow:0 0 6px rgba(0,0,0,.5);
 }
 
-.dot1{ top:43%; left:57%; }
-.dot2{ top:45%; left:59%; }
-.dot3{ top:38%; left:54%; }
-.dot4{ top:49%; left:55%; }
-.dot5{ top:56%; left:70%; }
+.dot1{ top:46.5%; left:58.2%; }  /* Kharg Island */
+.dot2{ top:48.8%; left:60.0%; }  /* Strait of Hormuz */
+.dot3{ top:42.0%; left:55.0%; }  /* Suez Canal */
+.dot4{ top:52.5%; left:56.0%; }  /* Bab el-Mandeb */
+.dot5{ top:58.8%; left:71.0%; }  /* Strait of Malacca */
 
 .map-legend{
   margin-top:20px;
