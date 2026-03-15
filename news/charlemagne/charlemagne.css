@@ -489,8 +489,15 @@ ul,ol{
 
 .map-container{
   position:relative;
-  max-width:1000px;
+  max-width:900px;
   margin:30px auto;
+}
+
+.map-image{
+  width:100%;
+  height:auto;
+  display:block;
+  margin:auto;
 }
 
 .dot{
