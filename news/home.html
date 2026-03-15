@@ -5,62 +5,379 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>The Day Watch — World News | Berean Bible College</title>
   <style>
-    :root{--nav-blue:#002147;--muted:#555;--green:#228B22}
-    html,body{margin:0;padding:0;background:white;color:#111;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
-    header{text-align:center;padding:18px 0 10px 0;border-bottom:2px solid #ddd}
-    header img{width:80px;height:auto;display:block;margin:0 auto 10px}
-    header h1{font-size:28px;margin:18;color:var(--nav-blue)}
-    header h2{font-size:24px;color:var(--muted);margin-top:5px}
-    nav{display:flex;justify-content:center;gap:25px;padding:10px 0;border-bottom:1px solid #ccc}
-    nav a{color:var(--nav-blue);text-decoration:none;font-weight:bold}
-    nav a:hover{color:var(--green)}
-
-/* TWO-COLUMN LAYOUT */    
-    .content{display:grid;grid-template-columns:280px 1fr;gap:20px;padding:20px;max-width:1200px;margin:0 auto}
-    .sidebar{border-right:2px solid #ccc;padding-right:15px}
-    .sidebar h3{color:var(--nav-blue);font-size:18px;margin-bottom:15px}
-    .sidebar iframe{width:100%;height:160px;border:none;margin-bottom:15px;border-radius:4px}
-    .sidebar ul{list-style:none;padding:0;margin:20px 0 0 0}
-    .sidebar li{margin-bottom:12px}
-    .sidebar a{color:var(--nav-blue);text-decoration:none;font-size:15px;font-weight:600}
-    .sidebar a:hover{color:var(--green);text-decoration:underline}
-    
-    .main{padding-left:20px;line-height:1.7}
-    .main h2{color:var(--nav-blue);font-size:26px;border-bottom:2px solid #ccc;padding-bottom:8px;margin-bottom:20px}
-    .main h3{color:var(--nav-blue);font-size:20px;margin-top:30px;margin-bottom:15px}
-    .main p{margin-bottom:15px}
-    
-    .news-link{display:block;padding:12px;margin-bottom:10px;background:#f9f9f9;border-left:4px solid var(--green);border-radius:4px;text-decoration:none;color:#111;transition:0.3s}
-    .news-link:hover{background:#f0f8ff;border-left-color:var(--nav-blue)}
-    .news-link h4{margin:0 0 5px 0;color:var(--nav-blue);font-size:16px}
-    .news-link p{margin:0;font-size:13px;color:#666}
-    .news-link .date{font-size:11px;color:#999;margin-top:5px}
-    
-    /* HERO BANNER - Full dramatic impact */
-    .hero {
-      background: url('shofar-watchman.jpg') center/cover no-repeat;
-      background-size: cover;
-      background-position: center;
-      min-height: 70vh;           /* Taller for drama */
-      max-height: 600px;
-      margin: 0 0 20px 0;
-      border-bottom: 2px solid #ddd;
-      overflow: hidden;
+    :root{
+      --nav-blue:#002147;
+      --muted:#555;
+      --green:#228B22;
+      --gold:#b08a2e;
+      --light:#f7f7f7;
+      --line:#ddd;
     }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      color: #555;
-      border-top: 1px solid #ccc;
-      margin-top: 30px;
-      font-size: 14px;
+    html,body{
+      margin:0;
+      padding:0;
+      background:white;
+      color:#111;
+      font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
     }
-    
-    @media (max-width:850px){
-      .content{grid-template-columns:1fr}
-      .sidebar{border-right:none;border-bottom:2px solid #ccc;padding-bottom:15px;margin-bottom:20px}
-      .hero { min-height: 50vh; }
+
+    img{
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    header{
+      text-align:center;
+      padding:18px 0 10px 0;
+      border-bottom:2px solid var(--line);
+      background:white;
+    }
+
+    header img{
+      width:80px;
+      height:auto;
+      display:block;
+      margin:0 auto 10px;
+    }
+
+    header h1{
+      font-size:30px;
+      margin:0;
+      color:var(--nav-blue);
+    }
+
+    header h2{
+      font-size:20px;
+      color:var(--muted);
+      margin:6px 0 0 0;
+      font-weight:500;
+    }
+
+    nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:22px;
+      padding:12px 16px;
+      border-bottom:1px solid #ccc;
+      background:white;
+    }
+
+    nav a{
+      color:var(--nav-blue);
+      font-weight:bold;
+    }
+
+    nav a:hover{
+      color:var(--green);
+    }
+
+    .hero{
+      background:url('shofar-watchman.jpg') center/cover no-repeat;
+      min-height:56vh;
+      max-height:620px;
+      border-bottom:2px solid var(--line);
+    }
+
+    .intro{
+      max-width:1100px;
+      margin:0 auto;
+      padding:36px 20px 28px;
+      text-align:center;
+      font-family:Georgia,"Times New Roman",serif;
+    }
+
+    .intro h2{
+      margin:0 0 12px 0;
+      color:var(--nav-blue);
+      font-size:34px;
+      letter-spacing:1px;
+    }
+
+    .intro .tagline{
+      font-size:20px;
+      font-style:italic;
+      color:#333;
+      margin:0 0 18px 0;
+    }
+
+    .intro p{
+      max-width:820px;
+      margin:0 auto 14px auto;
+      line-height:1.8;
+      font-size:17px;
+    }
+
+    .cta-row{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:6px;
+      font-weight:bold;
+      transition:.2s ease;
+    }
+
+    .btn-green{
+      background:var(--green);
+      color:white;
+    }
+
+    .btn-green:hover{
+      background:#2fa22f;
+    }
+
+    .btn-blue{
+      background:var(--nav-blue);
+      color:white;
+    }
+
+    .btn-blue:hover{
+      background:#0b336a;
+    }
+
+    .btn-gold{
+      background:#ffd700;
+      color:#111;
+    }
+
+    .btn-gold:hover{
+      background:#f0c800;
+    }
+
+    .brief-box{
+      max-width:1100px;
+      margin:0 auto 30px auto;
+      padding:0 20px;
+    }
+
+    .brief-inner{
+      background:#f9f9f9;
+      border-left:4px solid var(--gold);
+      border-radius:4px;
+      padding:22px 22px 24px;
+      font-family:Georgia,"Times New Roman",serif;
+    }
+
+    .brief-inner h3{
+      margin:0 0 10px 0;
+      color:var(--nav-blue);
+      font-size:23px;
+    }
+
+    .brief-inner p{
+      margin:0 0 12px 0;
+      line-height:1.7;
+      font-size:16px;
+    }
+
+    .brief-meta{
+      color:#666;
+      font-size:14px;
+      margin-bottom:16px;
+    }
+
+    .ticker{
+      background:white;
+      border-top:1px solid #eee;
+      border-bottom:1px solid #eee;
+      overflow:hidden;
+      white-space:nowrap;
+      max-width:1200px;
+      margin:0 auto 20px auto;
+    }
+
+    .ticker p{
+      display:inline-block;
+      animation:scroll-left 60s linear infinite;
+      color:#0066CC;
+      padding:9px 0;
+      margin:0;
+      font-size:1rem;
+    }
+
+    @keyframes scroll-left{
+      from { transform:translateX(100%); }
+      to { transform:translateX(-100%); }
+    }
+
+    .content{
+      display:grid;
+      grid-template-columns:300px 1fr;
+      gap:28px;
+      padding:10px 20px 30px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .sidebar{
+      border-right:2px solid #ccc;
+      padding-right:18px;
+    }
+
+    .sidebar h3{
+      color:var(--nav-blue);
+      font-size:18px;
+      margin:0 0 14px 0;
+    }
+
+    .sidebar p.label{
+      font-size:13px;
+      color:#555;
+      margin:0 0 10px 0;
+    }
+
+    .sidebar iframe{
+      width:100%;
+      height:170px;
+      border:none;
+      margin-bottom:18px;
+      border-radius:4px;
+    }
+
+    .sidebar ul{
+      list-style:none;
+      padding:0;
+      margin:18px 0 28px 0;
+    }
+
+    .sidebar li{
+      margin-bottom:12px;
+    }
+
+    .sidebar a{
+      color:var(--nav-blue);
+      font-weight:600;
+    }
+
+    .sidebar a:hover{
+      color:var(--green);
+      text-decoration:underline;
+    }
+
+    .notice{
+      font-size:12px;
+      color:#0066CC;
+      background:#f8f8f8;
+      padding:8px 10px;
+      border-left:4px solid #0066CC;
+      margin:10px 0 22px 0;
+    }
+
+    .main{
+      padding-left:6px;
+      line-height:1.75;
+    }
+
+    .main h2{
+      color:var(--nav-blue);
+      font-size:28px;
+      border-bottom:2px solid #ccc;
+      padding-bottom:8px;
+      margin:0 0 20px 0;
+    }
+
+    .main h3{
+      color:var(--nav-blue);
+      font-size:21px;
+      margin:30px 0 14px 0;
+    }
+
+    .main p{
+      margin-bottom:15px;
+    }
+
+    .main ul{
+      margin:0 0 20px 20px;
+      line-height:1.9;
+    }
+
+    .quote{
+      font-style:italic;
+      color:#555;
+    }
+
+    .grid-links{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:20px;
+    }
+
+    .news-link{
+      display:block;
+      padding:14px;
+      background:#f9f9f9;
+      border-left:4px solid var(--green);
+      border-radius:4px;
+      color:#111;
+      transition:.2s ease;
+    }
+
+    .news-link:hover{
+      background:#f0f8ff;
+      border-left-color:var(--nav-blue);
+    }
+
+    .news-link h4{
+      margin:0 0 6px 0;
+      color:var(--nav-blue);
+      font-size:16px;
+    }
+
+    .news-link p{
+      margin:0;
+      font-size:13px;
+      color:#666;
+      line-height:1.5;
+    }
+
+    footer{
+      text-align:center;
+      padding:18px;
+      color:#555;
+      border-top:1px solid #ccc;
+      margin-top:20px;
+      font-size:14px;
+    }
+
+    footer a{
+      color:var(--green);
+      font-weight:bold;
+    }
+
+    @media (max-width:900px){
+      .content{
+        grid-template-columns:1fr;
+      }
+
+      .sidebar{
+        border-right:none;
+        border-bottom:2px solid #ccc;
+        padding-right:0;
+        padding-bottom:18px;
+        margin-bottom:10px;
+      }
+
+      .hero{
+        min-height:42vh;
+      }
+
+      .grid-links{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
@@ -70,115 +387,67 @@
     <h1>U.S.A. & World News Today</h1>
     <h2>Berean Bible College</h2>
   </header>
-  
+
   <nav>
     <a href="../index.html">BBC Home</a>
+    <a href="charlemagne/index.html">Charlemagne Brief</a>
     <a href="../bible/o-l-research-lab.html">Research Lab</a>
     <a href="../store/narthex.html">Narthex</a>
     <a href="../eden/veterans.html">Missionary Training</a>
     <a href="../childrenshelp/impact.html">Children's H.E.L.P.</a>
   </nav>
 
-  <!-- HERO BANNER - Pure Image, No Text, Max Drama -->
   <div class="hero"></div>
 
-  <!-- THE WATCHMAN'S BRIEF - Premium Subscription Section -->
-  <div style="background: white; color: #111; padding: 40px 20px; margin: 0; font-family: Georgia, 'Times New Roman', serif;">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-      
-      <h2 style="color: #4A6B7C; font-size: 32px; margin: 0 0 15px 0; font-family: Georgia, 'Times New Roman', serif; letter-spacing: 1px;">
-        THE WATCHMAN'S BRIEF
-      </h2>
-      
-      <p style="font-size: 18px; font-style: italic; margin: 0 0 25px 0; color: #111; font-family: Georgia, 'Times New Roman', serif;">
-        "Tomorrow's News Today" — Prophetic Intelligence Analysis
-      </p>
-      
-      <div style="max-width: 800px; margin: 0 auto 30px auto; line-height: 1.8; font-size: 16px; font-family: Georgia, 'Times New Roman', serif;">
-        <p style="margin: 0 0 15px 0; color: #111;">
-          Beyond the headlines: <strong>Connect current events to biblical prophecy.</strong> War-game geopolitical cascades. Track prophetic indicators. Understand what's coming.
-        </p>
-        <p style="margin: 0; color: #111;">
-          Weekly 5,000-word analysis you won't find anywhere else — combining 30 years of biblical scholarship with real-time intelligence.
-        </p>
-      </div>
-      
-      <!-- Latest Brief Showcase -->
-      <div style="background: #f9f9f9; border-left: 4px solid #4A6B7C; padding: 20px; margin: 0 auto 30px auto; max-width: 700px; text-align: left; border-radius: 4px;">
-        <h3 style="color: #4A6B7C; margin: 0 0 10px 0; font-size: 20px; font-family: Georgia, 'Times New Roman', serif;">Latest Watchman's Brief:</h3>
-        <p style="margin: 0 0 8px 0; font-size: 17px; font-weight: bold; font-family: Georgia, 'Times New Roman', serif; color: #111;">
-          THE DAY WATCH | "THE PERSIAN PROPHECIES" by Dr. Tim James
-        </p>
+  <section class="intro">
+    <h2>THE DAY WATCH</h2>
+    <p class="tagline">“Tomorrow’s News Today” — World headlines with biblical discernment</p>
+    <p>
+      The Day Watch exists to help believers follow world events without panic,
+      sensationalism, or confusion. We watch Israel, the Middle East, Europe,
+      the United States, and global systems through a Scripture-grounded lens.
+    </p>
+    <p>
+      For deeper analysis, readers can move from daily headlines into
+      <strong>The Watchman’s Brief</strong> and the
+      <strong>Charlemagne Brief</strong>.
+    </p>
 
-        <p style="margin: 0 0 15px 0; font-size: 14px; color: #555; font-family: Georgia, 'Times New Roman', serif;">
-          February 27, 2026 | "The Persian Prophecies" (634 pages) is now available on Amazon.com in two formats: Kindle eBook, and Paperback
-        </p>
-
-        <a href="https://thedaywatch.substack.com/p/the-persian-prophecies-634-pages" target="_blank" style="display: inline-block; background: #228B22; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 15px; font-family: Georgia, 'Times New Roman', serif;">
-          Read Free Preview →
-        </a>
-      </div>
-      
-      <!-- Subscription CTA -->
-      <div style="margin: 30px auto 0 auto; max-width: 600px;">
-        <p style="font-size: 20px; font-weight: bold; margin: 0 0 20px 0; color: #4A6B7C; font-family: Georgia, 'Times New Roman', serif;">
-          Subscribe to The Watchman's Brief
-        </p>
-        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-          <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; min-width: 200px; border: 2px solid #ddd;">
-            <p style="font-size: 28px; font-weight: bold; margin: 0; color: #4A6B7C; font-family: Georgia, 'Times New Roman', serif;">$5/month</p>
-            <p style="font-size: 14px; margin: 5px 0 0 0; color: #555; font-family: Georgia, 'Times New Roman', serif;">or $54/year (save 10%)</p>
-          </div>
-        </div>
-        <a href="https://thedaywatch.substack.com/subscribe" target="_blank" style="display: inline-block; margin-top: 25px; background: #FFD700; color: #111; padding: 15px 40px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: 0.3s; font-family: Georgia, 'Times New Roman', serif;">
-          Get The Watchman's Brief →
-        </a>
-        <p style="font-size: 13px; margin: 15px 0 0 0; color: #555; font-family: Georgia, 'Times New Roman', serif;">
-          Weekly analysis • Prophetic forecasts • Scripture-grounded • Cancel anytime
-        </p>
-      </div>
-      
+    <div class="cta-row">
+      <a href="https://thedaywatch.substack.com/subscribe" target="_blank" class="btn btn-gold">Subscribe to The Watchman’s Brief</a>
+      <a href="charlemagne/index.html" class="btn btn-blue">Enter The Charlemagne Brief</a>
+      <a href="#live-sources" class="btn btn-green">Open Live Sources</a>
     </div>
-  </div>
+  </section>
 
-  <!-- TICKER -->
+  <section class="brief-box">
+    <div class="brief-inner">
+      <h3>The Watchman’s Brief</h3>
+      <p class="brief-meta">Weekly long-form prophetic intelligence analysis from Dr. Tim James</p>
+      <p>
+        Beyond the daily cycle of headlines, <strong>The Watchman’s Brief</strong>
+        connects current events to biblical prophecy, historical pattern
+        recognition, and long-range geopolitical implications.
+      </p>
+      <p>
+        <strong>Current featured release:</strong> <em>The Persian Prophecies</em> —
+        a 634-page study now available on Amazon in Kindle and paperback formats.
+      </p>
+      <a href="https://thedaywatch.substack.com/p/the-persian-prophecies-634-pages" target="_blank" class="btn btn-green">Read Free Preview →</a>
+    </div>
+  </section>
+
   <div class="ticker">
-    <p>Breaking news from Israel, Europe, the Middle East & beyond * Be a watchman! * Matthew 25:13, (Ten Bridesmaids): Because you do not know the day or the hour the Bridegroom will return, be prepared and watch! * Mark 13:28-37, "Watch!" * 1 Thessalonians 5:1-6, (paraphrased): "...the day of the Lord will come without warning for the unrighteous. But the righteous are children of the light and of the day - so remain alert! * <strong>TheDayWatch.com</strong></p>
+    <p>
+      Breaking news from Israel, Europe, the Middle East & beyond • Be a watchman •
+      Matthew 25:13 • Mark 13:28–37 • 1 Thessalonians 5:1–6 • TheDayWatch.com
+    </p>
   </div>
 
-  <style>
-    @keyframes scroll-left {
-      from { transform: translateX(100%); }
-      to { transform: translateX(-100%); }
-    }
-    .ticker {
-      background: white;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-      overflow: hidden;
-      white-space: nowrap;
-      margin: 15px 0;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .ticker p {
-      display: inline-block;
-      animation: scroll-left 60s linear infinite;
-      color: #0066CC;
-      font-weight: normal;
-      padding: 8px 0;
-      margin: 0;
-      font-size: 1rem;
-    }
-  </style>
-  
-  <div class="content">
-    
-    <!-- Sidebar -->
-    <div class="sidebar">
+  <div class="content" id="live-sources">
 
-<h3 style="margin-top:30px">Quick Links</h3>
+    <aside class="sidebar">
+      <h3>Quick Links</h3>
       <ul>
         <li><a href="https://www.jpost.com" target="_blank">→ Jerusalem Post</a></li>
         <li><a href="https://www.timesofisrael.com" target="_blank">→ Times of Israel</a></li>
@@ -186,112 +455,100 @@
         <li><a href="https://english.alarabiya.net" target="_blank">→ Al Arabiya English</a></li>
         <li><a href="https://www.dw.com/en/top-stories/s-9097" target="_blank">→ DW News</a></li>
         <li><a href="https://www.i24news.tv/en" target="_blank">→ i24NEWS</a></li>
-      </ul>      
+      </ul>
 
-<h3>Featured Teaching</h3>
+      <h3>Featured Teaching</h3>
+      <p class="label"><strong>Latest Message — N.T. Wright</strong></p>
+      <iframe src="https://www.youtube.com/embed/EVSXdHywnQY" title="Tom Wright - Ask N.T. Wright Anything" allowfullscreen></iframe>
 
-<p style="font-size:13px;color:#555;margin-bottom:10px"><strong>Latest Message – N.T. "Tom" Wright</strong></p>
-<iframe src="https://www.youtube.com/embed/EVSXdHywnQY" title="Tom Wright - Ask N.T. Wright Anything" allowfullscreen></iframe>
+      <div class="notice">
+        <strong>Note:</strong> If a black rectangle appears, that is usually YouTube’s own display behavior, not a site error. Click play or “Watch on YouTube.”
+      </div>
 
-<!-- Friendly notice so people aren't alarmed by YouTube's black "error" banner -->
-<p style="font-size:12px; color:#0066CC; background:#f8f8f8; padding:8px 10px; border-left:4px solid #0066CC; margin:15px 0;">
-  <strong>Note:</strong> The black rectangle that sometimes appears is <em>not</em> a website error. 
-  It's just YouTube's standard way of displaying a recorded video (Featured Teaching) versus a live stream (Live News below). 
-  Simply click "Watch on YouTube" or the play button to play.
-</p>
+      <h3>Weekly News: Biblical Perspective</h3>
+      <p class="label"><strong>Catching Up With Jacob</strong></p>
+      <iframe src="https://www.youtube.com/embed/i-WdoDrePRU?si=YkvhlJPFnPJwnbbz" title="Moriel TV" allowfullscreen></iframe>
 
-<h3 style="margin-top:30px">Weekly News: Biblical Perspective</h3>
-<p style="font-size:13px;color:#555;margin-bottom:10px"><strong>Catching Up With Jacob: Nov. 22, 2025</strong></p>
-<iframe src="https://www.youtube.com/embed/i-WdoDrePRU?si=YkvhlJPFnPJwnbbz" title="Moriel TV" allowfullscreen></iframe>
+      <h3>Domestic (USA) Affairs</h3>
+      <p class="label"><strong>What is happening now?</strong></p>
+      <iframe src="https://www.youtube.com/embed/4nMfRpesYfw" title="Fox LIVE Now" allowfullscreen></iframe>
+    </aside>
 
-<h3 style="margin-top:30px">Domestic (USA) Affairs</h3>
-<p style="font-size:13px;color:#555;margin-bottom:10px"><strong>What is happening NOW?</strong></p>
-<iframe src="https://www.youtube.com/embed/4nMfRpesYfw" title="Fox LIVE Now" allowfullscreen></iframe>
-
-<h3 style="margin-top:30px">Domestic (USA) Real Estate</h3>
-<p style="font-size:13px;color:#555;margin-bottom:10px"><strong>Rebel Capitalist</strong></p>
-<iframe src="https://www.youtube.com/embed/iHL6Y0g7MG0" title="Rebel Capitalist" allowfullscreen></iframe>
-    
-    </div>
-    
-    <!-- Main -->
-    <div class="main">
+    <main class="main">
       <h2>Prophecy Watch — World Headlines</h2>
-      
-      <p>Welcome to The Day Watch, where we monitor world events through the lens of biblical prophecy. We track developments in Israel, the Middle East, Europe, and beyond—watching for the signs of the times.</p>
-      
-      <p style="font-style:italic;color:#555;">"Watch therefore, for you do not know on what day your Lord is coming." (Matthew 24:42)</p>
-      
-      <h3>Today's Focus</h3>
-      
-      <p>The news sources in the sidebar provide 24/7 coverage of prophecy-relevant events. Click the links to stay informed about:</p>
-      
-      <ul style="margin-left:20px;line-height:2">
+
+      <p>
+        Welcome to The Day Watch, where we follow world events through the lens
+        of biblical prophecy while avoiding fear-mongering and date-setting.
+        The purpose of this page is simple: help readers stay informed,
+        watchful, and grounded.
+      </p>
+
+      <p class="quote">
+        “Watch therefore, for you do not know on what day your Lord is coming.”
+        (Matthew 24:42)
+      </p>
+
+      <h3>What We Watch</h3>
+      <ul>
         <li>Israeli-Palestinian developments</li>
         <li>Middle East conflicts and alliances</li>
         <li>European political shifts</li>
-        <li>Global economic trends</li>
+        <li>Global economic realignment</li>
         <li>Persecution of Christians worldwide</li>
-        <li>Natural disasters and "birth pains"</li>
-        <li>Technological advances relevant to end-times prophecy</li>
+        <li>Natural disasters and “birth pains”</li>
+        <li>Technological developments relevant to end-times control systems</li>
       </ul>
-      
-      <h3>Featured News Sources</h3>
-      
-      <a href="https://www.jpost.com" target="_blank" class="news-link">
-        <h4>Jerusalem Post</h4>
-        <p>Israel's leading English-language news source. Essential for understanding Israeli politics, security, and regional developments.</p>
-      </a>
-      
-      <a href="https://www.timesofisrael.com" target="_blank" class="news-link">
-        <h4>Times of Israel</h4>
-        <p>Comprehensive coverage of Israel and the Jewish world, with balanced reporting and in-depth analysis.</p>
-      </a>
-      
-      <a href="https://www.christianpost.com/news/world.html" target="_blank" class="news-link">
-        <h4>Christian Post World News</h4>
-        <p>Christian perspective on global events, with special attention to persecution and religious freedom issues.</p>
-      </a>
-      
-      <a href="https://english.alarabiya.net" target="_blank" class="news-link">
-        <h4>Al Arabiya English</h4>
-        <p>Gulf States' perspective on Middle Eastern affairs. Saudi-owned, generally moderate.</p>
-      </a>
-      
-      <a href="https://www.dw.com/en/top-stories/s-9097" target="_blank" class="news-link">
-        <h4>Deutsche Welle (DW News)</h4>
-        <p>German public broadcaster with reliable European and global coverage.</p>
-      </a>
-      
-      <a href="https://www.i24news.tv/en" target="_blank" class="news-link">
-        <h4>i24NEWS</h4>
-        <p>Israeli international news channel broadcasting 24/7 from Tel Aviv in multiple languages.</p>
-      </a>
-      
-      <h3 style="margin-top:40px">About The Day Watch</h3>
-      
-      <p>This page serves as a resource for believers who want to stay informed about world events while maintaining a biblical perspective. We don't promote fear-mongering or date-setting; instead, we encourage watchfulness and discernment.</p>
 
-      <p style="font-style:italic;color:#555;margin-top:20px">Jesus commanded: "What I say to you, I say to everyone: 'Watch!'" (Mark 13:37)</p>
+      <h3>Featured Resources</h3>
+      <div class="grid-links">
+        <a href="charlemagne/index.html" class="news-link">
+          <h4>The Charlemagne Brief</h4>
+          <p>Sober geopolitical analysis connecting world headlines to long-range historical and prophetic patterns.</p>
+        </a>
 
-      <p style="font-style:italic;color:#555;margin-top:20px">When these things begin to take place, ...your redemption - the resurrection... is drawing near. (Luke 21:28)</p>
+        <a href="https://thedaywatch.substack.com" target="_blank" class="news-link">
+          <h4>The Watchman’s Brief</h4>
+          <p>Weekly premium analysis from Dr. Tim James focused on prophecy, intelligence, and biblical interpretation.</p>
+        </a>
 
-      <p style="font-style:italic;color:#555;margin-top:20px">Our blessed hope is the appearing of the glory of our great God and Savior Jesus Christ on the day of His return. (Titus 2:13)</p>
+        <a href="https://www.jpost.com" target="_blank" class="news-link">
+          <h4>Jerusalem Post</h4>
+          <p>Essential coverage of Israeli politics, security, and regional developments.</p>
+        </a>
 
-      <p style="font-style:italic;color:#555;margin-top:20px">"Blessed are the meek, for they shall inherit the earth." (Matthew 5:5)</p>
+        <a href="https://www.timesofisrael.com" target="_blank" class="news-link">
+          <h4>Times of Israel</h4>
+          <p>Comprehensive reporting on Israel and the Jewish world.</p>
+        </a>
 
-      <p style="font-style:italic;color:#555;margin-top:20px">"And to Him was given dominion and glory and a kingdom, that all peoples, nations, and languages should serve him; His dominion is an everlasting dominion, which shall not pass away, and His kingdom one that shall not be destroyed." (Daniel 7:14)</p>
-      
-      <h3 style="margin-top:40px">The Kingdom of God is the kingdom on the earth. Jesus came. He's coming again - to stay! The earth will be restored to perfection, "as it was in the beginning," and then New Jerusalem will arrive (Revelation 21:2).</h3>
+        <a href="https://english.alarabiya.net" target="_blank" class="news-link">
+          <h4>Al Arabiya English</h4>
+          <p>A Gulf-region perspective on the Middle East and surrounding geopolitical developments.</p>
+        </a>
 
-      
-    </div>
+        <a href="https://www.dw.com/en/top-stories/s-9097" target="_blank" class="news-link">
+          <h4>Deutsche Welle</h4>
+          <p>Reliable European and global coverage from Germany’s public broadcaster.</p>
+        </a>
+      </div>
+
+      <h3>Our Perspective</h3>
+      <p>
+        The Day Watch is not built to provoke panic. It is built to encourage
+        biblical watchfulness, discernment, and steadiness in an age of rapid
+        change.
+      </p>
+
+      <p class="quote">“What I say to you, I say to everyone: Watch!” (Mark 13:37)</p>
+      <p class="quote">“When these things begin to take place... your redemption is drawing near.” (Luke 21:28)</p>
+      <p class="quote">“Blessed are the meek, for they shall inherit the earth.” (Matthew 5:5)</p>
+    </main>
   </div>
-  
+
   <footer>
     © 2026 Berean Bible College. All rights reserved.<br>
-    <a href="https://thedaywatch.com" style="color:var(--green);text-decoration:none;font-weight:bold">TheDayWatch.com</a> • 
-    Watching and waiting for His return
+    <a href="https://thedaywatch.com">TheDayWatch.com</a> • Watching and waiting for His return
   </footer>
 </body>
 </html>
