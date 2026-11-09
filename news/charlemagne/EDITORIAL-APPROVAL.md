@@ -17,3 +17,9 @@ Review and merge this development PR **separately** to install the workflow on `
 
 ## Limitations
 This is a secure **GitHub Actions approval control**, not yet an embedded web-page button. GitHub Pages is public static hosting; a standalone public HTML button cannot safely authenticate publication. For a future one-click private interface, use GitHub OAuth or an authenticated GitHub App. The GitHub repository owner must initiate the Actions run.
+
+## Local validation results — 9 November 2026
+
+A local Bash/JQ simulation of the workflow's authorization and scope predicates completed **11/11 expected outcomes**. One legitimate release case passed; the following cases were rejected: unauthorized actor, changed SHA, draft PR, missing release label, external fork, workflow-file change, draft-folder file, nested-folder file, malformed PR number, and empty file list.
+
+**This is not a GitHub Actions integration test.** No publishing action, GitHub permission boundary, merge behavior, or Pages deployment was exercised. PR #2 remains Draft and must not be merged until an isolated integration test is arranged. The workflow is not yet a functioning one-click button.
