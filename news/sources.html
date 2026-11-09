@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sources &amp; Live Video | The Day Watch</title><link rel="canonical" href="https://bereanbible.college/news/sources.html"><link rel="stylesheet" href="news.css">
+  <style>
+    :root{
+      --nav-blue:#002147;
+      --muted:#555;
+      --green:#228B22;
+      --gold:#b08a2e;
+      --light:#f7f7f7;
+      --line:#ddd;
+    }
+
+    html,body{
+      margin:0;
+      padding:0;
+      background:white;
+      color:#111;
+      font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+
+    img{
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    header{
+      text-align:center;
+      padding:18px 0 10px 0;
+      border-bottom:2px solid var(--line);
+      background:white;
+    }
+
+    header img{
+      width:80px;
+      height:auto;
+      display:block;
+      margin:0 auto 10px;
+    }
+
+    header h1{
+      font-size:30px;
+      margin:0;
+      color:var(--nav-blue);
+    }
+
+    header h2{
+      font-size:20px;
+      color:var(--muted);
+      margin:6px 0 0 0;
+      font-weight:500;
+    }
+
+    nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:22px;
+      padding:12px 16px;
+      border-bottom:1px solid #ccc;
+      background:white;
+    }
+
+    nav a{
+      color:var(--nav-blue);
+      font-weight:bold;
+    }
+
+    nav a:hover{
+      color:var(--green);
+    }
+
+    .hero{
+      background:url('shofar-watchman.jpg') center/cover no-repeat;
+      min-height:56vh;
+      max-height:620px;
+      border-bottom:2px solid var(--line);
+    }
+
+    .intro{
+      max-width:1100px;
+      margin:0 auto;
+      padding:36px 20px 28px;
+      text-align:center;
+      font-family:Georgia,"Times New Roman",serif;
+    }
+
+    .intro h2{
+      margin:0 0 12px 0;
+      color:var(--nav-blue);
+      font-size:34px;
+      letter-spacing:1px;
+    }
+
+    .intro .tagline{
+      font-size:20px;
+      font-style:italic;
+      color:#333;
+      margin:0 0 18px 0;
+    }
+
+    .intro p{
+      max-width:820px;
+      margin:0 auto 14px auto;
+      line-height:1.8;
+      font-size:17px;
+    }
+
+    .cta-row{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:6px;
+      font-weight:bold;
+      transition:.2s ease;
+    }
+
+    .btn-green{
+      background:var(--green);
+      color:white;
+    }
+
+    .btn-green:hover{
+      background:#2fa22f;
+    }
+
+    .btn-blue{
+      background:var(--nav-blue);
+      color:white;
+    }
+
+    .btn-blue:hover{
+      background:#0b336a;
+    }
+
+    .btn-gold{
+      background:#ffd700;
+      color:#111;
+    }
+
+    .btn-gold:hover{
+      background:#f0c800;
+    }
+
+    .brief-box{
+      max-width:1100px;
+      margin:0 auto 30px auto;
+      padding:0 20px;
+    }
+
+    .brief-inner{
+      background:#f9f9f9;
+      border-left:4px solid var(--gold);
+      border-radius:4px;
+      padding:22px 22px 24px;
+      font-family:Georgia,"Times New Roman",serif;
+    }
+
+    .brief-inner h3{
+      margin:0 0 10px 0;
+      color:var(--nav-blue);
+      font-size:23px;
+    }
+
+    .brief-inner p{
+      margin:0 0 12px 0;
+      line-height:1.7;
+      font-size:16px;
+    }
+
+    .brief-meta{
+      color:#666;
+      font-size:14px;
+      margin-bottom:16px;
+    }
+
+    .ticker{
+      background:white;
+      border-top:1px solid #eee;
+      border-bottom:1px solid #eee;
+      overflow:hidden;
+      white-space:nowrap;
+      max-width:1200px;
+      margin:0 auto 20px auto;
+    }
+
+    .ticker p{
+      display:inline-block;
+      animation:scroll-left 60s linear infinite;
+      color:#0066CC;
+      padding:9px 0;
+      margin:0;
+      font-size:1rem;
+    }
+
+    @keyframes scroll-left{
+      from { transform:translateX(100%); }
+      to { transform:translateX(-100%); }
+    }
+
+    .content{
+      display:grid;
+      grid-template-columns:300px 1fr;
+      gap:28px;
+      padding:10px 20px 30px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .sidebar{
+      border-right:2px solid #ccc;
+      padding-right:18px;
+    }
+
+    .sidebar h3{
+      color:var(--nav-blue);
+      font-size:18px;
+      margin:0 0 14px 0;
+    }
+
+    .sidebar p.label{
+      font-size:13px;
+      color:#555;
+      margin:0 0 10px 0;
+    }
+
+    .sidebar iframe{
+      width:100%;
+      height:170px;
+      border:none;
+      margin-bottom:18px;
+      border-radius:4px;
+    }
+
+    .sidebar ul{
+      list-style:none;
+      padding:0;
+      margin:18px 0 28px 0;
+    }
+
+    .sidebar li{
+      margin-bottom:12px;
+    }
+
+    .sidebar a{
+      color:var(--nav-blue);
+      font-weight:600;
+    }
+
+    .sidebar a:hover{
+      color:var(--green);
+      text-decoration:underline;
+    }
+
+    .notice{
+      font-size:12px;
+      color:#0066CC;
+      background:#f8f8f8;
+      padding:8px 10px;
+      border-left:4px solid #0066CC;
+      margin:10px 0 22px 0;
+    }
+
+    .main{
+      padding-left:6px;
+      line-height:1.75;
+    }
+
+    .main h2{
+      color:var(--nav-blue);
+      font-size:28px;
+      border-bottom:2px solid #ccc;
+      padding-bottom:8px;
+      margin:0 0 20px 0;
+    }
+
+    .main h3{
+      color:var(--nav-blue);
+      font-size:21px;
+      margin:30px 0 14px 0;
+    }
+
+    .main p{
+      margin-bottom:15px;
+    }
+
+    .main ul{
+      margin:0 0 20px 20px;
+      line-height:1.9;
+    }
+
+    .quote{
+      font-style:italic;
+      color:#555;
+    }
+
+    .grid-links{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:20px;
+    }
+
+    .news-link{
+      display:block;
+      padding:14px;
+      background:#f9f9f9;
+      border-left:4px solid var(--green);
+      border-radius:4px;
+      color:#111;
+      transition:.2s ease;
+    }
+
+    .news-link:hover{
+      background:#f0f8ff;
+      border-left-color:var(--nav-blue);
+    }
+
+    .news-link h4{
+      margin:0 0 6px 0;
+      color:var(--nav-blue);
+      font-size:16px;
+    }
+
+    .news-link p{
+      margin:0;
+      font-size:13px;
+      color:#666;
+      line-height:1.5;
+    }
+
+    footer{
+      text-align:center;
+      padding:18px;
+      color:#555;
+      border-top:1px solid #ccc;
+      margin-top:20px;
+      font-size:14px;
+    }
+
+    footer a{
+      color:var(--green);
+      font-weight:bold;
+    }
+
+    @media (max-width:900px){
+      .content{
+        grid-template-columns:1fr;
+      }
+
+      .sidebar{
+        border-right:none;
+        border-bottom:2px solid #ccc;
+        padding-right:0;
+        padding-bottom:18px;
+        margin-bottom:10px;
+      }
+
+      .hero{
+        min-height:42vh;
+      }
+
+      .grid-links{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="new_Temple_sharpened.jpg" alt="Temple Logo">
+    <h1>Sources &amp; Live Video</h1>
+    <h2>Berean Bible College</h2>
+  </header>
+
+  <nav class="news-navigation" aria-label="Primary navigation"><a href="index.html">Latest</a><a href="charlemagne/strategic-development-watch.html">Strategic Watch</a><a href="charlemagne/index.html">Charlemagne Brief</a><a href="sources.html">Sources &amp; Video</a><a href="charlemagne/archive.html">Archive</a><a href="../index.html">BBC Home</a><a href="https://thedaywatch.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Subscribe</a></nav>
+
+  <nav aria-label="Return navigation"><a href="index.html" data-previous-page>← Back to previous page</a><a href="index.html">News portal</a></nav>
+  <div class="hero"></div>
+
+  <section class="intro"><h2>THE DAY WATCH — SOURCES</h2><p>External reporting, live broadcasts and teaching resources. These publishers control their own content and availability. For our dated updates, <a href="index.html">open Latest</a>.</p></section>
+
+  <section class="brief-box" id="newsletter">
+    <div class="brief-inner">
+      <h3>The Watchman’s Brief</h3>
+      <p class="brief-meta">Weekly long-form prophetic intelligence analysis from Dr. Tim James</p>
+      <p>
+        Beyond the daily cycle of headlines, <strong>The Watchman’s Brief</strong>
+        connects current events to biblical prophecy, historical pattern
+        recognition, and long-range geopolitical implications.
+      </p>
+      <p>
+        <strong>Current featured release:</strong> <em>The Persian Prophecies</em> —
+        a 634-page study now available on Amazon in Kindle and paperback formats.
+      </p>
+      <a href="https://thedaywatch.substack.com/p/the-persian-prophecies-634-pages" target="_blank" rel="noopener noreferrer" class="btn btn-green">Read Free Preview →</a>
+    </div>
+  </section>
+
+  
+
+  <div class="content" id="live-sources">
+
+    <aside class="sidebar">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="https://www.jpost.com" target="_blank" rel="noopener noreferrer">→ Jerusalem Post</a></li>
+        <li><a href="https://www.timesofisrael.com" target="_blank" rel="noopener noreferrer">→ Times of Israel</a></li>
+        <li><a href="https://www.christianpost.com/category/world" target="_blank" rel="noopener noreferrer">→ Christian Post World</a></li>
+        <li><a href="https://english.alarabiya.net" target="_blank" rel="noopener noreferrer">→ Al Arabiya English</a></li>
+        <li><a href="https://www.dw.com/en/top-stories/s-9097" target="_blank" rel="noopener noreferrer">→ DW News</a></li>
+        <li><a href="https://www.i24news.tv/en" target="_blank" rel="noopener noreferrer">→ i24NEWS</a></li>
+      </ul>
+
+      <h3>Featured Teaching</h3>
+      <p class="label"><strong>Featured Message — N.T. Wright</strong></p>
+      <iframe src="https://www.youtube.com/embed/EVSXdHywnQY" title="Tom Wright - Ask N.T. Wright Anything" loading="lazy" allowfullscreen></iframe>
+      <p><a href="https://www.youtube.com/watch?v=EVSXdHywnQY" target="_blank" rel="noopener noreferrer">Watch this teaching on YouTube →</a></p>
+
+      <div class="notice">
+        <strong>Note:</strong> If an embedded video does not play, use its direct viewing link. Videos can become unavailable or have embedding restrictions.
+      </div>
+
+      <h3>Weekly News: Biblical Perspective</h3>
+      <p class="label"><strong>Catching Up With Jacob</strong></p>
+      <iframe src="https://www.youtube.com/embed/i-WdoDrePRU" title="Moriel TV — Catching Up With Jacob Ep 261" loading="lazy" allowfullscreen></iframe>
+      <p><a href="https://www.youtube.com/watch?v=i-WdoDrePRU" target="_blank" rel="noopener noreferrer">Watch this episode on YouTube →</a></p>
+
+      <h3>Domestic (USA) Affairs</h3>
+      <p class="label"><strong>What is happening now?</strong></p>
+      <p><a href="https://www.livenowfox.com/live" target="_blank" rel="noopener noreferrer">Watch LiveNOW from FOX live →</a></p>
+    </aside>
+
+    <main class="main">
+      <h2>Prophecy Watch — World Headlines</h2>
+
+      <p>
+        Welcome to The Day Watch, where we follow world events through the lens
+        of biblical prophecy while avoiding fear-mongering and date-setting.
+        The purpose of this page is simple: help readers stay informed,
+        watchful, and grounded.
+      </p>
+
+      <p class="quote">
+        “Watch therefore, for you do not know on what day your Lord is coming.”
+        (Matthew 24:42)
+      </p>
+
+      <h3>Reading and teaching context</h3>
+      <ul>
+        <li>Israeli-Palestinian developments</li>
+        <li>Middle East conflicts and alliances</li>
+        <li>European political shifts</li>
+        <li>Global economic realignment</li>
+        <li>Persecution of Christians worldwide</li>
+        <li>Natural disasters and “birth pains”</li>
+        <li>Technological developments relevant to end-times control systems</li>
+      </ul>
+
+      <h3>Featured Resources</h3>
+      <div class="grid-links">
+        <a href="charlemagne/index.html" class="news-link">
+          <h4>The Charlemagne Brief</h4>
+          <p>Sober geopolitical analysis connecting world headlines to long-range historical and prophetic patterns.</p>
+        </a>
+
+        <a href="https://thedaywatch.substack.com" target="_blank" rel="noopener noreferrer" class="news-link">
+          <h4>The Watchman’s Brief</h4>
+          <p>Weekly premium analysis from Dr. Tim James focused on prophecy, intelligence, and biblical interpretation.</p>
+        </a>
+
+        <a href="https://www.jpost.com" target="_blank" rel="noopener noreferrer" class="news-link">
+          <h4>Jerusalem Post</h4>
+          <p>Essential coverage of Israeli politics, security, and regional developments.</p>
+        </a>
+
+        <a href="https://www.timesofisrael.com" target="_blank" rel="noopener noreferrer" class="news-link">
+          <h4>Times of Israel</h4>
+          <p>Comprehensive reporting on Israel and the Jewish world.</p>
+        </a>
+
+        <a href="https://english.alarabiya.net" target="_blank" rel="noopener noreferrer" class="news-link">
+          <h4>Al Arabiya English</h4>
+          <p>A Gulf-region perspective on the Middle East and surrounding geopolitical developments.</p>
+        </a>
+
+        <a href="https://www.dw.com/en/top-stories/s-9097" target="_blank" rel="noopener noreferrer" class="news-link">
+          <h4>Deutsche Welle</h4>
+          <p>Reliable European and global coverage from Germany’s public broadcaster.</p>
+        </a>
+      </div>
+
+      <section id="us-sources"><h3>U.S. sources and commentary</h3><p>External resources; inclusion is not endorsement of every claim. Distinguish reporting from opinion.</p><div class="grid-links">
+        <a href="https://www.youtube.com/@LiveNOWFOX" target="_blank" rel="noreferrer" class="news-link">
+          <span class="tag">Live Feed</span>
+          <h4>LiveNOW from FOX</h4>
+          <p>Useful for raw press conferences, domestic breaking coverage, and the immediate tone of the national conversation.</p>
+        </a>
+
+        <a href="https://www.youtube.com/@RebelCapitalistChannel" target="_blank" rel="noreferrer" class="news-link">
+          <span class="tag">Macro</span>
+          <h4>Rebel Capitalist</h4>
+          <p>Helpful for following housing, debt markets, the banking system, and the kinds of structural pressures that often get buried beneath political noise.</p>
+        </a>
+
+        <a href="https://www.wsj.com/news/us" target="_blank" rel="noreferrer" class="news-link">
+          <span class="tag">Business</span>
+          <h4>Wall Street Journal U.S.</h4>
+          <p>Useful for domestic policy, markets, business confidence, and federal decisions with broad downstream consequences.</p>
+        </a>
+
+        <a href="https://www.realclearpolitics.com" target="_blank" rel="noreferrer" class="news-link">
+          <span class="tag">Politics</span>
+          <h4>RealClearPolitics</h4>
+          <p>A practical aggregator for polling, commentary, and mainstream political developments across the U.S. spectrum.</p>
+        </a></div></section><h3>Our Perspective</h3>
+      <p>
+        The Day Watch is not built to provoke panic. It is built to encourage
+        biblical watchfulness, discernment, and steadiness in an age of rapid
+        change.
+      </p>
+
+      <p class="quote">“What I say to you, I say to everyone: Watch!” (Mark 13:37)</p>
+      <p class="quote">“When these things begin to take place... your redemption is drawing near.” (Luke 21:28)</p>
+      <p class="quote">“Blessed are the meek, for they shall inherit the earth.” (Matthew 5:5)</p>
+    </main>
+  </div>
+
+  <footer>
+    © 2026 Berean Bible College. All rights reserved.<br>
+    <a href="https://thedaywatch.com">TheDayWatch.com</a> • Watching and waiting for His return
+  </footer>
+<script src="charlemagne/back-navigation.js" defer></script>
+</body>
+</html>
