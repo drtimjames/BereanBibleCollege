@@ -1,0 +1,22 @@
+name: Audit GitHub Pages publishing footprint
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/pages-footprint-audit.yml'
+      - 'scripts/pages_footprint_audit.py'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inventory publishable files and largest assets
+        run: python3 scripts/pages_footprint_audit.py
+      - name: Publish inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages-footprint-report
+          path: pages-footprint-report.txt
+          retention-days: 14
