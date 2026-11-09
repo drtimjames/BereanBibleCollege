@@ -46,7 +46,7 @@ jobs:
           files="$(gh api --paginate "repos/$REPO/pulls/$PR/files?per_page=100" --jq '.[].filename')"
           [[ -n "$files" ]] || { echo "::error::No changed files"; exit 1; }
           while IFS= read -r file; do
-            if [[ ! "$file" =~ ^news/charlemagne/[^/]+\\.(html|css)$ ]]; then
+            if [[ ! "$file" =~ ^news/charlemagne/[^/]+[.](html|css)$ ]]; then
               echo "::error::Unapproved path: $file"; exit 1
             fi
           done <<< "$files"
