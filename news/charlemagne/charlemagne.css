@@ -648,3 +648,13 @@ ul,ol{
 .brief-meta{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media(max-width:960px){.hero-grid{grid-template-columns:1fr}.hero .visual{min-height:0}.brief-meta{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.hero .visual .dossier-grid{grid-template-columns:1fr}.brief-meta{grid-template-columns:1fr}}
+
+/* Equal-weight strategic map and dossier panels on the Charlemagne homepage. */
+@media (min-width:961px){
+  .hero .visual{grid-template-rows:repeat(2,minmax(0,1fr));align-self:stretch;min-height:760px}
+  .hero .visual .panel,.hero .visual .dossier{height:100%;min-height:0;min-width:0}
+  .hero .visual .panel{display:flex;flex-direction:column}
+  .hero .visual .panel img{width:100%;height:0;min-height:0;flex:1 1 auto;object-fit:contain;background:#e9e9e9}
+  .hero .visual .panel-copy{flex:0 0 auto}
+  .hero .visual .dossier{overflow:auto}
+}
