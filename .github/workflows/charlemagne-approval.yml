@@ -46,13 +46,9 @@ jobs:
           files="$(gh api --paginate "repos/$REPO/pulls/$PR/files?per_page=100" --jq '.[].filename')"
           [[ -n "$files" ]] || { echo "::error::No changed files"; exit 1; }
           while IFS= read -r file; do
-            case "$file" in
-              news/charlemagne/*.html|news/charlemagne/*.css) ;;
-              *) echo "::error::Unapproved path: $file"; exit 1 ;;
-            esac
-            case "$file" in
-              news/charlemagne/drafts/*) echo "::error::Drafts cannot be published"; exit 1 ;;
-            esac
+            if [[ ! "$file" =~ ^news/charlemagne/[^/]+\\.(html|css)$ ]]; then
+              echo "::error::Unapproved path: $file"; exit 1
+            fi
           done <<< "$files"
           echo "Verified exact reviewed SHA and approved file scope."
       - name: Merge only the reviewed commit
