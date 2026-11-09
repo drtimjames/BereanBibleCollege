@@ -671,3 +671,8 @@ ul,ol{
   .hero .visual .dossier-grid{flex:1;align-items:start}
 }
 @media(min-width:961px) and (max-width:1200px){.hero h1{font-size:clamp(2.45rem,4vw,3.65rem)}.hero-grid{gap:32px}}
+
+/* Final masthead lockup: never split CHARLEMAGNE across lines. */
+.hero h1.charlemagne-title{max-width:100%;font-size:clamp(2.15rem,3.35vw,3.5rem);line-height:1.03;letter-spacing:-.018em;overflow-wrap:normal;word-break:normal}
+.hero h1.charlemagne-title span{display:block;white-space:nowrap}
+@media(max-width:640px){.hero h1.charlemagne-title{font-size:clamp(1.7rem,7.4vw,3rem)}}
