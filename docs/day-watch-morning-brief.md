@@ -7,6 +7,9 @@ The Day Watch Morning Brief gives readers a compact, sourced account of conseque
 
 Pilot delivery: prepare one morning packet daily around 8 a.m. America/Los_Angeles. The existing hourly watch continues its existing work. The morning task prepares Substack and video drafts for Tim. Verified public web editions may be published under Tim's standing authorization. Substack email delivery and YouTube uploads require their own available authorized publishing route.
 
+## Web presentation
+Use warm gold (#f3d58a) for The Day Watch Morning Brief H1, sky blue (#80ceff) for The Charlemagne Assessment H2, and soft green (#a4dfb1) for Scriptural perspective H2 against the existing dark background. Keep the assessment and scripture heading IDs as assessment and scripture. Add generous top spacing and a visible divider before both major sections. Keep story titles subordinate. Match the November 17 sample CSS for later public editions. Preserve semantic H1/H2 structure. Substack styling depends on its editor and theme capabilities.
+
 ## Format
 - Subject: The Day Watch Morning Brief — [local date]
 - Subtitle: a sentence naming the consequential developments covered.
