@@ -1,0 +1,70 @@
+name: Charlemagne — Authenticated Editorial Approval
+
+on:
+  workflow_dispatch:
+    inputs:
+      pull_request:
+        description: "Prepared publication pull request number"
+        required: true
+        type: string
+      expected_head_sha:
+        description: "Full 40-character commit SHA of the exact version Tim reviewed"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: charlemagne-approval
+  cancel-in-progress: false
+
+jobs:
+  approve-and-publish:
+    if: github.actor == 'drtimjames' && github.repository == 'drtimjames/BereanBibleCollege'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify exact reviewed pull request and publishing scope
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ inputs.pull_request }}
+          EXPECTED: ${{ inputs.expected_head_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$PR" =~ ^[1-9][0-9]*$ ]] || { echo "::error::Invalid PR number"; exit 1; }
+          [[ "$EXPECTED" =~ ^[0-9a-fA-F]{40}$ ]] || { echo "::error::Expected a full 40-character SHA"; exit 1; }
+          data="$(gh api "repos/$REPO/pulls/$PR")"
+          [[ "$(jq -r .state <<< "$data")" == open ]] || { echo "::error::PR is not open"; exit 1; }
+          [[ "$(jq -r .draft <<< "$data")" == false ]] || { echo "::error::PR is still a draft"; exit 1; }
+          [[ "$(jq -r .base.ref <<< "$data")" == main ]] || { echo "::error::PR must target main"; exit 1; }
+          [[ "$(jq -r .head.repo.full_name <<< "$data")" == "$REPO" ]] || { echo "::error::External PR not allowed"; exit 1; }
+          [[ "$(jq -r .head.sha <<< "$data")" == "$EXPECTED" ]] || { echo "::error::PR changed since Tim reviewed it"; exit 1; }
+          [[ "$(jq -r '.labels | any(.name == "charlemagne-approved-release")' <<< "$data")" == true ]] || { echo "::error::Missing release label"; exit 1; }
+          files="$(gh api --paginate "repos/$REPO/pulls/$PR/files?per_page=100" --jq '.[].filename')"
+          [[ -n "$files" ]] || { echo "::error::No changed files"; exit 1; }
+          while IFS= read -r file; do
+            if [[ ! "$file" =~ ^news/charlemagne/[^/]+[.](html|css)$ ]]; then
+              echo "::error::Unapproved path: $file"; exit 1
+            fi
+          done <<< "$files"
+          echo "Verified exact reviewed SHA and approved file scope."
+      - name: Merge only the reviewed commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ inputs.pull_request }}
+          EXPECTED: ${{ inputs.expected_head_sha }}
+        run: |
+          set -euo pipefail
+          gh pr merge "$PR" --repo "$REPO" --squash --match-head-commit "$EXPECTED" --delete-branch
+      - name: Record published merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ inputs.pull_request }}
+        run: |
+          gh pr view "$PR" --repo "$REPO" --json state,mergedAt,url
+          echo "The GitHub Pages live URL must still be verified after deployment."

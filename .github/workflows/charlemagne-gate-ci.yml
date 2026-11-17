@@ -1,0 +1,46 @@
+name: Charlemagne — Safe Approval Gate CI
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/charlemagne-approval.yml'
+      - '.github/workflows/charlemagne-gate-ci.yml'
+      - 'news/charlemagne/EDITORIAL-APPROVAL.md'
+
+permissions:
+  contents: read
+
+jobs:
+  test-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test gate predicates without publishing
+        shell: bash
+        run: |
+          set -euo pipefail
+          check() {
+            local actor="$1" repo="$2" state="$3" draft="$4" base="$5" origin="$6" sha="$7" expected="$8" label="$9" file="${10}"
+            [[ "$actor" == drtimjames && "$repo" == drtimjames/BereanBibleCollege ]] || return 1
+            [[ "$state" == open && "$draft" == false && "$base" == main ]] || return 1
+            [[ "$origin" == "$repo" && "$sha" == "$expected" && "$label" == true ]] || return 1
+            [[ "$file" =~ ^news/charlemagne/[^/]+[.](html|css)$ ]]
+          }
+          sha=0123456789abcdef0123456789abcdef01234567
+          pass=0
+          assert_case() {
+            local expected="$1"; shift
+            if check "$@"; then actual=pass; else actual=reject; fi
+            [[ "$actual" == "$expected" ]] || { echo "::error::Expected $expected, got $actual"; exit 1; }
+            pass=$((pass+1))
+          }
+          assert_case pass drtimjames drtimjames/BereanBibleCollege open false main drtimjames/BereanBibleCollege "$sha" "$sha" true news/charlemagne/index.html
+          assert_case reject intruder drtimjames/BereanBibleCollege open false main drtimjames/BereanBibleCollege "$sha" "$sha" true news/charlemagne/index.html
+          assert_case reject drtimjames drtimjames/BereanBibleCollege open true main drtimjames/BereanBibleCollege "$sha" "$sha" true news/charlemagne/index.html
+          assert_case reject drtimjames drtimjames/BereanBibleCollege open false dev drtimjames/BereanBibleCollege "$sha" "$sha" true news/charlemagne/index.html
+          assert_case reject drtimjames drtimjames/BereanBibleCollege open false main attacker/fork "$sha" "$sha" true news/charlemagne/index.html
+          assert_case reject drtimjames drtimjames/BereanBibleCollege open false main drtimjames/BereanBibleCollege "$sha" deadbeef true news/charlemagne/index.html
+          assert_case reject drtimjames drtimjames/BereanBibleCollege open false main drtimjames/BereanBibleCollege "$sha" "$sha" false news/charlemagne/index.html
+          assert_case reject drtimjames drtimjames/BereanBibleCollege open false main drtimjames/BereanBibleCollege "$sha" "$sha" true .github/workflows/evil.yml
+          assert_case reject drtimjames drtimjames/BereanBibleCollege open false main drtimjames/BereanBibleCollege "$sha" "$sha" true news/charlemagne/drafts/draft.html
+          assert_case pass drtimjames drtimjames/BereanBibleCollege open false main drtimjames/BereanBibleCollege "$sha" "$sha" true news/charlemagne/charlemagne.css
+          echo "$pass gate scenarios passed; no merge or publish operations executed."
